@@ -68,39 +68,48 @@ blur = cv2.GaussianBlur(zero_img,(9,9),0)
 # subtract blur
 delta_img = cv2.subtract(blur_ref,blur)
 img2 = cv2.resize(delta_img, (0,0), fx=0.3, fy=0.3) 
-cv2.imshow('image',img2)
-cv2.waitKey(0)
-cv2.waitKey(1)
-cv2.destroyAllWindows()
-cv2.waitKey(1)
-cv2.imwrite('delta_img.png',img2)
+## uncomment below to visualize the subtracted image
+#cv2.imshow('image',img2)
+#cv2.waitKey(0)
+#cv2.waitKey(1)
+#cv2.destroyAllWindows()
+#cv2.waitKey(1)
+## write image for documentation
+#cv2.imwrite('delta_img.png',img2)
 
 # Evaluate threshold values
 thresh = 70 
 maxval=255
 ret, thresholded = cv2.threshold(delta_img, thresh, maxval, cv2.THRESH_BINARY);
-for i in circles:
-    # fill the outer circle
-    cv2.circle(thresholded,(i[0],i[1]),i[2]-rad_offset,255,12 )
-    # zero the innter circle
-    cv2.circle(thresholded,(i[0],i[1]),i[2]-(rad_offset+inner_radius),255,12)
-img2 = cv2.resize(thresholded, (0,0), fx=0.3, fy=0.3) 
 
-cv2.imshow('image',img2)
-cv2.waitKey(0)
-cv2.waitKey(1)
-cv2.destroyAllWindows()
-cv2.waitKey(1)
-cv2.imwrite('threshold_img.png',img2)
+# uncomment this section to generate images for the documentation or to
+# visualize the mask locations. This section screws up the measurement so 
+# disable it when needing actual gauge measurements
+##-----------------------------------------------------------------##
+#for i in circles:
+#    # fill the outer circle
+#    cv2.circle(thresholded,(i[0],i[1]),i[2]-rad_offset,255,12 )
+#    # zero the innter circle
+#    cv2.circle(thresholded,(i[0],i[1]),i[2]-(rad_offset+inner_radius),255,12)
+#img2 = cv2.resize(thresholded, (0,0), fx=0.3, fy=0.3) 
+#
+#cv2.imshow('image',img2)
+#cv2.waitKey(0)
+#cv2.waitKey(1)
+#cv2.destroyAllWindows()
+#cv2.waitKey(1)
+#cv2.imwrite('threshold_img.png',img2)
+##-----------------------------------------------------------------##
 
 delta_img = cv2.bitwise_and(thresholded,mask)    
-img2 = cv2.resize(delta_img, (0,0), fx=0.3, fy=0.3) 
-cv2.imshow('image',img2)
-cv2.waitKey(0)
-cv2.waitKey(1)
-cv2.destroyAllWindows()
-cv2.waitKey(1)
-cv2.imwrite('mask_img.png',img2)
+## uncomment below to visualize the masked image
+#img2 = cv2.resize(delta_img, (0,0), fx=0.3, fy=0.3) 
+#cv2.imshow('image',img2)
+#cv2.waitKey(0)
+#cv2.waitKey(1)
+#cv2.destroyAllWindows()
+#cv2.waitKey(1)
+#cv2.imwrite('mask_img.png',img2)
 
 # Calculate the zero angle for the gauges from the zero reference image
 # find needles edges
