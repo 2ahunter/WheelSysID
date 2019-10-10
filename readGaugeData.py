@@ -26,12 +26,12 @@ images = ReadMultipleImages('./gaugeCV/*.JPG','IMG')
 # Load the reference image
 ref_img = cv2.imread('./gaugeCV/calibration/back.JPG',0)
 im = cv2.resize(ref_img, (0,0), fx=0.3, fy=0.3) 
-cv2.imwrite('ref.png',im)
+# cv2.imwrite('ref.png',im)
 
 # Load the zero angle calibration image
 zero_img = cv2.imread('./gaugeCV/calibration/zero.JPG',0)
 im = cv2.resize(zero_img, (0,0), fx=0.3, fy=0.3) 
-cv2.imwrite('zero.png',im)
+# cv2.imwrite('zero.png',im)
 
 # Circle geometry and gauge calibration data
 circles = np.zeros((2,3),dtype=np.uint16)
