@@ -21,15 +21,15 @@ def ReadMultipleImages(dir,cond):
     return images
 
 # Load images in grayscale
-images = ReadMultipleImages('./gaugeCV/*.JPG','IMG')
+images = ReadMultipleImages('./sample_data/*.JPG','IMG')
 
 # Load the reference image
-ref_img = cv2.imread('./gaugeCV/calibration/back.JPG',0)
+ref_img = cv2.imread('./sample_data/calibration/back.JPG',0)
 im = cv2.resize(ref_img, (0,0), fx=0.3, fy=0.3) 
 # cv2.imwrite('ref.png',im)
 
 # Load the zero angle calibration image
-zero_img = cv2.imread('./gaugeCV/calibration/zero.JPG',0)
+zero_img = cv2.imread('./sample_data/calibration/zero.JPG',0)
 im = cv2.resize(zero_img, (0,0), fx=0.3, fy=0.3) 
 # cv2.imwrite('zero.png',im)
 
@@ -208,4 +208,4 @@ plt.plot(Radial,label = 'radial')
 plt.ylabel('Displacement [mm]')
 plt.legend()
 data = [Lateral,Radial]
-sio.savemat('./gaugeCV/CV_valid.mat',mdict={'CV_valid':data})
+sio.savemat('./sample_data/CV_valid.mat',mdict={'CV_valid':data})
