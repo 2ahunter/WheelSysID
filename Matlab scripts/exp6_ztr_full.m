@@ -92,16 +92,22 @@ T_mean = mean(cat(2,NDL_mean,DL_mean,NDT_mean,DT_mean),2);
 
 asym_ten = (NDL_mean + shiftTC(flip(DT_mean),1))/2;
 sym_ten = (DL_mean + shiftTC(flip(NDT_mean),1))/2;
-figure()
+theta_s = pi/32:pi/16:2*pi
+figure(1)
 subplot(4,1,1)
-title('Tension Influence Curves')
-bar(asym_ten)
+bar(theta_s,asym_ten)
+title('Tension Gain Curves')
+ylabel('Tension [N]')
 subplot(4,1,2)
-bar(sym_ten)
+bar(theta_s,sym_ten)
+ylabel('Tension [N]')
 subplot(4,1,3)
-bar(shiftTC(flip(sym_ten),1))
+bar(theta_s,shiftTC(flip(sym_ten),1))
+ylabel('Tension [N]')
 subplot(4,1,4)
-bar(shiftTC(flip(asym_ten),1))
+bar(theta_s,shiftTC(flip(asym_ten),1))
+xlabel('Angle [rad]')
+ylabel('Tension [N]')
 
 % Generate influence matrix gain curves for each spoke:
 IM_ten = zeros(numSpokes,numSpokes);
@@ -121,15 +127,15 @@ for spoke = 1:numSpokes
     end
 end
 
-figure()
-subplot(4,1,1)
-bar(IM_mean_ten(:,1))
-subplot(4,1,2)
-bar(IM_mean_ten(:,2))
-subplot(4,1,3)
-bar(IM_mean_ten(:,3))
-subplot(4,1,4)
-bar(IM_mean_ten(:,4))
+% figure(2)
+% subplot(4,1,1)
+% bar(IM_mean_ten(:,1))
+% subplot(4,1,2)
+% bar(IM_mean_ten(:,2))
+% subplot(4,1,3)
+% bar(IM_mean_ten(:,3))
+% subplot(4,1,4)
+% bar(IM_mean_ten(:,4))
 
 %% Evaluate baseline data
 
@@ -137,7 +143,7 @@ base_lat = cat(2, matrix_base(:,1),matrix_base(:,3),matrix_base(:,5),matrix_base
 base_rad = cat(2, matrix_base(:,2),matrix_base(:,4),matrix_base(:,6),matrix_base(:,8));
 base_ten = matrix_tension_raw(:,1:3);
 % test repeatability of baseline measurements
-figure()
+figure(3)
 subplot(3,1,1)
 plot(base_lat,'x-')
 title('Baseline Measurements Taken During Wheel Characterization')
@@ -157,7 +163,7 @@ delta_base_rad = base_rad - base_rad_mean;
 delta_base_ten = base_ten - base_ten_mean;
 
 % plot repeatability data
-figure()
+figure(4)
 
 subplot(3,1,1)
 plot(delta_base_lat,'x')
@@ -180,6 +186,7 @@ plot(delta_base_ten,'x-.')
 
 im_lat_raw = matrix_lat - base_lat_mean;
 im_rad_raw = matrix_rad - base_rad_mean;
+theta_r = pi/32:pi/32:2*pi;
 
 % figure()
 % subplot(2,1,1)
@@ -191,7 +198,7 @@ im_rad_raw = matrix_rad - base_rad_mean;
 gc_lat = zeros(2*numSpokes,numSpokes);
 gc_rad = gc_lat;
 
-figure()
+figure(5)
 subplot(2,1,1)
 hold on
 for spoke = 1:numSpokes
@@ -202,10 +209,10 @@ for spoke = 1:numSpokes
         gc_lat(:,spoke) = -gCurve(data, spoke);
     end
     gc = shiftGC(gc_lat(:,spoke),16);
-    plot(gc)
+    plot(theta_r,gc)
 end
 hold off
-title('Lateral Influence Curve Measurements')
+title('Lateral Gain Curve Measurements')
 legend('Lateral')
 ylabel('Displacement [mm]')
 
@@ -215,25 +222,27 @@ for spoke = 1:numSpokes
     data = im_rad_raw(:,spoke);
     gc_rad(:,spoke) = gCurve(data, spoke);
     gc = shiftGC(gc_rad(:,spoke),16);
-    plot(gc)
+    plot(theta_r,gc)
 end
 hold off
-title('Radial Influence Curve Measurements')
+title('Radial Gain Curve Measurements')
 legend('Radial')
 ylabel('Displacement [mm]')
+xlabel('Angle [rad]')
     
 % generate mean gain curves
 gc_lat_mean = mean(gc_lat,2);
 gc_rad_mean = mean(gc_rad,2);
 
-figure()
-plot(shiftGC(gc_lat_mean,16))
+figure(6)
+plot(theta_r,shiftGC(gc_lat_mean,16))
 hold on
-plot(shiftGC(gc_rad_mean,16), 'r-')
+plot(theta_r,shiftGC(gc_rad_mean,16), 'r-')
 hold off
-title('Mean Influence Curves')
+title('Mean Gain Curves')
 legend('Lateral','Radial')
 ylabel('Displacement [mm]')
+xlabel('Angle [rad]')
 
 % generate IM displacement gain curves
 
@@ -293,20 +302,21 @@ Y_w = cat(1,YLat,mu1*YRad,mu2*Y_ten);
 X_hat = Phi_w\Y_w;
 
 % plot experiment
-figure()
+figure(7)
 subplot(3,1,1)
-plot(YLat)
-title('Predicted Error for Random De-Truing')
+plot(theta_r,YLat)
+title('Predicted Profiles for Random De-Truing')
 ylabel('Lateral Error [mm]')
 subplot(3,1,2)
-plot(YRad)
+plot(theta_r,YRad)
 ylabel('Radial Error [mm]')
 subplot(3,1,3)
-bar(Y_ten)
+bar(theta_s,Y_ten)
 ylabel('Tension Error [N]')
+xlabel('Angle [rad]')
 
 % compare prediction versus actual
-figure()
+figure(8)
 hold on
 stem(X)
 stem(X_hat)
@@ -314,25 +324,27 @@ hold off
 title('Simulated Truing Solution')
 legend('actual','predicted')
 ylabel('Adjustment Error [revolutions]')
+xlabel('Spoke Number')
 
 % Evaluate final result
-figure()
+figure(9)
 subplot(4,1,1)
-plot(IM_lat*X_hat-YLat)
+plot(theta_r,IM_lat*X_hat-YLat)
 title('Lateral Error')
 ylabel('Lateral Error [mm]')
 subplot(4,1,2)
-plot(IM_rad*X_hat-YRad)
+plot(theta_r,IM_rad*X_hat-YRad)
 title('Radial Error')
 ylabel('Radial Error [mm]')
 subplot(4,1,3)
-bar(IM_ten*X_hat-Y_ten)
+bar(theta_s,IM_ten*X_hat-Y_ten)
 title('Tension Error')
 ylabel('Tension Error [N]')
 subplot(4,1,4)
-stem(X_hat - X)
+stem(theta_s, X_hat - X)
 title('Spoke Adjustment Error')
 ylabel('Error [revolutions]')
+xlabel('Amgle [rad]')
 
 
 %% Estimate baseline correction
