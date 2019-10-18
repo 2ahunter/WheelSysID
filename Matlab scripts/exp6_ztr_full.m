@@ -15,6 +15,8 @@
 % gauge centers 
 
 %% load workspace
+close all
+clear all
 load('ztr_final.mat')
 load('tensionztrall.mat')
 numSpokes = 32;
@@ -92,30 +94,44 @@ T_mean = mean(cat(2,NDL_mean,DL_mean,NDT_mean,DT_mean),2);
 
 asym_ten = (NDL_mean + shiftTC(flip(DT_mean),1))/2;
 sym_ten = (DL_mean + shiftTC(flip(NDT_mean),1))/2;
-theta_s = pi/32:pi/16:2*pi
+theta_s = pi/32:pi/16:2*pi;
 figure(1)
 subplot(4,1,1)
 bar(theta_s,asym_ten)
 title('Tension Gain Curves')
 ylabel('Tension [N]')
+ax = gca; % current axes
+ax.FontSize = 16;
+ylim([-250,150])
 subplot(4,1,2)
 bar(theta_s,sym_ten)
 ylabel('Tension [N]')
+ax = gca; % current axes
+ax.FontSize = 16;
+ylim([-250,150])
 subplot(4,1,3)
 bar(theta_s,shiftTC(flip(sym_ten),1))
 ylabel('Tension [N]')
+ax = gca; % current axes
+ax.FontSize = 16;
+ylim([-250,150])
 subplot(4,1,4)
 bar(theta_s,shiftTC(flip(asym_ten),1))
 xlabel('Angle [rad]')
 ylabel('Tension [N]')
+ax = gca; % current axes
+ax.FontSize = 16;
+ylim([-250,150])
 
 % Generate influence matrix gain curves for each spoke:
 IM_ten = zeros(numSpokes,numSpokes);
 IM_mean_ten = IM_ten;
 for spoke = 1:numSpokes
     s = rem(spoke,4);
-    % approximation
+    % symmetric approximation to get rid of tension discretization
     IM_mean_ten(:,spoke) = shiftTC(T_mean,15+spoke);
+    % gain curves using all distinct patterns (leads to errors due to
+    % discretization!
     if s==1
         IM_ten(:,spoke) = shiftTC(asym_ten, 15+spoke);
     elseif s==2
@@ -143,7 +159,7 @@ base_lat = cat(2, matrix_base(:,1),matrix_base(:,3),matrix_base(:,5),matrix_base
 base_rad = cat(2, matrix_base(:,2),matrix_base(:,4),matrix_base(:,6),matrix_base(:,8));
 base_ten = matrix_tension_raw(:,1:3);
 % test repeatability of baseline measurements
-figure(3)
+figure(2)
 subplot(3,1,1)
 plot(base_lat,'x-')
 title('Baseline Measurements Taken During Wheel Characterization')
@@ -163,7 +179,7 @@ delta_base_rad = base_rad - base_rad_mean;
 delta_base_ten = base_ten - base_ten_mean;
 
 % plot repeatability data
-figure(4)
+figure(3)
 
 subplot(3,1,1)
 plot(delta_base_lat,'x')
@@ -198,7 +214,7 @@ theta_r = pi/32:pi/32:2*pi;
 gc_lat = zeros(2*numSpokes,numSpokes);
 gc_rad = gc_lat;
 
-figure(5)
+figure(4)
 subplot(2,1,1)
 hold on
 for spoke = 1:numSpokes
@@ -215,6 +231,8 @@ hold off
 title('Lateral Gain Curve Measurements')
 legend('Lateral')
 ylabel('Displacement [mm]')
+ax = gca;
+ax.FontSize=16;
 
 subplot(2,1,2)
 hold on
@@ -229,12 +247,14 @@ title('Radial Gain Curve Measurements')
 legend('Radial')
 ylabel('Displacement [mm]')
 xlabel('Angle [rad]')
+ax = gca;
+ax.FontSize=16;
     
 % generate mean gain curves
 gc_lat_mean = mean(gc_lat,2);
 gc_rad_mean = mean(gc_rad,2);
 
-figure(6)
+figure(5)
 plot(theta_r,shiftGC(gc_lat_mean,16))
 hold on
 plot(theta_r,shiftGC(gc_rad_mean,16), 'r-')
@@ -243,6 +263,8 @@ title('Mean Gain Curves')
 legend('Lateral','Radial')
 ylabel('Displacement [mm]')
 xlabel('Angle [rad]')
+ax = gca;
+ax.FontSize=16;
 
 % generate IM displacement gain curves
 
@@ -302,49 +324,64 @@ Y_w = cat(1,YLat,mu1*YRad,mu2*Y_ten);
 X_hat = Phi_w\Y_w;
 
 % plot experiment
-figure(7)
+figure(6)
 subplot(3,1,1)
-plot(theta_r,YLat)
+plot(theta_r,YLat,'LineWidth',1)
 title('Predicted Profiles for Random De-Truing')
-ylabel('Lateral Error [mm]')
+ylabel('Lateral [mm]')
+ax = gca;
+ax.FontSize=16;
 subplot(3,1,2)
-plot(theta_r,YRad)
-ylabel('Radial Error [mm]')
+plot(theta_r,YRad,'LineWidth',1)
+ylabel('Radial [mm]')
+ax = gca;
+ax.FontSize=16;
 subplot(3,1,3)
 bar(theta_s,Y_ten)
-ylabel('Tension Error [N]')
+ylabel('Tension [N]')
 xlabel('Angle [rad]')
-
+ax = gca;
+ax.FontSize=16;
 % compare prediction versus actual
-figure(8)
+figure(7)
 hold on
-stem(X)
-stem(X_hat)
+stem(X,'LineWidth',1)
+stem(X_hat,'LineWidth',1)
 hold off
 title('Simulated Truing Solution')
 legend('actual','predicted')
-ylabel('Adjustment Error [revolutions]')
+ylabel('Adjustment Error [revs]')
 xlabel('Spoke Number')
+ax = gca;
+ax.FontSize=16;
 
 % Evaluate final result
-figure(9)
+figure(8)
 subplot(4,1,1)
 plot(theta_r,IM_lat*X_hat-YLat)
 title('Lateral Error')
-ylabel('Lateral Error [mm]')
+ylabel('Lateral [mm]')
+ax = gca;
+ax.FontSize=16;
 subplot(4,1,2)
 plot(theta_r,IM_rad*X_hat-YRad)
 title('Radial Error')
-ylabel('Radial Error [mm]')
+ylabel('Radial [mm]')
+ax = gca;
+ax.FontSize=16;
 subplot(4,1,3)
 bar(theta_s,IM_ten*X_hat-Y_ten)
 title('Tension Error')
-ylabel('Tension Error [N]')
+ylabel('Tension [N]')
+ax = gca;
+ax.FontSize=16;
 subplot(4,1,4)
 stem(theta_s, X_hat - X)
 title('Spoke Adjustment Error')
-ylabel('Error [revolutions]')
-xlabel('Amgle [rad]')
+ylabel('Error [revs]')
+xlabel('Angle [rad]')
+ax = gca;
+ax.FontSize=16;
 
 
 %% Estimate baseline correction
@@ -424,46 +461,66 @@ Y_est_x1 = trueWheel(X,Phi,base_x1);
 % Y_lat_hat = Y_est_x1(1:64);
 % Y_rad_hat = Y_est_x1(65:128);
 % Y_ten_hat = Y_est_x1(129:end);
-figure()
+figure(9)
 subplot(3,1,1)
 hold on
-plot(Y_lat_hat(:,4),'b-')
-plot(v4_lat,'bx')
-plot(Y_lat_hat(:,16),'g-')
-plot(v16_lat,'go')
-plot(Y_lat_hat(:,32),'r-')
-plot(v32_lat,'rd')
+% plot(Y_lat_hat(:,4),'b-')
+% plot(v4_lat,'bx')
+% plot(Y_lat_hat(:,16),'g-')
+% plot(v16_lat,'go')
+plot(theta_r,Y_lat_hat(:,32),'b-','LineWidth',1)
+plot(theta_r,v32_lat,'kx','LineWidth',1)
 hold off
+ylabel('Lateral [mm]')
+legend('Predict','Measure')
+title('Prediction and Measurement After Random De-true')
+ax = gca;
+ax.FontSize = 16;
 subplot(3,1,2)
 hold on
-plot(Y_rad_hat(:,4),'b-')
-plot(v4_rad,'bx')
-plot(Y_rad_hat(:,16),'g-')
-plot(v16_rad,'go')
-plot(Y_rad_hat(:,32),'r-')
-plot(v32_rad,'rd')
+% plot(Y_rad_hat(:,4),'b-')
+% plot(v4_rad,'bx')
+% plot(Y_rad_hat(:,16),'g-')
+% plot(v16_rad,'go')
+plot(theta_r,Y_rad_hat(:,32),'b-','LineWidth',1)
+plot(theta_r,v32_rad,'kx','LineWidth',1)
 hold off
+ax = gca;
+ax.FontSize = 16;
+ylabel('Radial [mm]')
+legend('Predict','Measure')
 subplot(3,1,3)
 hold on
-bar(Y_ten_hat(:,32))
-bar(v32_ten)
+data = cat(2,Y_ten_hat(:,32),v32_ten);
+% bar(theta_s,Y_ten_hat(:,32))
+bar(theta_s,data)
 hold off
+ax = gca;
+ax.FontSize = 16;
+ylabel('Tension [N]')
+xlabel('Rim Angle [rad]')
+legend('Predict','Measure')
 
-figure()
+figure(10)
 subplot(3,1,1)
-hold on
-plot(Y_lat_hat(:,4)-v4_lat,'bx-.')
-plot(Y_lat_hat(:,16)-v16_lat,'go-.')
-plot(Y_lat_hat(:,32)- v32_lat,'rd-.')
-hold off
+plot(theta_r,Y_lat_hat(:,32)- v32_lat,'b-','LineWidth',1)
+ylabel('Lateral [mm]')
+title('Residual Error After Random De-true')
+ax = gca;
+ax.FontSize = 16;
 subplot(3,1,2)
-hold on
-plot(Y_rad_hat(:,4)-v4_rad,'bx-.')
-plot(Y_rad_hat(:,16)-v16_rad,'go-.')
-plot(Y_rad_hat(:,32)- v32_rad,'rd-.')
-hold off
+plot(theta_r,Y_rad_hat(:,32)- v32_rad,'b-','LineWidth',1)
+ylabel('Radial [mm]')
+ax = gca;
+ax.FontSize = 16;
 subplot(3,1,3)
-bar(Y_ten_hat(:,32) - v32_ten)
+bar(theta_s,Y_ten_hat(:,32) - v32_ten)
+ylabel('Tension [N]')
+xlabel('Rim Angle [rad]')
+ax = gca;
+ax.FontSize = 16;
+max(Y_lat_hat(:,32)- v32_lat) - min(Y_lat_hat(:,32)- v32_lat);
+max(abs(Y_rad_hat(:,32)- v32_rad));
 %% True the wheel from the previous experiment
 % measurement matrix with weighting:
 Y_w = cat(1,v32_lat,mu1*v32_rad,mu2*(v32_ten-target_tension));
@@ -538,7 +595,8 @@ v32_lat = valid_32_2(1,:)';
 v32_rad = valid_32_2(2,:)';
 Y_x2 = cat(1,v32_lat,v32_rad,v32_ten);
 
-plotExperiment(Y_hat,Y_x2,baseline_x2,target_tension)
+figNum = 11;
+plotExperiment(figNum, Y_hat,Y_x2,baseline_x2,target_tension)
 
 
 %% Iterate on new baseline
@@ -574,7 +632,8 @@ v32_lat = valid_32_3(1,:)';
 v32_rad = valid_32_3(2,:)';
 
 Y_x3 = cat(1,v32_lat,v32_rad,v32_ten);
-plotExperiment(Y_hat,Y_x3,baseline_x3,target_tension)
+figNum = figNum+3;
+plotExperiment(figNum, Y_hat,Y_x3,baseline_x3,target_tension)
 
 
 %% Change target tension and retrue the wheel (experiment 4)
@@ -583,15 +642,15 @@ Y_w = cat(1,v32_lat,mu1*(v32_rad),(mu2)*(v32_ten-target_tension));
 X_hat = Phi_sw\Y_w;
 X_hat_x4 = X_hat;
 Y_est = Phi_s*(-X_hat);
-figure()
-subplot(4,1,1)
-stem(-X_hat)
-subplot(4,1,2)
-plot(Y_est(1:64)+v32_lat)
-subplot(4,1,3)
-plot(Y_est(65:128)+v32_rad)
-subplot(4,1,4)
-bar(Y_est(129:end)+v32_ten)
+% figure()
+% subplot(4,1,1)
+% stem(-X_hat)
+% subplot(4,1,2)
+% plot(Y_est(1:64)+v32_lat)
+% subplot(4,1,3)
+% plot(Y_est(65:128)+v32_rad)
+% subplot(4,1,4)
+% bar(Y_est(129:end)+v32_ten)
 
 % redefine the baseline to the previous section result:
 baseline_x4 = Y_x3;
@@ -608,7 +667,8 @@ v32_lat = valid_32_4(1,:)';
 v32_rad = valid_32_4(2,:)';
 Y_x4 = cat(1,v32_lat,v32_rad,v32_ten);
 
-plotExperiment(Y_hat,Y_x4,baseline_x4,target_tension)
+figNum = figNum+3;
+plotExperiment(figNum, Y_hat,Y_x4,baseline_x4,target_tension)
 
 %% Iterate truing solution based on new baseline data (experiment 5)
 % This experiment is because the tension gain curves have significant error
@@ -622,15 +682,15 @@ Y_w = cat(1,v32_lat,mu1*(v32_rad),(mu2)*(v32_ten-target_tension));
 X_hat = Phi_w\Y_w;
 X_hat_x5 = X_hat;
 Y_est = Phi*(-X_hat);
-figure()
-subplot(4,1,1)
-stem(-X_hat)
-subplot(4,1,2)
-plot(Y_est(1:64)+v32_lat)
-subplot(4,1,3)
-plot(Y_est(65:128)+v32_rad)
-subplot(4,1,4)
-bar(Y_est(129:end)+v32_ten)
+% figure()
+% subplot(4,1,1)
+% stem(-X_hat)
+% subplot(4,1,2)
+% plot(Y_est(1:64)+v32_lat)
+% subplot(4,1,3)
+% plot(Y_est(65:128)+v32_rad)
+% subplot(4,1,4)
+% bar(Y_est(129:end)+v32_ten)
 
 % redefine the baseline to the previous section result:
 baseline_lat = v32_lat;
@@ -651,7 +711,8 @@ v32_lat = valid_32_5(1,:)';
 v32_rad = valid_32_5(2,:)';
 Y_x5 = cat(1,v32_lat,v32_rad,v32_ten);
 
-plotExperiment(Y_hat,Y_x5,baseline_x5,target_tension)
+figNum = figNum+3;
+plotExperiment(figNum, Y_hat,Y_x5,baseline_x5,target_tension)
 
 X_hat_net = X_hat_x4 + X_hat_x5;
 % figure()
@@ -675,15 +736,15 @@ Y_w = cat(1,baseline(1:64),mu1*(baseline(65:128)-mean(baseline(65:128))),mu2*bas
 X_hat = Phi_sw\Y_w;
 X_hat_x6 = X_hat;
 Y_est = Phi_s*(-X_hat);
-figure()
-subplot(4,1,1)
-stem(-X_hat)
-subplot(4,1,2)
-plot(Y_est(1:64)+baseline(1:64))
-subplot(4,1,3)
-plot(Y_est(65:128)+baseline(65:128))
-subplot(4,1,4)
-bar(Y_est(129:end)+baseline(129:end)+target_tension)
+% figure()
+% subplot(4,1,1)
+% stem(-X_hat)
+% subplot(4,1,2)
+% plot(Y_est(1:64)+baseline(1:64))
+% subplot(4,1,3)
+% plot(Y_est(65:128)+baseline(65:128))
+% subplot(4,1,4)
+% bar(Y_est(129:end)+baseline(129:end)+target_tension)
 
 % todo: see if subtracting radial baseline significantly changes solution.
 % It should contribute to an offset.  Or should we predict the offset
@@ -692,10 +753,11 @@ bar(Y_est(129:end)+baseline(129:end)+target_tension)
 Y_hat = trueWheel(-X_hat,Phi_s,baseline);
 load('valid_32_6.mat');
 load('ten_valid_6.mat');
-ten_valid_6t = spline(d,T,ten_valid_6d)
+ten_valid_6t = spline(d,T,ten_valid_6d);
 v32_ten = ten_valid_6t;
 v32_lat = valid_32_6(1,:)';
 v32_rad = valid_32_6(2,:)';
 Y_x6 = cat(1,v32_lat,v32_rad,v32_ten);
-plotExperiment(Y_hat,Y_x6,baseline,target_tension);
+figNum = figNum+3;
+plotExperiment(figNum, Y_hat,Y_x6,baseline,target_tension);
 

@@ -41,7 +41,7 @@
     \item Spokes patterns vary from radial to nearly tangential
     \end{itemize}
 \end{frame}
-  
+
 \begin{frame}{Bicycle Wheel Geometry}
     \begin{center}
     	\includegraphics[width=4.0in]{fig_geometry.pdf}
@@ -50,22 +50,22 @@
     {\tiny Image credit: Ford, Matthew, \emph{Reinventing the Wheel: Stress Analysis, Stability, and Optimization of the Bicycle Wheel}, PhD. Dissertation Northwestern University, December 2018.}
     \end{block}
 \end{frame}
-  
-  \begin{frame}{Wheel Truing}
-  	\begin{itemize}
-            \item Spoke tension is adjusted by changing the effective length of the spoke via a threaded nipple seated in the rim
-            \item Spoke tension consists of lateral, radial, and tangential components at the rim           
-            \item Spoke tension is adjusted such that rim is `true' in both lateral and radial dimensions, and desired mean tension is achieved
-            \item Conventional truing algorithm:
-            \begin{enumerate}
-                \item Adjust mean tension
-                \item Minimize lateral variations
-                \item Minimize radial variations
-                \item Repeat until all desired specifications are met
-            \end{enumerate}
+
+\begin{frame}{Wheel Truing}
+	\begin{itemize}
+        \item Spoke tension is adjusted by changing the effective length of the spoke via a threaded nipple seated in the rim
+        \item Spoke tension consists of lateral, radial, and tangential components at the rim           
+        \item Spoke tension is adjusted such that rim is `true' in both lateral and radial dimensions, and desired mean tension is achieved
+        \item Conventional truing algorithm:
+        \begin{enumerate}
+            \item Adjust mean tension
+            \item Minimize lateral variations
+            \item Minimize radial variations
+            \item Repeat until all desired specifications are met
+        \end{enumerate}
 	\end{itemize}
-    \end{frame}
-    
+\end{frame}
+
 \section{Apparatus}
   \begin{frame}{Apparatus}
     \begin{columns}[T] 
@@ -83,8 +83,7 @@
  \end{column}
  \end{columns}
   \end{frame}
-      
-            
+  
 \section{Method}
  
 \begin{frame}
@@ -96,7 +95,7 @@
   	\includegraphics[height=2.3in]{GainCurveTheory}\\
 	{\tiny Theoretical gain curves derived for a generic wheel using https://github.com/dashdotrobot/bike-wheel-calc}
 \end{frame}
-  
+
 \begin{frame}
     \frametitle{Measurements Using Computer Vision}
     \begin{figure}
@@ -132,7 +131,7 @@
             \item Calculate displacement measurement from angle
         \end{enumerate}
 \end{frame}
-      
+
 \begin{frame}
       \frametitle{Spoke Tension Measurements}
       \begin{figure}
@@ -199,7 +198,7 @@ Let $\bf{u_s}$=$u_s(\theta)$ be the lateral displacement vector (gain curve) for
      \end{bmatrix} 
      \end{align*}
 \end{frame}
- 
+
 \begin{frame}
 \frametitle{Measurement Prediction}
 Let $\bf d$ be a vector of spoke rotations. Let $\bf Y_b$ be the baseline wheel measurements, that is, the state of the wheel prior to the application of $\bf d$. The predicted lateral, radial, and tension measurements, $\bf \hat Y$, after applying $\bf d$ to the spokes is given by:
@@ -276,7 +275,7 @@ Predict the set of spoke rotations, $\bf \hat d$, that yield given set of measur
         \end{itemize}
      \end{column}
      \begin{column}[T]{5cm} % alternative top-align that's better for graphics
-          \includegraphics[totalheight=6.5cm]{TensionGC}
+          \includegraphics[totalheight=6cm]{TensionGC}
      \end{column}
  \end{columns}
 \end{frame}
@@ -305,18 +304,57 @@ Predict the set of spoke rotations, $\bf \hat d$, that yield given set of measur
 \frametitle{Truing Algorithm Simulation}
 \begin{figure}
         \centering
-        \begin{subfigure}[b]{0.4\textwidth}
+        \begin{subfigure}[b]{0.45\textwidth}
             \includegraphics[width=\textwidth]{detune}
         \end{subfigure}
-        \begin{subfigure}[b]{0.4\textwidth}
+        ~
+        \begin{subfigure}[b]{0.45\textwidth}
             \includegraphics[width=\textwidth]{simtrue}
         \end{subfigure}
 \end{figure}
 \begin{itemize}
-    \item 
-\end{itemize}•
-\end{frame}•
-  
+    \item Random spoke displacement vector, $\bf d$,  generated
+    \item Noise added to simulated profile
+    \item Spoke displacement vector, $\bf \hat d$, predicted
+    \item Weighting factors adjusted for performance
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Simulation Error}
+\begin{columns}[T]
+    \begin{column}[T]{5cm}
+    Weighting factors yielding satisfactory performance:
+    \begin{itemize}
+    \item $\mu_v = 0.5$
+    \item $\mu_t = 1.0e-5$ 
+    \end{itemize}
+    \end{column}
+    \begin{column}[T]{5cm} 
+        \includegraphics[width=\textwidth]{simerr}
+    \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{De-truing Experimental Results}
+\begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.45\textwidth}
+            \includegraphics[width=\textwidth]{detune_exp}
+        \end{subfigure}
+        ~
+        \begin{subfigure}[b]{0.45\textwidth}
+            \includegraphics[width=\textwidth]{detune_exp_err}
+        \end{subfigure}
+\end{figure}
+\begin{itemize}
+    \item Random spoke displacement vector, $\bf d$,  generated
+    \item Spokes adjusted using lateral feedback by $\bf d$
+    \item Final wheel measurements vs experimental prediction shown
+\end{itemize}
+\end{frame}
+
 \section{Conclusions}
 
 \begin{frame}{Conclusions}
@@ -329,4 +367,4 @@ Predict the set of spoke rotations, $\bf \hat d$, that yield given set of measur
       
 \end{frame}
 
-\end{document}
+\end{document}  
