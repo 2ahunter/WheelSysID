@@ -337,7 +337,7 @@ Predict the set of spoke rotations, $\bf \hat d$, that yield given set of measur
 \end{frame}
 
 \begin{frame}
-\frametitle{De-truing Experimental Results}
+\frametitle{Experiment 1: De-true Test Wheel}
 \begin{figure}
         \centering
         \begin{subfigure}[b]{0.45\textwidth}
@@ -349,9 +349,49 @@ Predict the set of spoke rotations, $\bf \hat d$, that yield given set of measur
         \end{subfigure}
 \end{figure}
 \begin{itemize}
-    \item Random spoke displacement vector, $\bf d$,  generated
-    \item Spokes adjusted using lateral feedback by $\bf d$
-    \item Final wheel measurements vs experimental prediction shown
+    \item Simulation spoke vector $\bf d$ applied to test manually trued test wheel
+    \item Spokes adjusted using lateral feedback
+    \item The model predicts the experimental results well; some residual structure is evident
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Experiment 2: True Test Wheel}
+\begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.45\textwidth}
+            \includegraphics[width=\textwidth]{exp2_pre_post}
+        \end{subfigure}
+        ~
+        \begin{subfigure}[b]{0.45\textwidth}
+            \includegraphics[width=\textwidth]{exp2_predict_measure}
+        \end{subfigure}
+\end{figure}
+\begin{itemize}
+    \item Apply truing algorithm to de-trued wheel (from prior experiment)
+    \item Lateral:
+    \item Radial:
+    \item Tension: 
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Experiment 3: Iterate Truing Algorithm}
+\begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.45\textwidth}
+            \includegraphics[width=\textwidth]{exp3_pre_post}
+        \end{subfigure}
+        ~
+        \begin{subfigure}[b]{0.45\textwidth}
+            \includegraphics[width=\textwidth]{exp3_predict_measure}
+        \end{subfigure}
+\end{figure}
+\begin{itemize}
+    \item Iterate truing algorithm to see if better performance possible
+    \item Lateral:
+    \item Radial:
+    \item Tension: 
 \end{itemize}
 \end{frame}
 

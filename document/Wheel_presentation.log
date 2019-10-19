@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  17 OCT 2019 16:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  18 OCT 2019 17:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1384,13 +1384,13 @@ Package pdftex.def Info: lat_rad_GC_mean.png used on input line 301.
 [18
 
  <./lat_rad_GC_raw.png (PNG copy)> <./lat_rad_GC_mean.png (PNG copy)>]
-<detune.png, id=388, 1124.2pt x 843.15pt>
+<detune.png, id=388, 562.1pt x 421.575pt>
 File: detune.png Graphic file (type png)
  <use detune.png>
 Package pdftex.def Info: detune.png used on input line 321.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
 
-<simtrue.png, id=389, 1124.2pt x 843.15pt>
+<simtrue.png, id=389, 562.1pt x 421.575pt>
 File: simtrue.png Graphic file (type png)
  <use simtrue.png>
 Package pdftex.def Info: simtrue.png used on input line 321.
@@ -1398,30 +1398,61 @@ Package pdftex.def Info: simtrue.png used on input line 321.
  [19
 
  <./detune.png (PNG copy)> <./simtrue.png (PNG copy)>]
-<simerr.png, id=405, 1124.2pt x 1254.6875pt>
+<simerr.png, id=405, 562.1pt x 652.4375pt>
 File: simerr.png Graphic file (type png)
  <use simerr.png>
 Package pdftex.def Info: simerr.png used on input line 337.
-(pdftex.def)             Requested size: 142.26378pt x 158.7692pt.
+(pdftex.def)             Requested size: 142.26378pt x 165.11995pt.
  [20
 
  <./simerr.png (PNG copy)>] <detune_exp.png, id=419, 1124.2pt x 843.15pt>
 File: detune_exp.png Graphic file (type png)
-
-<use detune_exp.png>
+ <use detune_exp.png>
 Package pdftex.def Info: detune_exp.png used on input line 356.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
- <detune_exp_err.png, id=420, 1124.2pt x 843.15pt>
-File: detune_exp_err.png Graphic file (type png)
 
-<use detune_exp_err.png>
+<detune_exp_err.png, id=420, 1124.2pt x 843.15pt>
+File: detune_exp_err.png Graphic file (type png)
+ <use detune_exp_err.png>
 Package pdftex.def Info: detune_exp_err.png used on input line 356.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
- [21
 
- <./detune_exp.png (PNG copy)> <./detune_exp_err.png (PNG copy)>] [22
+[21
 
-] [23
+ <./detune_exp.png (PNG copy)> <./detune_exp_err.png (PNG copy)>]
+<exp2_pre_post.png, id=434, 562.1pt x 421.575pt>
+File: exp2_pre_post.png Graphic file (type png)
+ <use exp2_pre_post.png>
+Package pdftex.def Info: exp2_pre_post.png used on input line 376.
+(pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
+
+<exp2_predict_measure.png, id=435, 562.1pt x 421.575pt>
+File: exp2_predict_measure.png Graphic file (type png)
+
+<use exp2_predict_measure.png>
+Package pdftex.def Info: exp2_predict_measure.png used on input line 376.
+(pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
+ [22
+
+ <./exp2_pre_post.png (PNG copy)> <./exp2_predict_measure.png (PNG copy)>] <exp
+3_pre_post.png, id=449, 562.1pt x 421.575pt>
+File: exp3_pre_post.png Graphic file (type png)
+
+<use exp3_pre_post.png>
+Package pdftex.def Info: exp3_pre_post.png used on input line 396.
+(pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
+
+<exp3_predict_measure.png, id=450, 562.1pt x 421.575pt>
+File: exp3_predict_measure.png Graphic file (type png)
+
+<use exp3_predict_measure.png>
+Package pdftex.def Info: exp3_predict_measure.png used on input line 396.
+(pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
+ [23
+
+ <./exp3_pre_post.png (PNG copy)> <./exp3_predict_measure.png (PNG copy)>] [24
+
+] [25
 
 ]
 \tf@nav=\write6
@@ -1433,19 +1464,19 @@ Package pdftex.def Info: detune_exp_err.png used on input line 356.
 \tf@snm=\write8
 \openout8 = `Wheel_presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 370.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 370.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 410.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 410.
  (./Wheel_presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 370.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 370.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 410.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 410.
 Package rerunfilecheck Info: File `Wheel_presentation.out' has not changed.
 (rerunfilecheck)             Checksum: 757BD02D749CC2FDA60FEEB8196EDC8C;310.
  ) 
 Here is how much of TeX's memory you used:
- 29828 strings out of 492995
- 595196 string characters out of 6132704
+ 29858 strings out of 492995
+ 595768 string characters out of 6132704
  623681 words of memory out of 5000000
- 32810 multiletter control sequences out of 15000+600000
+ 32832 multiletter control sequences out of 15000+600000
  35053 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,16n,60p,10392b,831s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1466,10 +1497,10 @@ nts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
 pe1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/ti
 mes/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on Wheel_presentation.pdf (23 pages, 4863069 bytes).
+Output written on Wheel_presentation.pdf (25 pages, 4906129 bytes).
 PDF statistics:
- 513 PDF objects out of 1000 (max. 8388607)
- 428 compressed objects within 5 object streams
- 54 named destinations out of 1000 (max. 500000)
- 220 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 545 PDF objects out of 1000 (max. 8388607)
+ 454 compressed objects within 5 object streams
+ 58 named destinations out of 1000 (max. 500000)
+ 240 words of extra memory for PDF output out of 10000 (max. 10000000)
 

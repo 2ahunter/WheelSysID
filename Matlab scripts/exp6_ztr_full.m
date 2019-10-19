@@ -117,7 +117,7 @@ ax.FontSize = 16;
 ylim([-250,150])
 subplot(4,1,4)
 bar(theta_s,shiftTC(flip(asym_ten),1))
-xlabel('Angle [rad]')
+xlabel('Rim Angle [rad]')
 ylabel('Tension [N]')
 ax = gca; % current axes
 ax.FontSize = 16;
@@ -246,7 +246,7 @@ hold off
 title('Radial Gain Curve Measurements')
 legend('Radial')
 ylabel('Displacement [mm]')
-xlabel('Angle [rad]')
+xlabel('Rim Angle [rad]')
 ax = gca;
 ax.FontSize=16;
     
@@ -255,14 +255,14 @@ gc_lat_mean = mean(gc_lat,2);
 gc_rad_mean = mean(gc_rad,2);
 
 figure(5)
-plot(theta_r,shiftGC(gc_lat_mean,16))
+plot(theta_r,shiftGC(gc_lat_mean,16),'LineWidth',1)
 hold on
-plot(theta_r,shiftGC(gc_rad_mean,16), 'r-')
+plot(theta_r,shiftGC(gc_rad_mean,16),'LineWidth',1)
 hold off
 title('Mean Gain Curves')
 legend('Lateral','Radial')
 ylabel('Displacement [mm]')
-xlabel('Angle [rad]')
+xlabel('Rim Angle [rad]')
 ax = gca;
 ax.FontSize=16;
 
@@ -310,6 +310,8 @@ pd = makedist('Normal','mu',0,'sigma',0.67);
 X = random(pd,[numSpokes,1]);
 X = round(X*4);
 X = X/4;
+% To test with the experimental version for the next section uncomment:
+load('X_test.mat')
 % Y is the measurement vector
 % new random lateral error vector
 pd = makedist('Normal','mu',0,'sigma',0.03);

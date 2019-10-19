@@ -52,7 +52,7 @@ figure(figNum)
 subplot(3,1,1)
 plot(theta_r,Y_lat_hat- Y_lat,'b-','LineWidth',1)
 ylabel('Lateral [mm]')
-title('Residual Error After Truing')
+title('Model Error')
 ax = gca;
 ax.FontSize = 16;
 
