@@ -99,3 +99,10 @@ ylabel('Tension [N]')
 xlabel('Rim Angle [rad]')
 ax = gca;
 ax.FontSize = 16;
+
+% print performance specs:
+fprintf('Figure %d performance\n',figNum)
+fprintf('Lateral:  mean = %1.5f; stdev = %1.5f \n',mean(Y_lat),std(Y_lat))
+fprintf('Radial:  mean = %1.5f; stdev = %1.5f\n',mean(Y_rad),std(Y_rad))
+fprintf('Tension:  mean = %4f ; stdev = %1.5f\n',mean(Y_ten),std(Y_ten))
+%%1.2f

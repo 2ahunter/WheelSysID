@@ -32,5 +32,5 @@ for spoke = 1:numSpokes
     end
 end
 
-Y = cat(1,Y_lat_hat(:,32),Y_rad_hat(:,32),Y_ten_hat(:,32));
+Y = cat(1,Y_lat_hat,Y_rad_hat,Y_ten_hat);
 end

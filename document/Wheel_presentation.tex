@@ -239,7 +239,16 @@ Predict the set of spoke rotations, $\bf \hat d$, that yield given set of measur
           \item Spoke turns are difficult to apply accurately.  Instead predict the state of the system after each spoke adjustment (element of $-\bf \hat d$)
           \item Adjust the spoke until the lateral displacement at the spoke location matches the prediction
           \item After all spokes adjusted, measure state of the system
+          \item Demonstrated graphically in the next slide...
         \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Truing Algorithm}
+\begin{figure}
+    \includegraphics[width=0.9\textwidth]{algorithm}
+\end{figure}
+{The predicted lateral profiles after each spoke adjustment during truing.  The diamonds are the lateral target points at the spoke being adjusted.  The blue curve represents the profile \emph{after} the first spoke adjustment, the green curve represents the final (trued) profile.}
 \end{frame}
 
 \section{Results}
@@ -349,7 +358,7 @@ Predict the set of spoke rotations, $\bf \hat d$, that yield given set of measur
         \end{subfigure}
 \end{figure}
 \begin{itemize}
-    \item Simulation spoke vector $\bf d$ applied to test manually trued test wheel
+    \item Simulation spoke vector $\bf d$ applied to manually-trued test wheel
     \item Spokes adjusted using lateral feedback
     \item The model predicts the experimental results well; some residual structure is evident
 \end{itemize}
@@ -367,12 +376,15 @@ Predict the set of spoke rotations, $\bf \hat d$, that yield given set of measur
             \includegraphics[width=\textwidth]{exp2_predict_measure}
         \end{subfigure}
 \end{figure}
+Post truing wheel measurements ($\mu \pm \sigma$):
 \begin{itemize}
-    \item Apply truing algorithm to de-trued wheel (from prior experiment)
-    \item Lateral:
-    \item Radial:
-    \item Tension: 
+    \item Lateral: $-0.062\pm0.091$mm
+    \item Radial: $-0.070\pm0.052$mm
+    \item Tension: $849\pm48$N
 \end{itemize}
+\begin{block}{}
+
+\end{block}
 \end{frame}
 
 \begin{frame}
@@ -387,11 +399,11 @@ Predict the set of spoke rotations, $\bf \hat d$, that yield given set of measur
             \includegraphics[width=\textwidth]{exp3_predict_measure}
         \end{subfigure}
 \end{figure}
+Post truing wheel measurements ($\mu \pm \sigma$):
 \begin{itemize}
-    \item Iterate truing algorithm to see if better performance possible
-    \item Lateral:
-    \item Radial:
-    \item Tension: 
+    \item Lateral: $-0.029\pm0.083$mm
+    \item Radial: $-0.052\pm0.032$mm
+    \item Tension: $781\pm33$N
 \end{itemize}
 \end{frame}
 

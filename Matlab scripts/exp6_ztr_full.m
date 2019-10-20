@@ -458,7 +458,7 @@ for spoke = 1:numSpokes
 end
 
 
-Y_est_x1 = trueWheel(X,Phi,base_x1);
+% Y_est_x1 = trueWheel(X,Phi,base_x1);
 % split data into components
 % Y_lat_hat = Y_est_x1(1:64);
 % Y_rad_hat = Y_est_x1(65:128);
@@ -574,7 +574,8 @@ baseline_rad = v32_rad;
 baseline_ten = v32_ten - target_tension;
 
 baseline_x2 = cat(1,baseline_lat,baseline_rad,baseline_ten);
-Y_hat = trueWheel(-X_hat,Phi,baseline_x2);
+Y_hat_x2 = trueWheel(-X_hat,Phi,baseline_x2);
+Y_hat=Y_hat_x2(:,end);
 % split data into components
 Y_lat_hat = Y_hat(1:64);
 Y_rad_hat = Y_hat(65:128);
@@ -618,7 +619,8 @@ baseline_rad = v32_rad;
 baseline_ten = v32_ten - target_tension;
 baseline_x3 = cat(1,baseline_lat,baseline_rad,baseline_ten);
 % run truing program
-Y_hat = trueWheel(-X_hat,Phi,baseline_x3);
+Y_hat_x3 = trueWheel(-X_hat,Phi,baseline_x3);
+Y_hat = Y_hat_x3(:,end);
 % split data into components
 Y_lat_hat = Y_hat(1:64);
 Y_rad_hat = Y_hat(65:128);
@@ -658,7 +660,8 @@ Y_est = Phi_s*(-X_hat);
 baseline_x4 = Y_x3;
 baseline_x4(129:end) = baseline_x4(129:end)-target_tension;
 % run truing program
-Y_hat = trueWheel(-X_hat,Phi,baseline_x4);
+Y_hat_x4 = trueWheel(-X_hat,Phi,baseline_x4);
+Y_hat = Y_hat_x4(:,end);
 
 %% Evaluate results for re-tension truing validation test 4 (new target tension)
 
@@ -700,7 +703,8 @@ baseline_rad = v32_rad;
 baseline_ten = v32_ten - target_tension;
 baseline_x5 = cat(1,baseline_lat,baseline_rad,baseline_ten);
 % run truing program
-Y_hat = trueWheel(-X_hat,Phi,baseline_x5);
+Y_hat_x5 = trueWheel(-X_hat,Phi,baseline_x5);
+Y_hat = Y_hat_x5(:,end);
 
 
 %% Evaluate results for re-tension truing validation test 5 (2nd iteration of new target tension)
@@ -752,7 +756,8 @@ Y_est = Phi_s*(-X_hat);
 % It should contribute to an offset.  Or should we predict the offset
 % change due to rim contraction and include a radial target?
 
-Y_hat = trueWheel(-X_hat,Phi_s,baseline);
+Y_hat_x6 = trueWheel(-X_hat,Phi_s,baseline);
+Y_hat = Y_hat_x6(:,end);
 load('valid_32_6.mat');
 load('ten_valid_6.mat');
 ten_valid_6t = spline(d,T,ten_valid_6d);
@@ -762,4 +767,27 @@ v32_rad = valid_32_6(2,:)';
 Y_x6 = cat(1,v32_lat,v32_rad,v32_ten);
 figNum = figNum+3;
 plotExperiment(figNum, Y_hat,Y_x6,baseline,target_tension);
+
+%% Plot Truing Algorithm example for experiment 2
+Y_lat_hat = Y_hat_x2(1:64,:)';
+Y_at_index = zeros(numSpokes, 1);
+for spoke = 1:numSpokes
+    index = 2*spoke - 1;
+    Y_at_index(spoke) = Y_lat_hat(spoke, index);
+end
+figure(26)
+hold on
+plot(theta_r,Y_lat_hat(2:31,:))
+plot(theta_r,Y_lat_hat(1,:),'b','LineWidth',3)
+plot(theta_r,Y_lat_hat(32,:),'g','LineWidth',3)
+plot(theta_s,Y_at_index, 'kd','MarkerSize',10)
+hold off
+ylabel('Lateral [mm]')
+xlabel('Rim Angle [rad]')
+title('Predicted Lateral Curves and Adjustment Points for Truing Algorithm')
+ax = gca;
+ax.FontSize = 16;
+
+    
+
 
