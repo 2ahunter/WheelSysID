@@ -234,24 +234,37 @@ Predict the set of spoke rotations, $\bf \hat d$, that yield given set of measur
 \begin{frame}
         \frametitle{Truing Algorithm}
         \begin{itemize}
-          \item $\bf \hat d$ is the best fit of spoke rotations that result in the measured state relative to the desired state
-          \item To achieve the desired state therefore apply $-\bf \hat d$ to the system
-          \item Spoke turns are difficult to apply accurately.  Instead predict the state of the system after each spoke adjustment (element of $-\bf \hat d$)
-          \item Adjust the spoke until the lateral displacement at the spoke location matches the prediction
+          \item $\bf \hat d$ is the best fit of spoke rotations that result in the measured state relative to some desired state
+          \item To achieve the desired state apply $-\bf \hat d$ to the system
+          \item Spoke turns are difficult to apply accurately.  Instead predict the state of the system after each spoke adjustment
+          \item Adjust the spoke until the \emph{lateral} displacement at the spoke location matches prediction
           \item After all spokes adjusted, measure state of the system
-          \item Demonstrated graphically in the next slide...
+          \item Demonstrated graphically in the next slides...
         \end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{Truing Algorithm}
+\begin{center}
+    \includegraphics[width=8cm]<1>{true1}
+    \includegraphics[width=8cm]<2>{true2}
+    \includegraphics[width=8cm]<3>{true3}
+    \includegraphics[width=8cm]<4>{true4}
+    \includegraphics[width=8cm]<5>{true_final}
+\end{center}
+\begin{block}{}
+    Thick curve is predicted profile, diamond is lateral target
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Truing Algorithm}
 \begin{figure}
-    \includegraphics[width=0.9\textwidth]{algorithm}
+    \includegraphics[height=5cm]{algorithm}
 \end{figure}
 \begin{itemize}
-    \item Predicted lateral profiles after each spoke adjustment
-    \item Diamonds represent  lateral targets
-    \item  Blue curve represents the profile \emph{after} first spoke adjustment
+    \item Predicted lateral profiles \emph{after} each spoke adjustment
+    \item Diamonds represent lateral targets
     \item Green represents final (trued) profile
 \end{itemize}
 \end{frame}
@@ -382,16 +395,16 @@ Predict the set of spoke rotations, $\bf \hat d$, that yield given set of measur
         \end{subfigure}
 \end{figure}
 Wheel measurements ($\mu \pm \sigma$):
+\centering
 \begin{tabular}{| l | c | c |}
     \hline
     Parameter & Inital & Final \\ \hline
-    Lateral & $0.078\pm0.820$ &$-0.062\pm 0.091$ \\ \hline 
-    Radial &$-0.067\pm0.122$& $-0.070\pm0.052$ \\ \hline 
-    Tension &$776\pm205$& $849\pm48$ \\ \hline 
+    Lateral [mm] & $0.078\pm0.820$ &$-0.062\pm 0.091$ \\ \hline 
+    Radial [mm] &$-0.067\pm0.122$& $-0.070\pm0.052$ \\ \hline 
+    Tension [N] &$776\pm205$& $849\pm48$ \\ \hline 
 \end{tabular}
 \begin{block}{}
-    \centering
-    Significant improvement in all parameters
+    Single iteration effectively trues a wheel
 \end{block}
 \end{frame}
 
@@ -408,15 +421,15 @@ Wheel measurements ($\mu \pm \sigma$):
         \end{subfigure}
 \end{figure}
 Wheel measurements ($\mu \pm \sigma$):
+\centering
 \begin{tabular}{| l | c | c |}
     \hline
     Parameter & Inital & Final \\ \hline
-    Lateral & $-0.062\pm0.091$ &$-0.029\pm 0.083$ \\ \hline 
-    Radial &$-0.070\pm0.052$& $-0.052\pm0.032$ \\ \hline 
-    Tension &$849\pm48$& $781\pm33$ \\ \hline 
+    Lateral [mm] & $-0.062\pm0.091$ &$-0.029\pm 0.083$ \\ \hline 
+    Radial [mm] &$-0.070\pm0.052$& $-0.052\pm0.032$ \\ \hline 
+    Tension [N] &$849\pm48$& $781\pm33$ \\ \hline 
 \end{tabular}
 \begin{block}{}
-    \centering
     Small but significant improvement after second iteration
 \end{block}
 \end{frame}
@@ -434,15 +447,15 @@ Wheel measurements ($\mu \pm \sigma$):
         \end{subfigure}
 \end{figure}
 Wheel measurements ($\mu \pm \sigma$):
+\centering
 \begin{tabular}{| l | c | c |}
     \hline
     Parameter & Inital & Final \\ \hline
-    Lateral & $-0.029\pm0.083$ &$0.045\pm 0.063$ \\ \hline 
-    Radial &$-0.052\pm0.032$& $-0.056\pm0.039$ \\ \hline 
-    Tension &$781\pm33$& $1126\pm76$ \\ \hline 
+    Lateral [mm] & $-0.029\pm0.083$ &$0.045\pm 0.063$ \\ \hline 
+    Radial [mm] &$-0.052\pm0.032$& $-0.056\pm0.039$ \\ \hline 
+    Tension [N] &$781\pm33$& $1126\pm76$ \\ \hline 
 \end{tabular}
 \begin{block}{}
-    \centering
     Tension exceeds target and non-uniform
 \end{block}
 \end{frame}
@@ -460,15 +473,15 @@ Wheel measurements ($\mu \pm \sigma$):
         \end{subfigure}
 \end{figure}
 Wheel measurements ($\mu \pm \sigma$):
+\centering
 \begin{tabular}{| l | c | c |}
     \hline
     Parameter & Inital & Final \\ \hline
-    Lateral & $0.045\pm0.063$ &$-0.012\pm 0.079$ \\ \hline 
-    Radial &$-0.056\pm0.039$& $-0.037\pm0.050$ \\ \hline 
-    Tension &$1126\pm76$& $914\pm63$ \\ \hline
+    Lateral [mm] & $0.045\pm0.063$ &$-0.012\pm 0.079$ \\ \hline 
+    Radial [mm] &$-0.056\pm0.039$& $-0.037\pm0.050$ \\ \hline 
+    Tension [N] &$1126\pm76$& $914\pm63$ \\ \hline 
 \end{tabular}
 \begin{block}{}
-    \centering
     Tension below target tension and non-uniform!
 \end{block}
 \end{frame}
@@ -491,8 +504,7 @@ Wheel measurements ($\mu \pm \sigma$):
 \item Simulation of a 200N tension change on perfectly true wheel highlights the model error
 \end{itemize}
 \begin{block}{}
-    \centering
-    Average tension model more accurate 
+    Change tension model to average 
 \end{block}
 \end{frame}
 
@@ -509,23 +521,54 @@ Wheel measurements ($\mu \pm \sigma$):
         \end{subfigure}
 \end{figure}
 Wheel measurements ($\mu \pm \sigma$):
+\centering
 \begin{tabular}{| l | c | c |}
     \hline
     Parameter & Inital & Final \\ \hline
-    Lateral & $-0.012\pm0.079$ &$-0.004\pm 0.098$ \\ \hline 
-    Radial &$-0.037\pm0.050$& $-0.064\pm0.042$ \\ \hline 
-    Tension &$914\pm63$& $1056\pm48$ \\ \hline
+    Lateral [mm] & $-0.012\pm0.079$ &$-0.004\pm 0.098$ \\ \hline 
+    Radial [mm] &$-0.037\pm0.050$& $-0.064\pm0.042$ \\ \hline 
+    Tension [N] &$914\pm63$& $1056\pm48$ \\ \hline 
 \end{tabular}
 \begin{block}{}
-    \centering
     Symmetric tension model improves tension uniformity
 \end{block}
 \end{frame}
 
-\section{Conclusions}
+\section{Conclusion}
 
-\begin{frame}{Conclusions}
-      
+\begin{frame}{Conclusion}
+\begin{itemize}
+    \item System identification techniques used to develop linear model of a wheel subject to spoke tension inputs
+    \item Computer vision techniques provide finer resolution from analog gauges than visual estimations
+    \item Computer vision vastly reduces time for data collection
+    \item The model can be used to predict:
+    \begin{itemize}
+        \item{Lateral displacement}
+        \item{Radial displacement}
+        \item{Tension changes}
+    \end{itemize}
+    \item Multi-object least squares approximations of these parameters used to find optimal spoke displacements for wheel truing
+    \item Wheel truing algorithm minimizes errors in tension adjustment using lateral feedback
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusion}
+\begin{itemize}
+    \item Truing performance limited by spoke tension adjustment resolution: 
+    \begin{itemize}
+        \item{Spoke twist during adjustment}
+        \item{Friction at nipple/spoke thread interface}
+    \end{itemize}
+    \item Truing performance also limited by tension measurement accuracy and resolution
+\end{itemize}
+\end{frame}
+
+\section{Future Work}
+
+\begin{frame}
+\frametitle{Future Work}
+
 \end{frame}
       
 \section{References}

@@ -102,7 +102,7 @@ ax.FontSize = 16;
 
 % print performance specs (formatted for tabular in latex:
 fprintf('Figure %d performance\n',figNum)
-fprintf('Lateral[mm] & $%1.3f\\pm%1.3f$ &',mean(base_lat),std(base_lat))
+fprintf('Lateral [mm] & $%1.3f\\pm%1.3f$ &',mean(base_lat),std(base_lat))
 fprintf('$%1.3f\\pm %1.3f$ \\\\ \\hline \n',mean(Y_lat),std(Y_lat))
 fprintf('Radial [mm] &$%1.3f\\pm%1.3f$& ',mean(base_rad),std(base_rad))
 fprintf('$%1.3f\\pm%1.3f$ \\\\ \\hline \n',mean(Y_rad),std(Y_rad))

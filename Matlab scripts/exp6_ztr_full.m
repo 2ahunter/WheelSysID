@@ -422,6 +422,8 @@ load('tension_valid.mat')
 % process tension data
 v32_ten = spline(d,T,tension_validation_d);
 
+Y_x1 = valid_32';
+
 % Baseline data
 % figure()
 % subplot(2,1,1)
@@ -770,23 +772,95 @@ plotExperiment(figNum, Y_hat,Y_x6,baseline,target_tension);
 
 %% Plot Truing Algorithm example for experiment 2
 Y_lat_hat = Y_hat_x2(1:64,:)';
+Y_lat_b=Y_x1(1:64);
 Y_at_index = zeros(numSpokes, 1);
 for spoke = 1:numSpokes
     index = 2*spoke - 1;
     Y_at_index(spoke) = Y_lat_hat(spoke, index);
 end
-figure(26)
+
+figure()
 hold on
-plot(theta_r,Y_lat_hat(2:31,:))
-plot(theta_r,Y_lat_hat(1,:),'b','LineWidth',3)
-plot(theta_r,Y_lat_hat(32,:),'g','LineWidth',3)
-plot(theta_s,Y_at_index, 'kd','MarkerSize',10)
+plot(theta_r, Y_lat_b,'LineWidth',3) 
 hold off
+xlim([0,2.03*pi])
+ylabel('Lateral [mm]')
+xlabel('Rim Angle [rad]')
+title('Truing Algorithm: Step 0')
+ax = gca;
+ax.FontSize = 16;
+
+figure()
+hold on
+plot(theta_r, Y_lat_b) 
+plot(theta_r, Y_lat_hat(1,:),'LineWidth',3)
+plot(theta_s(1),Y_at_index(1),'kd','MarkerSize',10,'LineWidth',2)
+hold off
+xlim([0,2.03*pi])
+ylabel('Lateral [mm]')
+xlabel('Rim Angle [rad]')
+title('Truing Algorithm: Step 1')
+ax = gca;
+ax.FontSize = 16;
+
+figure()
+hold on
+plot(theta_r, Y_lat_b) 
+plot(theta_r, Y_lat_hat(1,:),'LineWidth',0.5)
+plot(theta_r, Y_lat_hat(2,:),'LineWidth',3)
+plot(theta_s(2),Y_at_index(2),'kd','MarkerSize',10,'LineWidth',2)
+hold off
+xlim([0,2.03*pi])
+ylabel('Lateral [mm]')
+xlabel('Rim Angle [rad]')
+title('Truing Algorithm: Step 2')
+ax = gca;
+ax.FontSize = 16;
+
+figure()
+hold on
+plot(theta_r, Y_lat_b) 
+plot(theta_r, Y_lat_hat(1:2,:),'LineWidth',0.5)
+plot(theta_r, Y_lat_hat(3,:),'LineWidth',3)
+plot(theta_s(3),Y_at_index(3),'kd','MarkerSize',10,'LineWidth',2)
+hold off
+xlim([0,2.03*pi])
+ylabel('Lateral [mm]')
+xlabel('Rim Angle [rad]')
+title('Truing Algorithm: Step 3')
+ax = gca;
+ax.FontSize = 16;
+
+figure()
+hold on
+plot(theta_r, Y_lat_b) 
+plot(theta_r,Y_lat_hat(1:31,:))
+plot(theta_r,Y_lat_hat(32,:),'LineWidth',3)
+plot(theta_s(32),Y_at_index(32), 'kd','MarkerSize',10,'LineWidth',2)
+hold off
+xlim([0,2.03*pi])
+ylabel('Lateral [mm]')
+xlabel('Rim Angle [rad]')
+title('Truing Algorithm: Step 32')
+ax = gca;
+ax.FontSize = 16;
+
+figure()
+hold on
+plot(theta_r, Y_lat_b) 
+plot(theta_r,Y_lat_hat(1:31,:))
+plot(theta_r,Y_lat_hat(32,:),'LineWidth',3)
+plot(theta_s(1:31),Y_at_index(1:31), 'kd','MarkerSize',10)
+plot(theta_s(32),Y_at_index(32), 'kd','MarkerSize',10,'LineWidth',2)
+hold off
+xlim([0,2.03*pi])
 ylabel('Lateral [mm]')
 xlabel('Rim Angle [rad]')
 title('Predicted Lateral Curves and Adjustment Points for Truing Algorithm')
 ax = gca;
 ax.FontSize = 16;
+
+
 
 %% Simualate tension change with both tension models:
 
@@ -800,7 +874,7 @@ X_hat = Phi\Y_sim;
 % symmetric gain curves:
 X_hat_s = Phi_s\Y_sim;
 
-figure(27)
+figure()
 stem(theta_s,X_hat,'LineWidth',2)
 hold on
 stem(theta_s,X_hat_s,'LineWidth',2)
