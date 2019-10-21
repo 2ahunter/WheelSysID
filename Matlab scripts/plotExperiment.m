@@ -100,9 +100,13 @@ xlabel('Rim Angle [rad]')
 ax = gca;
 ax.FontSize = 16;
 
-% print performance specs:
+% print performance specs (formatted for tabular in latex:
 fprintf('Figure %d performance\n',figNum)
-fprintf('Lateral:  mean = %1.5f; stdev = %1.5f \n',mean(Y_lat),std(Y_lat))
-fprintf('Radial:  mean = %1.5f; stdev = %1.5f\n',mean(Y_rad),std(Y_rad))
-fprintf('Tension:  mean = %4f ; stdev = %1.5f\n',mean(Y_ten),std(Y_ten))
+fprintf('Lateral[mm] & $%1.3f\\pm%1.3f$ &',mean(base_lat),std(base_lat))
+fprintf('$%1.3f\\pm %1.3f$ \\\\ \\hline \n',mean(Y_lat),std(Y_lat))
+fprintf('Radial [mm] &$%1.3f\\pm%1.3f$& ',mean(base_rad),std(base_rad))
+fprintf('$%1.3f\\pm%1.3f$ \\\\ \\hline \n',mean(Y_rad),std(Y_rad))
+fprintf('Tension [N] &$%1.0f\\pm%1.0f$& ',mean(base_ten+target_ten),std(base_ten))
+fprintf('$%1.0f\\pm%1.0f$ \\\\ \\hline \n',mean(Y_ten),std(Y_ten))
+
 %%1.2f

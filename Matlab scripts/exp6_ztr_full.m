@@ -788,6 +788,33 @@ title('Predicted Lateral Curves and Adjustment Points for Truing Algorithm')
 ax = gca;
 ax.FontSize = 16;
 
+%% Simualate tension change with both tension models:
+
+Y_lat_sim = zeros(64,1);
+Y_rad_sim = zeros(64,1);
+Y_ten_sim = -200 * ones(32,1);
+Y_sim = cat(1,Y_lat_sim,Y_rad_sim,Y_ten_sim);
+
+%four fold tension gain curves:
+X_hat = Phi\Y_sim;
+% symmetric gain curves:
+X_hat_s = Phi_s\Y_sim;
+
+figure(27)
+stem(theta_s,X_hat,'LineWidth',2)
+hold on
+stem(theta_s,X_hat_s,'LineWidth',2)
+hold off
+legend('full model', 'average model')
+xlabel('Rim angle')
+ylabel('Spoke Adjustment [revs]')
+title('Simulation of Tension Models')
+ylim([0.4,0.9])
+xlim([0,2*pi])
+ax = gca;
+ax.FontSize = 16;
+
+
     
 
 
