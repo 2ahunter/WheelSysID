@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  21 OCT 2019 16:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  22 OCT 2019 11:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1425,11 +1425,11 @@ File: lat_rad_GC_raw.png Graphic file (type png)
 Package pdftex.def Info: lat_rad_GC_raw.png used on input line 328.
 (pdftex.def)             Requested size: 138.10452pt x 103.56659pt.
 
-<lat_rad_GC_mean.png, id=489, 1124.2pt x 843.15pt>
+<lat_rad_GC_mean.png, id=489, 562.1pt x 421.575pt>
 File: lat_rad_GC_mean.png Graphic file (type png)
  <use lat_rad_GC_mean.png>
 Package pdftex.def Info: lat_rad_GC_mean.png used on input line 328.
-(pdftex.def)             Requested size: 138.10452pt x 103.56659pt.
+(pdftex.def)             Requested size: 138.10452pt x 103.57303pt.
 
 [24
 
@@ -1448,23 +1448,30 @@ Package pdftex.def Info: simtrue.png used on input line 348.
  [25
 
  <./detune.png (PNG copy)> <./simtrue.png (PNG copy)>]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 368.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 368.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 368.
+
 <simerr.png, id=522, 562.1pt x 652.4375pt>
 File: simerr.png Graphic file (type png)
  <use simerr.png>
-Package pdftex.def Info: simerr.png used on input line 364.
+Package pdftex.def Info: simerr.png used on input line 368.
 (pdftex.def)             Requested size: 142.26378pt x 165.11995pt.
  [26
 
  <./simerr.png (PNG copy)>] <detune_exp.png, id=537, 1124.2pt x 843.15pt>
 File: detune_exp.png Graphic file (type png)
  <use detune_exp.png>
-Package pdftex.def Info: detune_exp.png used on input line 383.
+Package pdftex.def Info: detune_exp.png used on input line 387.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
 
 <detune_exp_err.png, id=538, 1124.2pt x 843.15pt>
 File: detune_exp_err.png Graphic file (type png)
  <use detune_exp_err.png>
-Package pdftex.def Info: detune_exp_err.png used on input line 383.
+Package pdftex.def Info: detune_exp_err.png used on input line 387.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
 
 [27
@@ -1473,14 +1480,14 @@ Package pdftex.def Info: detune_exp_err.png used on input line 383.
 <exp2_pre_post.png, id=553, 562.1pt x 421.575pt>
 File: exp2_pre_post.png Graphic file (type png)
  <use exp2_pre_post.png>
-Package pdftex.def Info: exp2_pre_post.png used on input line 409.
+Package pdftex.def Info: exp2_pre_post.png used on input line 413.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
 
 <exp2_predict_measure.png, id=554, 562.1pt x 421.575pt>
 File: exp2_predict_measure.png Graphic file (type png)
 
 <use exp2_predict_measure.png>
-Package pdftex.def Info: exp2_predict_measure.png used on input line 409.
+Package pdftex.def Info: exp2_predict_measure.png used on input line 413.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
  [28
 
@@ -1489,14 +1496,14 @@ Package pdftex.def Info: exp2_predict_measure.png used on input line 409.
 File: exp3_pre_post.png Graphic file (type png)
 
 <use exp3_pre_post.png>
-Package pdftex.def Info: exp3_pre_post.png used on input line 435.
+Package pdftex.def Info: exp3_pre_post.png used on input line 439.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
 
 <exp3_predict_measure.png, id=570, 562.1pt x 421.575pt>
 File: exp3_predict_measure.png Graphic file (type png)
 
 <use exp3_predict_measure.png>
-Package pdftex.def Info: exp3_predict_measure.png used on input line 435.
+Package pdftex.def Info: exp3_predict_measure.png used on input line 439.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
  [29
 
@@ -1505,14 +1512,14 @@ Package pdftex.def Info: exp3_predict_measure.png used on input line 435.
 File: exp4_pre_post.png Graphic file (type png)
 
 <use exp4_pre_post.png>
-Package pdftex.def Info: exp4_pre_post.png used on input line 461.
+Package pdftex.def Info: exp4_pre_post.png used on input line 465.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
 
 <exp4_predict_measure.png, id=586, 562.1pt x 421.575pt>
 File: exp4_predict_measure.png Graphic file (type png)
 
 <use exp4_predict_measure.png>
-Package pdftex.def Info: exp4_predict_measure.png used on input line 461.
+Package pdftex.def Info: exp4_predict_measure.png used on input line 465.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
  [30
 
@@ -1521,14 +1528,14 @@ Package pdftex.def Info: exp4_predict_measure.png used on input line 461.
 File: exp5_pre_post.png Graphic file (type png)
 
 <use exp5_pre_post.png>
-Package pdftex.def Info: exp5_pre_post.png used on input line 487.
+Package pdftex.def Info: exp5_pre_post.png used on input line 491.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
 
 <exp5_predict_measure.png, id=602, 562.1pt x 421.575pt>
 File: exp5_predict_measure.png Graphic file (type png)
 
 <use exp5_predict_measure.png>
-Package pdftex.def Info: exp5_predict_measure.png used on input line 487.
+Package pdftex.def Info: exp5_predict_measure.png used on input line 491.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
  [31
 
@@ -1536,13 +1543,13 @@ Package pdftex.def Info: exp5_predict_measure.png used on input line 487.
 <exp4_model_err.png, id=618, 562.1pt x 421.575pt>
 File: exp4_model_err.png Graphic file (type png)
  <use exp4_model_err.png>
-Package pdftex.def Info: exp4_model_err.png used on input line 509.
+Package pdftex.def Info: exp4_model_err.png used on input line 513.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
 
 <sim_ten_mdls.png, id=619, 562.1pt x 421.575pt>
 File: sim_ten_mdls.png Graphic file (type png)
  <use sim_ten_mdls.png>
-Package pdftex.def Info: sim_ten_mdls.png used on input line 509.
+Package pdftex.def Info: sim_ten_mdls.png used on input line 513.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
  [32
 
@@ -1550,14 +1557,14 @@ Package pdftex.def Info: sim_ten_mdls.png used on input line 509.
 <exp6_pre_post.png, id=634, 562.1pt x 421.575pt>
 File: exp6_pre_post.png Graphic file (type png)
  <use exp6_pre_post.png>
-Package pdftex.def Info: exp6_pre_post.png used on input line 535.
+Package pdftex.def Info: exp6_pre_post.png used on input line 539.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
 
 <exp6_predict_measure.png, id=635, 562.1pt x 421.575pt>
 File: exp6_predict_measure.png Graphic file (type png)
 
 <use exp6_predict_measure.png>
-Package pdftex.def Info: exp6_predict_measure.png used on input line 535.
+Package pdftex.def Info: exp6_predict_measure.png used on input line 539.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
  [33
 
@@ -1565,7 +1572,11 @@ Package pdftex.def Info: exp6_predict_measure.png used on input line 535.
 
 ] [35
 
-] [36
+]
+Missing character: There is no â in font phvr7t!
+Missing character: There is no € in font phvr7t!
+Missing character: There is no ¢ in font phvr7t!
+ [36
 
 ] [37
 
@@ -1579,20 +1590,20 @@ Package pdftex.def Info: exp6_predict_measure.png used on input line 535.
 \tf@snm=\write8
 \openout8 = `Wheel_presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 580.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 580.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 595.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 595.
  (./Wheel_presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 580.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 580.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 595.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 595.
 Package rerunfilecheck Info: File `Wheel_presentation.out' has not changed.
-(rerunfilecheck)             Checksum: 0153B1A40F27EA79F150150C17D65A8E;355.
+(rerunfilecheck)             Checksum: 2912B816E2CDBB9E965AB5F4E9ED86A0;356.
  ) 
 Here is how much of TeX's memory you used:
- 29976 strings out of 492995
- 597579 string characters out of 6132704
+ 30006 strings out of 492995
+ 597937 string characters out of 6132704
  624681 words of memory out of 5000000
- 32910 multiletter control sequences out of 15000+600000
- 36939 words of font info for 70 fonts, out of 8000000 for 9000
+ 32935 multiletter control sequences out of 15000+600000
+ 48570 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,16n,60p,10392b,831s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -1612,7 +1623,7 @@ nts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
 pe1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/ti
 mes/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on Wheel_presentation.pdf (37 pages, 5866525 bytes).
+Output written on Wheel_presentation.pdf (37 pages, 5839669 bytes).
 PDF statistics:
  768 PDF objects out of 1000 (max. 8388607)
  649 compressed objects within 7 object streams

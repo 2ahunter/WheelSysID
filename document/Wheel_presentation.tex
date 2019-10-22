@@ -298,7 +298,7 @@ Predict the set of spoke rotations, $\bf \hat d$, that yield given set of measur
             \item Non-drive side trailing
             \item Drive side trailing
 	\end{itemize}
-	\item Tension meter discretization leads to bias so average curve used for all spokes
+	\item Tension meter model biased (experiments 4,5) $\implies$ final model changed to average of all patterns
         \end{itemize}
      \end{column}
      \begin{column}[T]{5cm} % alternative top-align that's better for graphics
@@ -351,10 +351,14 @@ Predict the set of spoke rotations, $\bf \hat d$, that yield given set of measur
 \frametitle{Simulation Error}
 \begin{columns}[T]
     \begin{column}[T]{5cm}
-    Weighting factors yielding satisfactory performance:
     \begin{itemize}
-    \item $\mu_v = 0.5$
-    \item $\mu_t = 1.0e-5$ 
+    \item Lateral displacement is more sensitive than radial with same spec
+    \item Units comparison of tension to lateral  $\implies \mu_t < \frac{0.6}{300}$
+    \item Weighting factors yielding satisfactory performance:
+        \begin{itemize}
+        \item $\mu_v = 0.5$
+        \item $\mu_t = 1.0e-5$ 
+        \end{itemize}
     \end{itemize}
     \end{column}
     \begin{column}[T]{5cm} 
@@ -509,7 +513,7 @@ Wheel measurements ($\mu \pm \sigma$):
 \end{frame}
 
 \begin{frame}
-\frametitle{Experiment 6: Symmetric Tension Model}
+\frametitle{Experiment 6: Average Tension Model}
 \begin{figure}
         \centering
         \begin{subfigure}[b]{0.45\textwidth}
@@ -534,9 +538,9 @@ Wheel measurements ($\mu \pm \sigma$):
 \end{block}
 \end{frame}
 
-\section{Conclusion}
+\section{Conclusions}
 
-\begin{frame}{Conclusion}
+\begin{frame}{Conclusions}
 \begin{itemize}
     \item System identification techniques used to develop linear model of a wheel subject to spoke tension inputs
     \item Computer vision techniques provide finer resolution from analog gauges than visual estimations
@@ -553,7 +557,7 @@ Wheel measurements ($\mu \pm \sigma$):
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Conclusion}
+\begin{frame}{Conclusions}
 \begin{itemize}
     \item Truing performance limited by spoke tension adjustment resolution: 
     \begin{itemize}
@@ -561,6 +565,9 @@ Wheel measurements ($\mu \pm \sigma$):
         \item{Friction at nipple/spoke thread interface}
     \end{itemize}
     \item Truing performance also limited by tension measurement accuracy and resolution
+    \begin{itemize}
+        \item Small effects due to spoke patterns not captured by model
+    \end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -568,13 +575,21 @@ Wheel measurements ($\mu \pm \sigma$):
 
 \begin{frame}
 \frametitle{Future Work}
-
+\begin{itemize}
+\item Comparison with theoretical models 
+\item Extension of model to include tension offset (side to side)
+\item Improved resolution/accuracy tensiometer
+\item Mechatronic implementation 
+\end{itemize}•
 \end{frame}
       
 \section{References}
 
 \begin{frame}{References}
-      
+\begin{itemize}
+    \item Ford, Matthew, \emph{Reinventing the Wheel: Stress Analysis, Stability, and Optimization of the Bicycle Wheel}, PhD. Dissertation Northwestern University, December 2018
+    \item Brandt, Jobst, \emph{The Bicycle Wheel}, Avocet, 1993
+\end{itemize}
 \end{frame}
 
 \end{document}  
