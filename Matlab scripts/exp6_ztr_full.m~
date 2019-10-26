@@ -904,7 +904,7 @@ mu1 = sqrt(0.5);
 % tension to lateral exchange rate
 mu2 = sqrt(1.0e-5);
 % Regularization exchange rate:
-mu3 = sqrt(0.0005);
+mu3 = sqrt(0.5);
 % Regularization phi:
 Phi_rw = cat(1, IM_lat, mu1*IM_rad,mu3*eye(32));
 % Regularization phi:
@@ -932,12 +932,12 @@ Y_ten = IM_mean_ten*X + random(pd,[numSpokes,1]);
 Y_w = cat(1,YLat,mu1*YRad,mu2*Y_ten);
 Y_rw = cat(1,YLat,mu1*YRad,zeros(32,1));
 % Predicted spoke turns using symmetric tension gain curve
-X_hat_s = Phi_sw\Y_w;
-% Predicted spoke turns using regularization
+X_hat_s = Phi_sw\Y_sw;
+% Predicted spoke turns 
 X_hat_r = Phi_rw\Y_rw;
 
 % plot experiment
-figure()
+figure(6)
 subplot(3,1,1)
 plot(theta_r,YLat,'LineWidth',1)
 title('Predicted Profiles for Random De-Truing')
@@ -956,47 +956,46 @@ xlabel('Angle [rad]')
 ax = gca;
 ax.FontSize=16;
 % compare prediction versus actual
-figure()
+figure(7)
 hold on
 stem(X,'LineWidth',1)
-stem(X_hat_s,'LineWidth',1)
-stem(X_hat_r,'LineWidth',1)
+stem(X_hat,'LineWidth',1)
 hold off
 title('Simulated Truing Solution')
-legend('actual','predicted','regularized')
+legend('actual','predicted')
 ylabel('Adjustment Error [revs]')
 xlabel('Spoke Number')
 ax = gca;
 ax.FontSize=16;
 
 % Evaluate final result
-figure()
+figure(8)
 subplot(4,1,1)
-plot(theta_r,IM_lat*X_hat_s-YLat)
+plot(theta_r,IM_lat*X_hat-YLat)
 title('Lateral Error')
 ylabel('Lateral [mm]')
 ax = gca;
 ax.FontSize=16;
 subplot(4,1,2)
-plot(theta_r,IM_rad*X_hat_s-YRad)
+plot(theta_r,IM_rad*X_hat-YRad)
 title('Radial Error')
 ylabel('Radial [mm]')
 ax = gca;
 ax.FontSize=16;
 subplot(4,1,3)
-bar(theta_s,IM_ten*X_hat_s-Y_ten)
+bar(theta_s,IM_ten*X_hat-Y_ten)
 title('Tension Error')
 ylabel('Tension [N]')
 ax = gca;
 ax.FontSize=16;
 subplot(4,1,4)
-stem(theta_s, X_hat_s - X)
+stem(theta_s, X_hat - X)
 title('Spoke Adjustment Error')
 ylabel('Error [revs]')
 xlabel('Angle [rad]')
 ax = gca;
 ax.FontSize=16;
 
-
+    
 
 
