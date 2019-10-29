@@ -291,11 +291,9 @@ end
 
 %% Wheel Truing Simulation 
 % radial to lateral exchange rate
-mu1 = sqrt(0.5);
+mu1 = sqrt(0.25);
 % tension to lateral exchange rate
 mu2 = sqrt(1.0e-5);
-% Regularization exchange rate:
-mu3 = sqrt(0.5);
 % weighted Influence Matrices
 Phi_w = cat(1,IM_lat,mu1*IM_rad,mu2*IM_ten);
 % weighted IM using symmetric tension gain curves
@@ -318,7 +316,7 @@ X = random(pd,[numSpokes,1]);
 X = round(X*4);
 X = X/4;
 % To test with the experimental version for the next section uncomment:
-load('X_test.mat')
+% load('X_test.mat')
 % Y is the measurement vector
 % new random lateral error vector
 pd = makedist('Normal','mu',0,'sigma',0.03);
@@ -330,9 +328,7 @@ YRad = IM_rad*X + random(pd,[2*numSpokes,1]);
 pd = makedist('Normal','mu',0,'sigma',20);
 Y_ten = IM_ten*X + random(pd,[numSpokes,1]);
 Y_w = cat(1,YLat,mu1*YRad,mu2*Y_ten);
-Y_rw = cat(1,YLat,mu1*YRad,zeros(32,1));
 X_hat = Phi_w\Y_w;
-X_hat = Phi_rw\Y_rw;
 
 % plot experiment
 figure(6)
