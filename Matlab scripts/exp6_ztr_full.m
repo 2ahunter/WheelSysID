@@ -298,15 +298,11 @@ mu2 = sqrt(1.0e-5);
 Phi_w = cat(1,IM_lat,mu1*IM_rad,mu2*IM_ten);
 % weighted IM using symmetric tension gain curves
 Phi_sw = cat(1, IM_lat, mu1*IM_rad,mu2*IM_mean_ten);
-% Regularization phi:
-Phi_rw = cat(1, IM_lat, mu1*IM_rad,mu3*eye(32));
 % unweighted IM
 Phi = cat(1,IM_lat,IM_rad,IM_ten);
 % unweighted IM with symmetric tension curves
 Phi_s = cat(1,IM_lat,IM_rad,IM_mean_ten);
-% Regularized unweighted phi:
-% Regularization phi:
-Phi_r = cat(1, IM_lat,IM_rad,eye(32));
+
 
 % X is the adjustment vector
 X = zeros(numSpokes,1);
@@ -326,9 +322,9 @@ pd = makedist('Normal','mu',0,'sigma',0.01);
 YRad = IM_rad*X + random(pd,[2*numSpokes,1]);
 % new random tension error vector
 pd = makedist('Normal','mu',0,'sigma',20);
-Y_ten = IM_ten*X + random(pd,[numSpokes,1]);
+Y_ten = IM_mean_ten*X + random(pd,[numSpokes,1]);
 Y_w = cat(1,YLat,mu1*YRad,mu2*Y_ten);
-X_hat = Phi_w\Y_w;
+X_hat = Phi_sw\Y_w;
 
 % plot experiment
 figure(6)
