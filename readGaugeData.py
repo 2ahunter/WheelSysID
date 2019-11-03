@@ -21,25 +21,25 @@ def ReadMultipleImages(dir,cond):
     return images
 
 # Load images in grayscale
-images = ReadMultipleImages('./sample_data/*.JPG','IMG')
+images = ReadMultipleImages('../data/ztr_final/val_32_7/*.JPG','IMG')
 
 # Load the reference image
-ref_img = cv2.imread('./sample_data/calibration/back.JPG',0)
+ref_img = cv2.imread('../data/ztr_final/val_32_7/cal/ref.JPG',0)
 im = cv2.resize(ref_img, (0,0), fx=0.3, fy=0.3) 
 # cv2.imwrite('ref.png',im)
 
 # Load the zero angle calibration image
-zero_img = cv2.imread('./sample_data/calibration/zero.JPG',0)
+zero_img = cv2.imread('../data/ztr_final/val_32_7/cal/zero.JPG',0)
 im = cv2.resize(zero_img, (0,0), fx=0.3, fy=0.3) 
 # cv2.imwrite('zero.png',im)
 
 # Circle geometry and gauge calibration data
 circles = np.zeros((2,3),dtype=np.uint16)
 # gauge centers and radius--determine from the reference image manually
-c1_x = 1697
-c1_y = 1259
-c2_x = 1961
-c2_y = 3187
+c1_x = 1655
+c1_y = 1312
+c2_x = 1946
+c2_y = 3216
 c_r = 755
 
 c1 = np.array([c1_x,c1_y])
@@ -78,7 +78,7 @@ img2 = cv2.resize(delta_img, (0,0), fx=0.3, fy=0.3)
 #cv2.imwrite('delta_img.png',img2)
 
 # Evaluate threshold values
-thresh = 70 
+thresh = 80 
 maxval=255
 ret, thresholded = cv2.threshold(delta_img, thresh, maxval, cv2.THRESH_BINARY);
 
@@ -208,4 +208,4 @@ plt.plot(Radial,label = 'radial')
 plt.ylabel('Displacement [mm]')
 plt.legend()
 data = [Lateral,Radial]
-sio.savemat('./sample_data/CV_valid.mat',mdict={'CV_valid':data})
+sio.savemat('./Matlab scripts/valid_32_7.mat',mdict={'valid_32_7':data})

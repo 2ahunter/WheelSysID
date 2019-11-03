@@ -1053,8 +1053,9 @@ v32_rad = valid_32_7(2,:)';
 Y_x7 = cat(1,v32_lat,v32_rad,v32_ten);
 Y_pre = Y_x6;
 Y_post = Y_x7;
-save('exp7.mat','Y_pre','Y_post','X_adj','target_tension')
-plotExperiment(Y_hat,Y_post,Y_pre,target_tension);
+save('exp7.mat','Y
+
+plotExperiment(Y_hat,Y_x7,baseline,target_tension);
 
 
 
