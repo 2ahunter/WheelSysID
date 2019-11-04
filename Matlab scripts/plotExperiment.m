@@ -1,5 +1,5 @@
-function y = plotExperiment(Y_hat, Y, base, target_ten)
-% Input:  prediction, measurement, baseline, target tension.  
+function y = plotExperiment(Y_hat, Y, base, delta_ten)
+% Input:  prediction, measurement, baseline, change in tension.  
 % returns 1: 
 y=1;
 theta_s = pi/32:pi/16:2*pi;
@@ -40,7 +40,7 @@ legend('Predict','Measure')
 ax = gca;
 ax.FontSize = 16;
 subplot(3,1,3)
-data = cat(2,Y_ten_hat+target_ten,Y_ten);
+data = cat(2,Y_ten_hat+delta_ten,Y_ten);
 bar(theta_s,data)
 ylabel('Tension [N]')
 xlabel('Rim Angle [rad]')
@@ -63,7 +63,7 @@ ax = gca;
 ax.FontSize = 16;
 
 subplot(3,1,3)
-bar(theta_s,Y_ten_hat - (Y_ten-target_ten))
+bar(theta_s,Y_ten_hat - (Y_ten-delta_ten))
 ylabel('Tension [N]')
 xlabel('Rim Angle [rad]')
 ax = gca;

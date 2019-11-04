@@ -433,6 +433,7 @@ load('tension_valid.mat')
 % process tension data
 v32_ten = spline(d,T,tension_validation_d);
 % save experiment data
+X_adj = X;
 Y_pre = base_x1;
 Yx1 = cat(1,v32_lat,v32_rad,v32_ten);
 Y_post = Yx1;
@@ -1041,7 +1042,7 @@ target_tension = mean(baseline(129:end));
 baseline(129:end) = baseline(129:end) - target_tension;
 
 X = ones(32,1); % one rotation
-X_adj = -X;
+X_adj = X;
 Y_hat_x7 = trueWheel(X,Phi_s,baseline);
 Y_hat = Y_hat_x7(:,end);
 load('ten_valid_7.mat')
