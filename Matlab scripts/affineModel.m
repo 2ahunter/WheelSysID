@@ -11,8 +11,6 @@ end
     
 close all
 
-
-
 %% 
 x = (-1:0.1:1)';
 
@@ -22,8 +20,6 @@ c = A\DT;
 A_tilde = x;
 DT_hat = A_tilde*c;
 
-
-
 figure()
 plot(x,DT_hat)
 hold on
@@ -32,7 +28,6 @@ hold off
 
 fprintf('Best fit constant = %1.5f \n', c(1))
 
-%% 
 
 
 

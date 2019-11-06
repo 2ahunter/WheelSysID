@@ -1,4 +1,4 @@
-function [delta_X,delta_tension] = runExperiment(experiment)
+function [delta_X,delta_tension] = evalExperiment(experiment)
 % runExperiment.m:  Load baseline and displaced wheel data for a given
 % experiment and evaluate against the model
 %clear all
@@ -26,9 +26,9 @@ numSpokes = size(X_adj,1);
 % mean tension change for mean spoke adjustment (found from affineModel.m:
 c = -472.95911;
 
-Phi_lat = Phi(1:2*numSpokes);
-Phi_rad = Phi(2*numSpokes+1:4*numSpokes);
-Phi_ten = Phi(4*numSpokes+1:end);
+Phi_lat = Phi(1:2*numSpokes,:);
+Phi_rad = Phi(2*numSpokes+1:4*numSpokes,:);
+Phi_ten = Phi(4*numSpokes+1:end,:);
 
 Y_lat_pre = Y_pre(1:2*numSpokes);
 Y_rad_pre = Y_pre(2*numSpokes+1:4*numSpokes);
@@ -40,16 +40,19 @@ Y_ten_post = Y_post(4*numSpokes+1:end);
 
 delta_tension = mean(Y_ten_post - Y_ten_pre);
 delta_X = mean(X_adj);
+delta_T = c*delta_X;
 
-Y_lat_hat = Phi_lat*X_adj; 
-Y_rad_hat = Y_hat(2*numSpokes+1:4*numSpokes);
-Y_ten_hat = Y_hat(4*numSpokes+1:end);
+Y_lat_hat = Phi_lat*X_adj + Y_lat_pre;
+Y_rad_hat = Phi_rad*X_adj +Y_rad_pre;
+Y_ten_hat = Phi_ten * (X_adj-delta_X) + delta_T+Y_ten_pre;
 
 Y_lat_err = sum((Y_lat_post - Y_lat_hat).^2);
 Y_rad_err = sum((Y_rad_post - Y_rad_hat).^2);
 Y_ten_err = sum((Y_ten_post - Y_ten_hat).^2);
 
-plotExperiment(Y_hat, Y_post, Y_pre, delta_tension)
+Y_hat = cat(1,Y_lat_hat,Y_rad_hat,Y_ten_hat);
+
+plotExperiment(Y_hat, Y_post, Y_pre, 0)
 fprintf('Model sum-squared error:\n')
 fprintf('Lateral: %1.3f \n',Y_lat_err)
 fprintf('Radial: %1.4f \n',Y_rad_err)

@@ -1,61 +1,61 @@
-function [delta_X,delta_tension] = runExperiment(experiment)
 % runExperiment.m:  Load baseline and displaced wheel data for a given
 % experiment and evaluate against the model
 %clear all
 close all
+% Constants
+% mean tension change for mean spoke adjustment (found from affineModel.m:
+c = -472.95911;
+numSpokes = 32;
+% Set target tension
+target_tension = 1000;
+
+% load tension conversion table:
+load('WFCompCal.mat');
+d = WF_cal_18(:,1);
+T = WF_cal_18(:,2);
 
 % Load the model--includes both symmetric and four-fold tension curves and
 % assumed weighting factors mu1 and mu2
 load('gainCurves.mat')
-% Load experimental data.  This includes the baseline (pre-adjustment)
-% data, the displaced data (post adjustment), and the adjustment vector, X,
-% that was applied during the truing operation.
-load(experiment)
 
-% Generate a model that evaluates the variation of tension away from the
-% mean tension.  i.e., Y_hat_tension = Phi*(X - mean(X)) + c0*mean(X). c0
-% will be fit from experiments.
-% choose which gain curves, either Phi_s (mean tension gain curves) or Phi
-% (four-fold tension gain curves).
+% Load basline data. 
+load('valid_32_7.mat')
+load('ten_valid_7.mat')
 
-%Phi = Phi_s
-% Note that sumsq error of tension is roughly 2x when using symmetric
-% tension gain curves and the average tension is unchanged
+% convert tension displacements to tension units:
+ten_valid_7t = spline(d,T,ten_valid_7);
 
-numSpokes = size(X_adj,1);
-% mean tension change for mean spoke adjustment (found from affineModel.m:
-c = -472.95911;
+% baseline data:
+Y_lat_pre = valid_32_7(1,:)';
+Y_rad_pre = valid_32_7(2,:);
+Y_ten_pre = ten_valid_7t - mean(ten_valid_7t);
+% put in a single vector for later use:
+baseline = cat(1,Y_lat_pre,Y_rad_pre,Y_ten_pre);
 
+% separate state adjustment model into submatrices
 Phi_lat = Phi(1:2*numSpokes,:);
 Phi_rad = Phi(2*numSpokes+1:4*numSpokes,:);
 Phi_ten = Phi(4*numSpokes+1:end,:);
 
-Y_lat_pre = Y_pre(1:2*numSpokes);
-Y_rad_pre = Y_pre(2*numSpokes+1:4*numSpokes);
-Y_ten_pre = Y_pre(4*numSpokes+1:end);
+% generate weighted vector measurements
+Y_w = cat(1,Y_lat_pre,Y_rad_pre*mu1,Y_ten_pre*mu2);
 
-Y_lat_post = Y_post(1:2*numSpokes);
-Y_rad_post = Y_post(2*numSpokes+1:4*numSpokes);
-Y_ten_post = Y_post(4*numSpokes+1:end);
+%generate weighted matrix model Phi:
+Phi_w = cat(1, Phi_lat,Phi_rad*mu1,Phi_ten*mu2);
+
+%calculate weighted least square approximation to spoke vector:
+d_hat = Phi_w\Y_w;
+% invert sign to get truing vector
+d = -d_hat;
 
 delta_tension = mean(Y_ten_post - Y_ten_pre);
-delta_X = mean(X_adj);
-delta_T = c*delta_X
+delta_d = mean(d);
+delta_T = c*delta_d;
 
-Y_lat_hat = Phi_lat*X_adj + Y_lat_pre;
-Y_rad_hat = Phi_rad*X_adj +Y_rad_pre;
-Y_ten_hat = Phi_ten * (X_adj-delta_X) + delta_T+Y_ten_pre
+Y_lat_hat = Phi_lat*d + Y_lat_pre;
+Y_rad_hat = Phi_rad*d + Y_rad_pre;
+Y_ten_hat = Phi_ten * (d-delta_d) + delta_T+Y_ten_pre;
 
-Y_lat_err = sum((Y_lat_post - Y_lat_hat).^2);
-Y_rad_err = sum((Y_rad_post - Y_rad_hat).^2);
-Y_ten_err = sum((Y_ten_post - Y_ten_hat).^2);
-
-Y_hat = cat(1,Y_lat_hat,Y_rad_hat,Y_ten_hat);
-
-plotExperiment(Y_hat, Y_post, Y_pre, 0)
-fprintf('Model sum-squared error:\n')
-fprintf('Lateral: %1.3f \n',Y_lat_err)
-fprintf('Radial: %1.4f \n',Y_rad_err)
-fprintf('Tension: %1.0f \n',Y_ten_err)
-fprintf('Mean adjustment:  %1.3f \n', delta_X)
-fprintf('Mean tension change:  %1.0f \n', delta_tension)
+%we won't use the predicted data returned by trueWheel, but we want to
+%generate the truing recipe
+Y_hat_2 = trueWheel(d,Phi,baseline);

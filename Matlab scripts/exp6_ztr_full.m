@@ -97,6 +97,14 @@ T_mean = mean(cat(2,NDL_mean,DL_mean,NDT_mean,DT_mean),2);
 
 asym_ten = (NDL_mean + shiftTC(flip(DT_mean),1))/2;
 sym_ten = (DL_mean + shiftTC(flip(NDT_mean),1))/2;
+
+c = -473;  % measured average tension change for all spokes loosened by 1 turn
+offset_asym = c/numSpokes - mean(NDL_mean);
+offset_sym = c/numSpokes - mean(DL_mean);
+% adjust for bias
+asym_ten_off = (NDL_mean + shiftTC(flip(DT_mean),1))/2 + offset_asym;
+sym_ten_off = (DL_mean + shiftTC(flip(NDT_mean),1))/2 + offset_sym;
+
 theta_s = pi/32:pi/16:2*pi;
 % figure(1)
 % subplot(4,1,1)
@@ -128,6 +136,7 @@ theta_s = pi/32:pi/16:2*pi;
 
 % Generate influence matrix gain curves for each spoke:
 IM_ten = zeros(numSpokes,numSpokes);
+IM_ten_off = zeros(numSpokes,numSpokes);
 IM_mean_ten = IM_ten;
 for spoke = 1:numSpokes
     s = rem(spoke,4);
@@ -137,24 +146,24 @@ for spoke = 1:numSpokes
     % discretization!
     if s==1
         IM_ten(:,spoke) = shiftTC(asym_ten, 15+spoke);
+        IM_ten_off(:,spoke) = shiftTC(asym_ten_off, 15+spoke);
     elseif s==2
         IM_ten(:,spoke) = shiftTC(sym_ten, 15+spoke);
+        IM_ten_off(:,spoke) = shiftTC(sym_ten_off, 15+spoke);
     elseif s==3
         IM_ten(:,spoke) = shiftTC(flip(sym_ten), 15+spoke+1);
+        IM_ten_off(:,spoke) = shiftTC(flip(sym_ten_off), 15+spoke+1);
     else
         IM_ten(:,spoke) = shiftTC(flip(asym_ten), 15+spoke +1);
+        IM_ten_off(:,spoke) = shiftTC(flip(asym_ten_off), 15+spoke +1);
     end
 end
 
-% figure(2)
-% subplot(4,1,1)
-% bar(IM_mean_ten(:,1))
-% subplot(4,1,2)
-% bar(IM_mean_ten(:,2))
-% subplot(4,1,3)
-% bar(IM_mean_ten(:,3))
-% subplot(4,1,4)
-% bar(IM_mean_ten(:,4))
+% Conclusions: IM_mean_ten doesn't fit as well as IM_ten.  Adding offset to
+% try to bring mean tension to match experimental data doesn't work.  To
+% see this multiply IM_ten_off a vector of ones.  The answer should be
+% uniformly -473, but instead we get the repeated pattern of  
+% -561.6751, -435.2975, -435.2975, -561.6751
 
 %% Evaluate baseline data
 
