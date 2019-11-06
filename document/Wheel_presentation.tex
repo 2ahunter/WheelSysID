@@ -21,10 +21,9 @@
 \section{Introduction}
   \begin{frame}{Introduction}
     \begin{itemize}
-        \item Wheel `truing' is the process of adjusting spoke tension to minimize lateral and radial variations
-        \item Commercial robotic bicycle wheel truing machines use a heuristic truing method.  
-        \item This method mimics the actions a human might take to perform the task.
-        \item This method can be inefficient or ineffective requiring human intervention
+        \item Wheel `truing' is the process of adjusting spoke tension to minimize lateral, radial, and tension variations
+        \item Commercial robotic bicycle wheel truing machines employ an open loop algorithm that operates iteratively
+        \item This method may not achieve wheel specifications requiring human intervention
     \end{itemize}
      The work that follows demonstrates an optimal approach to wheel truing using system identification techniques and feedback control to achieve wheel alignment. 
   \end{frame}
@@ -53,7 +52,7 @@
 
 \begin{frame}{Wheel Truing}
 	\begin{itemize}
-        \item Spoke tension is adjusted by changing the effective length of the spoke via a threaded nipple seated in the rim
+        \item Spoke tension is adjusted by tightening or loosening the spoke via a threaded nipple seated in the rim
         \item Spoke tension consists of lateral, radial, and tangential components at the rim           
         \item Spoke tension is adjusted such that rim is `true' in both lateral and radial dimensions, and desired mean tension is achieved
         \item Conventional truing algorithm:
@@ -171,15 +170,14 @@ Measurement data collected for a wheel under test:
         t(\theta = n_s\frac{2\pi}{n_s})
     \end{bmatrix} \\
     \bf Y &= \begin{bmatrix}
-    \bf U\\\bf V\\ \bf T
+    \bf U\\\bf V\\ \mathbf {T}-\bar T
     \end{bmatrix}
     \end{align*}
 \begin{itemize}
     \item $n_s$ = number of spokes
-    \item $\theta=$ rim measurement location where $\theta = 0$ is taken to be the valve hole
-    \item $u(\theta)=$ lateral measurement at $\theta$
-    \item $v(\theta) = $ radial measurement at $\theta$
-    \item $t(\theta)=$ spoke tension measurement at $\theta$
+    \item $\theta=$ rim angle measurement location where $\theta = 0$ is taken to be the valve hole
+    \item $u(\theta),v(\theta),t(\theta)=$ lateral, radial, and tension measurements taken at rim angle $\theta$
+    \item $\bar T=$ mean spoke tension
 \end{itemize}
 \end{frame}
 
@@ -214,30 +212,56 @@ Let $\bf d$ be a vector of spoke rotations. Let $\bf Y_b$ be the baseline wheel 
 
 \begin{frame}
 \frametitle{Multi-objective Least Squares}
-Predict the set of spoke rotations, $\bf \hat d$, that yield given set of measurements, $\bf Y$ given the weighting factors $\mu_v$, $\mu_t$ and desired state $\bf Y_d = [\bf u_d, v_d, T_d]^T$:
+Compute the optimal vector of spoke rotations, ${\bf d}_{ls}$, from the set of measurements, $\{ \mathbf {u,v,T} \} $ given the weighting factors $\mu_v \text{ and }\mu_t$:
     \begin{align*}
     \tilde \Phi &= \begin{bmatrix}
     \Phi_u\\
     \Phi_v \sqrt {\mu_v}\\
     \Phi_t \sqrt {\mu_t}
-    \end{bmatrix}
-     \Delta \bf \tilde Y = \begin{bmatrix}
-    \bf u - u_d \\
-   ( {\bf v - v_d} )  \sqrt {\mu_v}\\
-    ( {\bf  T - T_d} )  \sqrt {\mu_t}
+    \end{bmatrix} \quad
+    \bf \tilde Y = \begin{bmatrix}
+    \mathbf {u} \\
+   \mathbf {v}  \sqrt {\mu_v}\\
+    ( {\bf  T} - \bar T )  \sqrt {\mu_t}
     \end{bmatrix}  \\
-        {\bf \hat d} &= \tilde \Phi^\dagger \Delta {\bf \tilde Y}
+        {\bf d}_{ls} &= \tilde \Phi^\dagger {\bf \tilde Y}
     \end{align*}
-	Where $\tilde \Phi^\dagger$ is the pseudo-inverse of $\tilde \Phi$.  The weighting factors represent the tradeoff between the lateral, radial, and tension variables and are found through evaluation of the wheel specification and exhaustive simulation.
+	Where $\tilde \Phi^\dagger$ is the pseudo-inverse of $\tilde \Phi$.  The weighting factors represent the tradeoff between the lateral, radial, and tension variables and are found through evaluation of the wheel specification, as well as the noise and accuracy of the measurements.
+\end{frame}
+
+\begin{frame}
+        \frametitle{Tension Targeting}
+        \begin{itemize}
+          \item Targeting a different tension, $T_d$, can be accomplished by substituting $T_d$ for $\bar T$ into $\bf Y$
+          \item However:
+          \begin{itemize}
+              \item $T_d$ is weighted when calculating $\bf d$--not desireable
+              \item Non-ideality in tension gain curves is amplified when $T_d$ is significantly different than $\bar T$
+          \end{itemize}
+          \item Note: \emph {uniform tension changes do not affect lateral and radial displacements. } 
+          \item Therefore uniform tension changes (due to average of $ \bar d={\bf d} $) are separable from non-uniform tension changes (${\bf d}-\bar d$)
+        \end{itemize}
+\end{frame}
+        
+\begin{frame}
+        \frametitle{Tension Targeting}        
+        A better alternative is to calculate the constant factor, $d_{cm}$ that induces the mean tension change separately from $\bf d$:
+        \begin{align*}
+            d_{cm} &=  (T_d - \bar T)/c
+        \end{align*}
+        where $c$ is the proportionality constant between mean tension and mean adjustment.  The predicted tension vector, $\bf \hat T$, becomes:
+        \begin{align*}
+            \bf \hat T &= \Phi_t({\bf d}- \bar d)+ \bar T+(d_{cm}+ \bar d)c \\
+        \end{align*}
 \end{frame}
 
 \begin{frame}
         \frametitle{Truing Algorithm}
         \begin{itemize}
-          \item $\bf \hat d$ is the best fit of spoke rotations that result in the measured state relative to some desired state
-          \item To achieve the desired state apply $-\bf \hat d$ to the system
-          \item Spoke turns are difficult to apply accurately.  Instead predict the state of the system after each spoke adjustment
-          \item Adjust the spoke until the \emph{lateral} displacement at the spoke location matches prediction
+          \item ${\bf d}_{ls}$ is the optimal fit of nipple rotations that result in the measured state relative to a perfectly true wheel
+          \item To true the wheel apply ${\bf d=-d}_{ls}$ to the system
+          \item Spoke nipple turns are difficult to apply accurately.  Instead predict the state of the system after each adjustment (entry in $\bf d$)
+          \item Adjust the spoke until the lateral displacement at the spoke location matches the prediction
           \item After all spokes adjusted, measure state of the system
           \item Demonstrated graphically in the next slides...
         \end{itemize}
@@ -298,7 +322,6 @@ Predict the set of spoke rotations, $\bf \hat d$, that yield given set of measur
             \item Non-drive side trailing
             \item Drive side trailing
 	\end{itemize}
-	\item Tension meter model biased (experiments 4,5) $\implies$ final model changed to average of all patterns
         \end{itemize}
      \end{column}
      \begin{column}[T]{5cm} % alternative top-align that's better for graphics
