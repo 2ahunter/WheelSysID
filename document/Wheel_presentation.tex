@@ -238,20 +238,21 @@ Compute the optimal vector of spoke rotations, ${\bf d}_{ls}$, from the set of m
               \item $T_d$ is weighted when calculating $\bf d$--not desireable
               \item Non-ideality in tension gain curves is amplified when $T_d$ is significantly different than $\bar T$
           \end{itemize}
-          \item Note: \emph {uniform tension changes do not affect lateral and radial displacements. } 
-          \item Therefore uniform tension changes (due to average of $ \bar d={\bf d} $) are separable from non-uniform tension changes (${\bf d}-\bar d$)
+          \item Note: \emph {ensemble average tension changes do not affect lateral and radial displacements.} 
+          \item Equivalently, a constant added to $\bf d$ does not effect lateral and radial displacements
+          \item Therefore average tension changes ($T_d - \bar T$) are separable from total tension changes ($\Phi_t \mathbf {d}$) and predicted with higher confidence 
         \end{itemize}
 \end{frame}
         
 \begin{frame}
         \frametitle{Tension Targeting}        
-        A better alternative is to calculate the constant factor, $d_{cm}$ that induces the mean tension change separately from $\bf d$:
+        The better alternative is to calculate the constant factor, $d_{cm}$ that induces the mean tension change separately from $\bf d$:
         \begin{align*}
             d_{cm} &=  (T_d - \bar T)/c
         \end{align*}
         where $c$ is the proportionality constant between mean tension and mean adjustment.  The predicted tension vector, $\bf \hat T$, becomes:
         \begin{align*}
-            \bf \hat T &= \Phi_t({\bf d}- \bar d)+ \bar T+(d_{cm}+ \bar d)c \\
+            \bf \hat T &=  \bar T+\Phi_t({\bf d}- \bar d)+ (d_{cm}+ \bar d)c \\
         \end{align*}
 \end{frame}
 
