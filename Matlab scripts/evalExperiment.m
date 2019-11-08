@@ -1,8 +1,8 @@
 function [delta_X,delta_tension] = evalExperiment(experiment)
 % runExperiment.m:  Load baseline and displaced wheel data for a given
 % experiment and evaluate against the model
-%clear all
-close all
+% clear all
+% close all
 
 % Load the model--includes both symmetric and four-fold tension curves and
 % assumed weighting factors mu1 and mu2

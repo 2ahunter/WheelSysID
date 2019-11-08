@@ -662,7 +662,7 @@ Y_ten_hat = Y_hat(129:end);
 
 load('ten_valid_3.mat');
 % convert to tension units
-v32_ten = spline(d,T,ten_valid_3d);
+v32_ten = spline(d,T,ten_d);
 load('valid_32_3.mat')
 v32_lat = valid_32_3(1,:)';
 v32_rad = valid_32_3(2,:)';

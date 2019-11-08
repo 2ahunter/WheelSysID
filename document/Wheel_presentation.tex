@@ -246,21 +246,22 @@ Compute the optimal vector of spoke rotations, ${\bf d}_{ls}$, from the set of m
         
 \begin{frame}
         \frametitle{Tension Targeting}        
-        The better alternative is to calculate the constant factor, $d_{cm}$ that induces the mean tension change separately from $\bf d$:
+        A better approach is to subtract the mean adjustment value from $\mathbf{d}_{ls}$ and to calculate a constant factor, $d_{cm}$ that induces the desired change in mean tension:
         \begin{align*}
+            \mathbf{d} &= -(\mathbf{d}_{ls} - \bar d_{ls})\\
             d_{cm} &=  (T_d - \bar T)/c
         \end{align*}
         where $c$ is the proportionality constant between mean tension and mean adjustment.  The predicted tension vector, $\bf \hat T$, becomes:
         \begin{align*}
-            \bf \hat T &=  \bar T+\Phi_t({\bf d}- \bar d)+ (d_{cm}+ \bar d)c \\
+            \bf \hat T &=  \bar T+\Phi_t{\bf d}+ d_{cm}c \\
+            &= T_d + \Phi_t{\bf d}
         \end{align*}
 \end{frame}
 
 \begin{frame}
         \frametitle{Truing Algorithm}
         \begin{itemize}
-          \item ${\bf d}_{ls}$ is the optimal fit of nipple rotations that result in the measured state relative to a perfectly true wheel
-          \item To true the wheel apply ${\bf d=-d}_{ls}$ to the system
+          \item ${\bf d}$ is vector of nipple rotations that take the wheel from current to desired state
           \item Spoke nipple turns are difficult to apply accurately.  Instead predict the state of the system after each adjustment (entry in $\bf d$)
           \item Adjust the spoke until the lateral displacement at the spoke location matches the prediction
           \item After all spokes adjusted, measure state of the system

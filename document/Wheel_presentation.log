@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  24 OCT 2019 08:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  7 NOV 2019 14:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1261,10 +1261,10 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 <fig_geometry.pdf, id=127, 465.7003pt x 238.06088pt>
 File: fig_geometry.pdf Graphic file (type pdf)
  <use fig_geometry.pdf>
-Package pdftex.def Info: fig_geometry.pdf used on input line 52.
+Package pdftex.def Info: fig_geometry.pdf used on input line 51.
 (pdftex.def)             Requested size: 289.07999pt x 147.77785pt.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <6> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 52.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 51.
 
 [5
 
@@ -1274,7 +1274,7 @@ LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <6> not available
 File: apparatus.jpg Graphic file (type jpg)
 
 <use apparatus.jpg>
-Package pdftex.def Info: apparatus.jpg used on input line 85.
+Package pdftex.def Info: apparatus.jpg used on input line 84.
 (pdftex.def)             Requested size: 189.66711pt x 142.26378pt.
  [7
 
@@ -1282,10 +1282,10 @@ Package pdftex.def Info: apparatus.jpg used on input line 85.
 <GainCurveTheory.png, id=232, 722.7pt x 722.7pt>
 File: GainCurveTheory.png Graphic file (type png)
  <use GainCurveTheory.png>
-Package pdftex.def Info: GainCurveTheory.png used on input line 97.
+Package pdftex.def Info: GainCurveTheory.png used on input line 96.
 (pdftex.def)             Requested size: 166.2175pt x 166.2212pt.
 
-Overfull \vbox (2.71913pt too high) detected at line 97
+Overfull \vbox (2.71913pt too high) detected at line 96
  []
 
 [8
@@ -1294,25 +1294,25 @@ Overfull \vbox (2.71913pt too high) detected at line 97
 File: ref.png Graphic file (type png)
 
 <use ref.png>
-Package pdftex.def Info: ref.png used on input line 133.
+Package pdftex.def Info: ref.png used on input line 132.
 (pdftex.def)             Requested size: 58.14763pt x 77.49118pt.
  <zero.png, id=249, 1040.88875pt x 1387.1825pt>
 File: zero.png Graphic file (type png)
  <use zero.png>
-Package pdftex.def Info: zero.png used on input line 133.
+Package pdftex.def Info: zero.png used on input line 132.
 (pdftex.def)             Requested size: 58.14763pt x 77.49118pt.
 
 <delta_img.png, id=250, 1040.88875pt x 1387.1825pt>
 File: delta_img.png Graphic file (type png)
  <use delta_img.png>
-Package pdftex.def Info: delta_img.png used on input line 133.
+Package pdftex.def Info: delta_img.png used on input line 132.
 (pdftex.def)             Requested size: 58.14763pt x 77.49118pt.
 
 <threshold_img.png, id=251, 1040.88875pt x 1387.1825pt>
 File: threshold_img.png Graphic file (type png)
 
 <use threshold_img.png>
-Package pdftex.def Info: threshold_img.png used on input line 133.
+Package pdftex.def Info: threshold_img.png used on input line 132.
 (pdftex.def)             Requested size: 58.14763pt x 77.49118pt.
  [9
 
@@ -1321,7 +1321,7 @@ Package pdftex.def Info: threshold_img.png used on input line 133.
 <wheelfanatyk.jpg, id=266, 752.8125pt x 798.985pt>
 File: wheelfanatyk.jpg Graphic file (type jpg)
  <use wheelfanatyk.jpg>
-Package pdftex.def Info: wheelfanatyk.jpg used on input line 149.
+Package pdftex.def Info: wheelfanatyk.jpg used on input line 148.
 (pdftex.def)             Requested size: 67.01503pt x 71.13188pt.
 Missing character: There is no â in font phvr7t!
 Missing character: There is no € in font phvr7t!
@@ -1331,11 +1331,11 @@ Missing character: There is no ¢ in font phvr7t!
 
  <./wheelfanatyk.jpg>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 184.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 182.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 184.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 182.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 184.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 182.
  [11
 
 ] [12
@@ -1345,240 +1345,243 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 ] [14
 
 ]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 245.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 245.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 245.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 244.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 245.
  [15
 
+] [16
+
+] [17
+
 ]
-<true1.png, id=362, 1124.2pt x 843.15pt>
+<true1.png, id=392, 1124.2pt x 843.15pt>
 File: true1.png Graphic file (type png)
  <use true1.png>
-Package pdftex.def Info: true1.png used on input line 258.
+Package pdftex.def Info: true1.png used on input line 284.
 (pdftex.def)             Requested size: 227.62204pt x 170.7112pt.
- [16
+ [18
 
- <./true1.png (PNG copy)>] <true2.png, id=377, 1124.2pt x 843.15pt>
+ <./true1.png (PNG copy)>] <true2.png, id=408, 1124.2pt x 843.15pt>
 File: true2.png Graphic file (type png)
  <use true2.png>
-Package pdftex.def Info: true2.png used on input line 258.
-(pdftex.def)             Requested size: 227.62204pt x 170.7112pt.
- [17
-
- <./true2.png (PNG copy)>] <true3.png, id=392, 1124.2pt x 843.15pt>
-File: true3.png Graphic file (type png)
- <use true3.png>
-Package pdftex.def Info: true3.png used on input line 258.
-(pdftex.def)             Requested size: 227.62204pt x 170.7112pt.
-
-[18
-
- <./true3.png (PNG copy)>] <true4.png, id=408, 1124.2pt x 843.15pt>
-File: true4.png Graphic file (type png)
-
-<use true4.png>
-Package pdftex.def Info: true4.png used on input line 258.
+Package pdftex.def Info: true2.png used on input line 284.
 (pdftex.def)             Requested size: 227.62204pt x 170.7112pt.
  [19
 
+ <./true2.png (PNG copy)>] <true3.png, id=424, 1124.2pt x 843.15pt>
+File: true3.png Graphic file (type png)
+ <use true3.png>
+Package pdftex.def Info: true3.png used on input line 284.
+(pdftex.def)             Requested size: 227.62204pt x 170.7112pt.
+
+[20
+
+ <./true3.png (PNG copy)>] <true4.png, id=439, 1124.2pt x 843.15pt>
+File: true4.png Graphic file (type png)
+
+<use true4.png>
+Package pdftex.def Info: true4.png used on input line 284.
+(pdftex.def)             Requested size: 227.62204pt x 170.7112pt.
+ [21
+
  <./true4.png (PNG copy)>]
-<true_final.png, id=424, 1124.2pt x 843.15pt>
+<true_final.png, id=454, 1124.2pt x 843.15pt>
 File: true_final.png Graphic file (type png)
  <use true_final.png>
-Package pdftex.def Info: true_final.png used on input line 258.
+Package pdftex.def Info: true_final.png used on input line 284.
 (pdftex.def)             Requested size: 227.62204pt x 170.7112pt.
- [20
+ [22
 
- <./true_final.png (PNG copy)>] <algorithm.png, id=439, 1537.745pt x 843.15pt>
+ <./true_final.png (PNG copy)>] <algorithm.png, id=469, 1537.745pt x 843.15pt>
 File: algorithm.png Graphic file (type png)
 
 <use algorithm.png>
-Package pdftex.def Info: algorithm.png used on input line 270.
+Package pdftex.def Info: algorithm.png used on input line 296.
 (pdftex.def)             Requested size: 259.44221pt x 142.26378pt.
- [21
+ [23
 
  <./algorithm.png (PNG copy)>]
-<gaugeCV_validation.pdf, id=454, 614.295pt x 794.97pt>
+<gaugeCV_validation.pdf, id=484, 614.295pt x 794.97pt>
 File: gaugeCV_validation.pdf Graphic file (type pdf)
 
 <use gaugeCV_validation.pdf>
-Package pdftex.def Info: gaugeCV_validation.pdf used on input line 286.
+Package pdftex.def Info: gaugeCV_validation.pdf used on input line 312.
 (pdftex.def)             Requested size: 199.16928pt x 127.56972pt.
- [22
+ [24
 
  <./gaugeCV_validation.pdf>]
-<TensionGC.png, id=473, 1124.2pt x 1246.6575pt>
+<TensionGC.png, id=501, 1124.2pt x 1246.6575pt>
 File: TensionGC.png Graphic file (type png)
  <use TensionGC.png>
-Package pdftex.def Info: TensionGC.png used on input line 308.
+Package pdftex.def Info: TensionGC.png used on input line 333.
 (pdftex.def)             Requested size: 153.939pt x 170.71652pt.
 
-Overfull \hbox (11.67522pt too wide) in paragraph at lines 308--308
+Overfull \hbox (11.67522pt too wide) in paragraph at lines 333--333
 [][]  
  []
 
-[23
+[25
 
  <./TensionGC.png (PNG copy)>]
-<lat_rad_GC_raw.png, id=488, 1124.2pt x 843.15pt>
+<lat_rad_GC_raw.png, id=518, 1124.2pt x 843.15pt>
 File: lat_rad_GC_raw.png Graphic file (type png)
  <use lat_rad_GC_raw.png>
-Package pdftex.def Info: lat_rad_GC_raw.png used on input line 328.
+Package pdftex.def Info: lat_rad_GC_raw.png used on input line 353.
 (pdftex.def)             Requested size: 138.10452pt x 103.56659pt.
 
-<lat_rad_GC_mean.png, id=489, 562.1pt x 421.575pt>
+<lat_rad_GC_mean.png, id=519, 562.1pt x 421.575pt>
 File: lat_rad_GC_mean.png Graphic file (type png)
  <use lat_rad_GC_mean.png>
-Package pdftex.def Info: lat_rad_GC_mean.png used on input line 328.
+Package pdftex.def Info: lat_rad_GC_mean.png used on input line 353.
 (pdftex.def)             Requested size: 138.10452pt x 103.57303pt.
 
-[24
+[26
 
  <./lat_rad_GC_raw.png (PNG copy)> <./lat_rad_GC_mean.png (PNG copy)>]
-<detune.png, id=504, 562.1pt x 421.575pt>
+<detune.png, id=534, 562.1pt x 421.575pt>
 File: detune.png Graphic file (type png)
  <use detune.png>
-Package pdftex.def Info: detune.png used on input line 348.
+Package pdftex.def Info: detune.png used on input line 373.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
 
-<simtrue.png, id=505, 562.1pt x 421.575pt>
+<simtrue.png, id=535, 562.1pt x 421.575pt>
 File: simtrue.png Graphic file (type png)
  <use simtrue.png>
-Package pdftex.def Info: simtrue.png used on input line 348.
+Package pdftex.def Info: simtrue.png used on input line 373.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
- [25
+ [27
 
  <./detune.png (PNG copy)> <./simtrue.png (PNG copy)>]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 368.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 368.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 368.
-
-<simerr.png, id=522, 562.1pt x 652.4375pt>
+<simerr.png, id=550, 562.1pt x 652.4375pt>
 File: simerr.png Graphic file (type png)
  <use simerr.png>
-Package pdftex.def Info: simerr.png used on input line 368.
+Package pdftex.def Info: simerr.png used on input line 393.
 (pdftex.def)             Requested size: 142.26378pt x 165.11995pt.
- [26
+ [28
 
- <./simerr.png (PNG copy)>] <detune_exp.png, id=537, 1124.2pt x 843.15pt>
+ <./simerr.png (PNG copy)>] <detune_exp.png, id=565, 1124.2pt x 843.15pt>
 File: detune_exp.png Graphic file (type png)
  <use detune_exp.png>
-Package pdftex.def Info: detune_exp.png used on input line 387.
+Package pdftex.def Info: detune_exp.png used on input line 412.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
 
-<detune_exp_err.png, id=538, 1124.2pt x 843.15pt>
+<detune_exp_err.png, id=566, 1124.2pt x 843.15pt>
 File: detune_exp_err.png Graphic file (type png)
  <use detune_exp_err.png>
-Package pdftex.def Info: detune_exp_err.png used on input line 387.
+Package pdftex.def Info: detune_exp_err.png used on input line 412.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
 
-[27
+[29
 
  <./detune_exp.png (PNG copy)> <./detune_exp_err.png (PNG copy)>]
-<exp2_pre_post.png, id=553, 562.1pt x 421.575pt>
+<exp2_pre_post.png, id=581, 562.1pt x 421.575pt>
 File: exp2_pre_post.png Graphic file (type png)
  <use exp2_pre_post.png>
-Package pdftex.def Info: exp2_pre_post.png used on input line 413.
+Package pdftex.def Info: exp2_pre_post.png used on input line 438.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
 
-<exp2_predict_measure.png, id=554, 562.1pt x 421.575pt>
+<exp2_predict_measure.png, id=582, 562.1pt x 421.575pt>
 File: exp2_predict_measure.png Graphic file (type png)
 
 <use exp2_predict_measure.png>
-Package pdftex.def Info: exp2_predict_measure.png used on input line 413.
-(pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
- [28
-
- <./exp2_pre_post.png (PNG copy)> <./exp2_predict_measure.png (PNG copy)>] <exp
-3_pre_post.png, id=569, 562.1pt x 421.575pt>
-File: exp3_pre_post.png Graphic file (type png)
-
-<use exp3_pre_post.png>
-Package pdftex.def Info: exp3_pre_post.png used on input line 439.
-(pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
-
-<exp3_predict_measure.png, id=570, 562.1pt x 421.575pt>
-File: exp3_predict_measure.png Graphic file (type png)
-
-<use exp3_predict_measure.png>
-Package pdftex.def Info: exp3_predict_measure.png used on input line 439.
-(pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
- [29
-
- <./exp3_pre_post.png (PNG copy)> <./exp3_predict_measure.png (PNG copy)>] <exp
-4_pre_post.png, id=585, 562.1pt x 421.575pt>
-File: exp4_pre_post.png Graphic file (type png)
-
-<use exp4_pre_post.png>
-Package pdftex.def Info: exp4_pre_post.png used on input line 465.
-(pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
-
-<exp4_predict_measure.png, id=586, 562.1pt x 421.575pt>
-File: exp4_predict_measure.png Graphic file (type png)
-
-<use exp4_predict_measure.png>
-Package pdftex.def Info: exp4_predict_measure.png used on input line 465.
+Package pdftex.def Info: exp2_predict_measure.png used on input line 438.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
  [30
 
- <./exp4_pre_post.png (PNG copy)> <./exp4_predict_measure.png (PNG copy)>] <exp
-5_pre_post.png, id=601, 562.1pt x 421.575pt>
-File: exp5_pre_post.png Graphic file (type png)
+ <./exp2_pre_post.png (PNG copy)> <./exp2_predict_measure.png (PNG copy)>] <exp
+3_pre_post.png, id=597, 562.1pt x 421.575pt>
+File: exp3_pre_post.png Graphic file (type png)
 
-<use exp5_pre_post.png>
-Package pdftex.def Info: exp5_pre_post.png used on input line 491.
+<use exp3_pre_post.png>
+Package pdftex.def Info: exp3_pre_post.png used on input line 464.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
 
-<exp5_predict_measure.png, id=602, 562.1pt x 421.575pt>
-File: exp5_predict_measure.png Graphic file (type png)
+<exp3_predict_measure.png, id=598, 562.1pt x 421.575pt>
+File: exp3_predict_measure.png Graphic file (type png)
 
-<use exp5_predict_measure.png>
-Package pdftex.def Info: exp5_predict_measure.png used on input line 491.
+<use exp3_predict_measure.png>
+Package pdftex.def Info: exp3_predict_measure.png used on input line 464.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
  [31
 
- <./exp5_pre_post.png (PNG copy)> <./exp5_predict_measure.png (PNG copy)>]
-<exp4_model_err.png, id=618, 562.1pt x 421.575pt>
-File: exp4_model_err.png Graphic file (type png)
- <use exp4_model_err.png>
-Package pdftex.def Info: exp4_model_err.png used on input line 513.
+ <./exp3_pre_post.png (PNG copy)> <./exp3_predict_measure.png (PNG copy)>] <exp
+4_pre_post.png, id=614, 562.1pt x 421.575pt>
+File: exp4_pre_post.png Graphic file (type png)
+
+<use exp4_pre_post.png>
+Package pdftex.def Info: exp4_pre_post.png used on input line 490.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
 
-<sim_ten_mdls.png, id=619, 562.1pt x 421.575pt>
-File: sim_ten_mdls.png Graphic file (type png)
- <use sim_ten_mdls.png>
-Package pdftex.def Info: sim_ten_mdls.png used on input line 513.
+<exp4_predict_measure.png, id=615, 562.1pt x 421.575pt>
+File: exp4_predict_measure.png Graphic file (type png)
+
+<use exp4_predict_measure.png>
+Package pdftex.def Info: exp4_predict_measure.png used on input line 490.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
  [32
 
- <./exp4_model_err.png (PNG copy)> <./sim_ten_mdls.png (PNG copy)>]
-<exp6_pre_post.png, id=634, 562.1pt x 421.575pt>
-File: exp6_pre_post.png Graphic file (type png)
- <use exp6_pre_post.png>
-Package pdftex.def Info: exp6_pre_post.png used on input line 539.
+ <./exp4_pre_post.png (PNG copy)> <./exp4_predict_measure.png (PNG copy)>] <exp
+5_pre_post.png, id=630, 562.1pt x 421.575pt>
+File: exp5_pre_post.png Graphic file (type png)
+
+<use exp5_pre_post.png>
+Package pdftex.def Info: exp5_pre_post.png used on input line 516.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
 
-<exp6_predict_measure.png, id=635, 562.1pt x 421.575pt>
-File: exp6_predict_measure.png Graphic file (type png)
+<exp5_predict_measure.png, id=631, 562.1pt x 421.575pt>
+File: exp5_predict_measure.png Graphic file (type png)
 
-<use exp6_predict_measure.png>
-Package pdftex.def Info: exp6_predict_measure.png used on input line 539.
+<use exp5_predict_measure.png>
+Package pdftex.def Info: exp5_predict_measure.png used on input line 516.
 (pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
  [33
 
- <./exp6_pre_post.png (PNG copy)> <./exp6_predict_measure.png (PNG copy)>] [34
+ <./exp5_pre_post.png (PNG copy)> <./exp5_predict_measure.png (PNG copy)>]
+<exp4_model_err.png, id=647, 562.1pt x 421.575pt>
+File: exp4_model_err.png Graphic file (type png)
+ <use exp4_model_err.png>
+Package pdftex.def Info: exp4_model_err.png used on input line 538.
+(pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
 
-] [35
+<sim_ten_mdls.png, id=648, 562.1pt x 421.575pt>
+File: sim_ten_mdls.png Graphic file (type png)
+ <use sim_ten_mdls.png>
+Package pdftex.def Info: sim_ten_mdls.png used on input line 538.
+(pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
+ [34
+
+ <./exp4_model_err.png (PNG copy)> <./sim_ten_mdls.png (PNG copy)>]
+<exp6_pre_post.png, id=663, 562.1pt x 421.575pt>
+File: exp6_pre_post.png Graphic file (type png)
+ <use exp6_pre_post.png>
+Package pdftex.def Info: exp6_pre_post.png used on input line 564.
+(pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
+
+<exp6_predict_measure.png, id=664, 562.1pt x 421.575pt>
+File: exp6_predict_measure.png Graphic file (type png)
+
+<use exp6_predict_measure.png>
+Package pdftex.def Info: exp6_predict_measure.png used on input line 564.
+(pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
+ [35
+
+ <./exp6_pre_post.png (PNG copy)> <./exp6_predict_measure.png (PNG copy)>] [36
+
+] [37
 
 ]
 Missing character: There is no â in font phvr7t!
 Missing character: There is no € in font phvr7t!
 Missing character: There is no ¢ in font phvr7t!
- [36
+ [38
 
-] [37
+] [39
 
 ]
 \tf@nav=\write6
@@ -1590,22 +1593,22 @@ Missing character: There is no ¢ in font phvr7t!
 \tf@snm=\write8
 \openout8 = `Wheel_presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 595.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 595.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 620.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 620.
  (./Wheel_presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 595.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 595.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 620.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 620.
 Package rerunfilecheck Info: File `Wheel_presentation.out' has not changed.
 (rerunfilecheck)             Checksum: 2912B816E2CDBB9E965AB5F4E9ED86A0;356.
  ) 
 Here is how much of TeX's memory you used:
- 30006 strings out of 492995
- 597937 string characters out of 6132704
+ 30019 strings out of 492995
+ 598168 string characters out of 6132704
  624681 words of memory out of 5000000
- 32935 multiletter control sequences out of 15000+600000
- 48570 words of font info for 95 fonts, out of 8000000 for 9000
+ 32943 multiletter control sequences out of 15000+600000
+ 49677 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,16n,60p,10392b,831s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,16n,60p,10392b,727s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/tex
@@ -1623,10 +1626,10 @@ nts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
 pe1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/ti
 mes/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on Wheel_presentation.pdf (37 pages, 5839672 bytes).
+Output written on Wheel_presentation.pdf (39 pages, 5843806 bytes).
 PDF statistics:
- 768 PDF objects out of 1000 (max. 8388607)
- 649 compressed objects within 7 object streams
- 83 named destinations out of 1000 (max. 500000)
+ 797 PDF objects out of 1000 (max. 8388607)
+ 676 compressed objects within 7 object streams
+ 87 named destinations out of 1000 (max. 500000)
  318 words of extra memory for PDF output out of 10000 (max. 10000000)
 
