@@ -46,16 +46,16 @@ Y_lat_hat = Phi_lat*X_adj + Y_lat_pre;
 Y_rad_hat = Phi_rad*X_adj +Y_rad_pre;
 Y_ten_hat = Phi_ten * (X_adj-delta_X) + delta_T+Y_ten_pre;
 
-Y_lat_err = sum((Y_lat_post - Y_lat_hat).^2);
-Y_rad_err = sum((Y_rad_post - Y_rad_hat).^2);
-Y_ten_err = sum((Y_ten_post - Y_ten_hat).^2);
+Y_lat_err = Y_lat_post - Y_lat_hat;
+Y_rad_err = Y_rad_post - Y_rad_hat;
+Y_ten_err = Y_ten_post - Y_ten_hat;
 
 Y_hat = cat(1,Y_lat_hat,Y_rad_hat,Y_ten_hat);
 
 plotExperiment(Y_hat, Y_post, Y_pre, 0)
-fprintf('Model sum-squared error:\n')
-fprintf('Lateral: %1.3f \n',Y_lat_err)
-fprintf('Radial: %1.4f \n',Y_rad_err)
-fprintf('Tension: %1.0f \n',Y_ten_err)
+fprintf('Model rms error:\n')
+fprintf('Lateral: %1.3f \n',rms(Y_lat_err))
+fprintf('Radial: %1.4f \n',rms(Y_rad_err))
+fprintf('Tension: %1.0f \n',rms(Y_ten_err))
 fprintf('Mean adjustment:  %1.3f \n', delta_X)
 fprintf('Mean tension change:  %1.0f \n', delta_tension)

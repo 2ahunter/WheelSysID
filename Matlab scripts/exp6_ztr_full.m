@@ -106,33 +106,33 @@ asym_ten_off = (NDL_mean + shiftTC(flip(DT_mean),1))/2 + offset_asym;
 sym_ten_off = (DL_mean + shiftTC(flip(NDT_mean),1))/2 + offset_sym;
 
 theta_s = pi/32:pi/16:2*pi;
-% figure(1)
-% subplot(4,1,1)
-% bar(theta_s,asym_ten)
-% title('Tension Gain Curves')
-% ylabel('Tension [N]')
-% ax = gca; % current axes
-% ax.FontSize = 16;
-% ylim([-250,150])
-% subplot(4,1,2)
-% bar(theta_s,sym_ten)
-% ylabel('Tension [N]')
-% ax = gca; % current axes
-% ax.FontSize = 16;
-% ylim([-250,150])
-% subplot(4,1,3)
-% bar(theta_s,shiftTC(flip(sym_ten),1))
-% ylabel('Tension [N]')
-% ax = gca; % current axes
-% ax.FontSize = 16;
-% ylim([-250,150])
-% subplot(4,1,4)
-% bar(theta_s,shiftTC(flip(asym_ten),1))
-% xlabel('Rim Angle [rad]')
-% ylabel('Tension [N]')
-% ax = gca; % current axes
-% ax.FontSize = 16;
-% ylim([-250,150])
+figure(1)
+subplot(4,1,1)
+bar(theta_s,asym_ten)
+title('Tension Gain Curves')
+ylabel('Tension [N]')
+ax = gca; % current axes
+ax.FontSize = 16;
+ylim([-250,150])
+subplot(4,1,2)
+bar(theta_s,sym_ten)
+ylabel('Tension [N]')
+ax = gca; % current axes
+ax.FontSize = 16;
+ylim([-250,150])
+subplot(4,1,3)
+bar(theta_s,shiftTC(flip(sym_ten),1))
+ylabel('Tension [N]')
+ax = gca; % current axes
+ax.FontSize = 16;
+ylim([-250,150])
+subplot(4,1,4)
+bar(theta_s,shiftTC(flip(asym_ten),1))
+xlabel('Rim Angle [rad]')
+ylabel('Tension [N]')
+ax = gca; % current axes
+ax.FontSize = 16;
+ylim([-250,150])
 
 % Generate influence matrix gain curves for each spoke:
 IM_ten = zeros(numSpokes,numSpokes);
@@ -270,9 +270,9 @@ bias_rad = mean(gc_rad_mean);
 gc_rad_mean = gc_rad_mean - bias_rad;
 
 figure()
-plot(theta_r,shiftGC(gc_lat_mean,16),'LineWidth',1)
+plot(theta_r,shiftGC(gc_lat_mean,16),'kx-.','LineWidth',1)
 hold on
-plot(theta_r,shiftGC(gc_rad_mean,16),'LineWidth',1)
+plot(theta_r,shiftGC(gc_rad_mean,16),'ko-.','LineWidth',1)
 hold off
 title('Mean Gain Curves')
 legend('Lateral','Radial')
@@ -345,6 +345,8 @@ Y_w = cat(1,YLat,mu1*YRad,mu2*Y_ten);
 X_hat = Phi_sw\Y_w;
 % X_hat = Phi_w\Y_w;
 
+%% 
+
 % plot experiment
 figure()
 subplot(3,1,1)
@@ -367,12 +369,12 @@ ax.FontSize=16;
 % compare prediction versus actual
 figure()
 hold on
-stem(X,'LineWidth',1)
-stem(X_hat,'LineWidth',1)
+stem(X,'k','LineWidth',1)
+stem(X_hat,'Color', [0.5 0.5 0.5],'LineWidth',1)
 hold off
 title('Simulated Truing Solution')
 legend('actual','predicted')
-ylabel('Adjustment Error [revs]')
+ylabel('Adjustment [revs]')
 xlabel('Spoke Number')
 ax = gca;
 ax.FontSize=16;
@@ -622,7 +624,7 @@ Y_ten_hat = Y_hat(129:end);
 % load raw data after all adjustments
 load('ten_valid_2.mat')
 load('valid_32_2.mat')
-v32_ten = spline(d,T,ten_valid_d);
+v32_ten = spline(d,T,ten_d);
 v32_lat = valid_32_2(1,:)';
 v32_rad = valid_32_2(2,:)';
 Y_x2 = cat(1,v32_lat,v32_rad,v32_ten);
@@ -747,7 +749,7 @@ Y_hat = Y_hat_x5(:,end);
 %% Evaluate results for re-tension truing validation test 5 (2nd iteration of new target tension)
 
 load('ten_valid_5.mat');
-ten_valid_5t = spline(d,T,ten_valid_5d);
+ten_valid_5t = spline(d,T,ten_d);
 v32_ten = ten_valid_5t;
 load('valid_32_5.mat')
 v32_lat = valid_32_5(1,:)';
@@ -799,7 +801,7 @@ Y_hat_x6 = trueWheel(-X_hat,Phi_s,baseline);
 Y_hat = Y_hat_x6(:,end);
 load('valid_32_6.mat');
 load('ten_valid_6.mat');
-ten_valid_6t = spline(d,T,ten_valid_6d);
+ten_valid_6t = spline(d,T,ten_d);
 v32_ten = ten_valid_6t;
 v32_lat = valid_32_6(1,:)';
 v32_rad = valid_32_6(2,:)';
@@ -888,11 +890,11 @@ ax.FontSize = 16;
 
 figure()
 hold on
-plot(theta_r, Y_lat_b) 
-plot(theta_r,Y_lat_hat(1:31,:))
-plot(theta_r,Y_lat_hat(32,:),'LineWidth',3)
+plot(theta_r, Y_lat_b,'-.','Color',[0.5 0.5 0.5])
+plot(theta_r,Y_lat_hat(1:31,:),'Color',[0.5 0.5 0.5]) 
+plot(theta_r,Y_lat_hat(32,:),'k','LineWidth',3)
 plot(theta_s(1:31),Y_at_index(1:31), 'kd','MarkerSize',10)
-plot(theta_s(32),Y_at_index(32), 'kd','MarkerSize',10,'LineWidth',2)
+plot(theta_s(32),Y_at_index(32), 'kd','MarkerSize',10,'LineWidth',3)
 hold off
 xlim([0,2.03*pi])
 ylabel('Lateral [mm]')
@@ -1055,7 +1057,7 @@ X_adj = X;
 Y_hat_x7 = trueWheel(X,Phi_s,baseline);
 Y_hat = Y_hat_x7(:,end);
 load('ten_valid_7.mat')
-ten_valid_7t = spline(d,T,ten_valid_7);
+ten_valid_7t = spline(d,T,ten_d);
 load('valid_32_7.mat')
 v32_ten = ten_valid_7t;
 v32_lat = valid_32_7(1,:)';

@@ -73,8 +73,8 @@ tension_m = cat(2,base_ten,Y_ten);
 figure()
 subplot(3,1,1)
 hold on
-plot(theta_r,base_lat,'LineWidth',1)
-plot(theta_r,Y_lat,'LineWidth',1)
+plot(theta_r,base_lat,'kx-.','LineWidth',1)
+plot(theta_r,Y_lat,'d-.','LineWidth',1,'Color',[0.5 0.5 0.5])
 hold off
 legend('pre','post')
 ylabel('Lateral [mm]')
@@ -83,8 +83,8 @@ ax = gca;
 ax.FontSize = 16;
 subplot(3,1,2)
 hold on
-plot(theta_r,base_rad,'LineWidth',1)
-plot(theta_r,Y_rad,'LineWidth',1)
+plot(theta_r,base_rad,'kx-.','LineWidth',1)
+plot(theta_r,Y_rad,'d-.','LineWidth',1,'Color',[0.5 0.5 0.5])
 hold off
 legend('pre','post')
 ylabel('Radial [mm]')

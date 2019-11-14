@@ -10,9 +10,12 @@ numSpokes = 32;
 % assumed weighting factors mu1 and mu2
 load('gainCurves.mat')
 
+% redefine tension weighting if you like:
+mu2 = sqrt(5e-5);
+
 % load pre-tuning data (the post data from previous experiment, usually
-postNum = 9;
-oldExperiment = strcat('exp',num2str(postNum),'.mat');
+preNum = 10;
+oldExperiment = strcat('exp',num2str(preNum),'.mat');
 load(oldExperiment)
 Y_pre = Y_post;
 
@@ -21,9 +24,6 @@ Y_lat_pre = Y_pre(1:2*numSpokes);
 Y_rad_pre = Y_pre(2*numSpokes+1:4*numSpokes);
 Y_ten_pre = Y_pre(4*numSpokes+1:end);
 Y_ten_pre_mean = mean(Y_ten_pre);
-
-figure()
-plot(Y_lat_pre)
 
 % separate state adjustment model into submatrices
 Phi_lat = Phi(1:2*numSpokes,:);
@@ -60,6 +60,15 @@ Y_lat_hat = Phi_lat*d + Y_lat_pre;
 Y_rad_hat = Phi_rad*d + Y_rad_pre;
 Y_ten_hat = Y_ten_pre + Phi_ten*d + delta_tension;
 
+figure()
+subplot(3,1,1)
+plot(Y_lat_hat)
+subplot(3,1,2)
+plot(Y_rad_hat)
+subplot(3,1,3)
+bar(Y_ten_hat)
+ylim([800,1100])
+
 % we won't use the predicted data returned by trueWheel, but we want to
 % generate the truing recipe
 Y_hat_2 = trueWheel(X_adj,Phi,Y_pre);
@@ -72,7 +81,7 @@ D = WF_cal_18(:,1);
 T = WF_cal_18(:,2);
 
 % load lateral and radial displacements:
-expNum = 10;
+expNum = 11;
 % filename for the post exerimental data
 fn1 = strcat('valid_32_',num2str(expNum),'.mat');
 load(fn1)
@@ -91,5 +100,5 @@ Y_post = cat(1,Y_lat_post,Y_rad_post,Y_ten_post);
 
 
 %% save experiment here
-newExperiment = strcat('exp',num2str(expNum),'.mat')
-save(newExperiment,'target_tension','X_adj','Y_post','Y_pre')
+% newExperiment = strcat('exp',num2str(expNum),'.mat')
+% save(newExperiment,'target_tension','X_adj','Y_post','Y_pre')
