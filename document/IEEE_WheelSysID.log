@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  14 NOV 2019 08:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  20 NOV 2019 17:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -114,7 +114,12 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \IEEEPARstartletwidth=\dimen125
 \c@IEEEbiography=\count93
 \@IEEEtranrubishbin=\box27
-) (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
@@ -204,35 +209,65 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
+(/usr/local/texlive/2017/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen137
+\captionmargin@=\dimen138
+\captionwidth=\dimen139
+\caption@tempdima=\dimen140
+\caption@indent=\dimen141
+\caption@parindent=\dimen142
+\caption@hangindent=\dimen143
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+\c@KVtest=\count107
+\sf@farskip=\skip47
+\sf@captopadj=\dimen144
+\sf@capskip=\skip48
+\sf@nearskip=\skip49
+\c@subfigure=\count108
+\c@subfigure@save=\count109
+\c@lofdepth=\count110
+\c@subtable=\count111
+\c@subtable@save=\count112
+\c@lotdepth=\count113
+\sf@top=\skip50
+\sf@bottom=\skip51
+)
 (./IEEE_WheelSysID.aux)
 \openout1 = `IEEE_WheelSysID.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 265.
-LaTeX Font Info:    ... okay on input line 265.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 265.
-LaTeX Font Info:    ... okay on input line 265.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 265.
-LaTeX Font Info:    ... okay on input line 265.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 265.
-LaTeX Font Info:    ... okay on input line 265.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 265.
-LaTeX Font Info:    ... okay on input line 265.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 265.
-LaTeX Font Info:    ... okay on input line 265.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 210.
+LaTeX Font Info:    ... okay on input line 210.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 210.
+LaTeX Font Info:    ... okay on input line 210.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 210.
+LaTeX Font Info:    ... okay on input line 210.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 210.
+LaTeX Font Info:    ... okay on input line 210.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 210.
+LaTeX Font Info:    ... okay on input line 210.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 210.
+LaTeX Font Info:    ... okay on input line 210.
 
 -- Lines per column: 58 (exact).
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count107
-\scratchdimen=\dimen137
+\scratchcounter=\count114
+\scratchdimen=\dimen145
 \scratchbox=\box30
-\nofMPsegments=\count108
-\nofMParguments=\count109
+\nofMPsegments=\count115
+\nofMParguments=\count116
 \everyMPshowfont=\toks21
-\MPscratchCnt=\count110
-\MPscratchDim=\dimen138
-\MPnumerator=\count111
-\makeMPintoPDFobject=\count112
+\MPscratchCnt=\count117
+\MPscratchDim=\dimen146
+\MPnumerator=\count118
+\makeMPintoPDFobject=\count119
 \everyMPtoPDFconversion=\toks22
 ) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
@@ -282,23 +317,50 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Underfull \hbox (badness 1728) in paragraph at lines 365--366
-[]\OT1/ptm/m/n/10 Our ap-proach builds upon the one pro-posed by Pa-
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+<rim_x.pdf, id=1, 73.72644pt x 282.78249pt>
+File: rim_x.pdf Graphic file (type pdf)
+ <use rim_x.pdf>
+Package pdftex.def Info: rim_x.pdf used on input line 319.
+(pdftex.def)             Requested size: 46.43811pt x 178.12369pt.
+
+<geom.pdf, id=2, 262.56496pt x 240.2034pt>
+File: geom.pdf Graphic file (type pdf)
+ <use geom.pdf>
+Package pdftex.def Info: geom.pdf used on input line 322.
+(pdftex.def)             Requested size: 193.5pt x 177.01834pt.
+
+Overfull \hbox (1.93835pt too wide) in paragraph at lines 319--323
+ [][][] 
  []
 
-<apparatus.jpg, id=1, 3276.24pt x 2457.18pt>
-File: apparatus.jpg Graphic file (type jpg)
- <use apparatus.jpg>
-Package pdftex.def Info: apparatus.jpg used on input line 381.
-(pdftex.def)             Requested size: 180.67499pt x 135.5015pt.
- [1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+[1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
+<./imgs/apparat.jpg, id=17, 3276.24pt x 2457.18pt>
+File: ./imgs/apparat.jpg Graphic file (type jpg)
+ <use ./imgs/apparat.jpg>
+Package pdftex.def Info: ./imgs/apparat.jpg used on input line 332.
+(pdftex.def)             Requested size: 180.67499pt x 135.5015pt.
 
-LaTeX Warning: Reference `eq:2' on page 2 undefined on input line 466.
+[2 <./rim_x.pdf> <./geom.pdf> <./imgs/apparat.jpg>]
+<./imgs/zero.png, id=53, 1040.88875pt x 1387.1825pt>
+File: ./imgs/zero.png Graphic file (type png)
+ <use ./imgs/zero.png>
+Package pdftex.def Info: ./imgs/zero.png used on input line 438.
+(pdftex.def)             Requested size: 103.19843pt x 137.51987pt.
 
-[2 <./apparatus.jpg>]
+<./imgs/threshold_img.png, id=54, 1040.88875pt x 1387.1825pt>
+File: ./imgs/threshold_img.png Graphic file (type png)
+
+<use ./imgs/threshold_img.png>
+Package pdftex.def Info: ./imgs/threshold_img.png used on input line 442.
+(pdftex.def)             Requested size: 103.19843pt x 137.51987pt.
+ [3 <./imgs/zero.png (PNG copy)> <./imgs/threshold_img.png (PNG copy)>]
 Package epstopdf Info: Source file: <./figs/algo.eps>
 (epstopdf)                    date: 2019-11-13 16:17:46
 (epstopdf)                    size: 54115 bytes
@@ -307,18 +369,18 @@ Package epstopdf Info: Source file: <./figs/algo.eps>
 (epstopdf)                    size: 20503 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figs/algo-eps-converted-
 to.pdf ./figs/algo.eps>
-(epstopdf)             \includegraphics on input line 490.
+(epstopdf)             \includegraphics on input line 455.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/algo-eps-converted-to.pdf, id=24, 610.28pt x 421.575pt>
+<./figs/algo-eps-converted-to.pdf, id=58, 610.28pt x 421.575pt>
 File: ./figs/algo-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/algo-eps-converted-to.pdf>
-Package pdftex.def Info: ./figs/algo-eps-converted-to.pdf used on input line 49
-0.
+Package pdftex.def Info: ./figs/algo-eps-converted-to.pdf used on input line 45
+5.
 (pdftex.def)             Requested size: 252.94499pt x 174.73164pt.
 
-Overfull \hbox (0.94499pt too wide) in paragraph at lines 490--491
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 455--456
  [][] 
  []
 
@@ -330,16 +392,15 @@ Package epstopdf Info: Source file: <./figs/CV.eps>
 (epstopdf)                    size: 8650 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figs/CV-eps-converted-to
 .pdf ./figs/CV.eps>
-(epstopdf)             \includegraphics on input line 500.
+(epstopdf)             \includegraphics on input line 465.
 Package epstopdf Info: Output file is already uptodate.
-<./figs/CV-eps-converted-to.pdf, id=25, 562.1pt x 421.575pt>
+<./figs/CV-eps-converted-to.pdf, id=59, 562.1pt x 421.575pt>
 File: ./figs/CV-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/CV-eps-converted-to.pdf>
-Package pdftex.def Info: ./figs/CV-eps-converted-to.pdf used on input line 500.
+Package pdftex.def Info: ./figs/CV-eps-converted-to.pdf used on input line 465.
 
 (pdftex.def)             Requested size: 234.87749pt x 176.15327pt.
- [3 <./figs/algo-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./figs/gc_lat_rad.eps>
 (epstopdf)                    date: 2019-11-13 16:22:46
 (epstopdf)                    size: 35098 bytes
@@ -348,15 +409,15 @@ Package epstopdf Info: Source file: <./figs/gc_lat_rad.eps>
 (epstopdf)                    size: 14964 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figs/gc_lat_rad-eps-conv
 erted-to.pdf ./figs/gc_lat_rad.eps>
-(epstopdf)             \includegraphics on input line 512.
+(epstopdf)             \includegraphics on input line 477.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/gc_lat_rad-eps-converted-to.pdf, id=37, 562.1pt x 421.575pt>
+<./figs/gc_lat_rad-eps-converted-to.pdf, id=60, 562.1pt x 421.575pt>
 File: ./figs/gc_lat_rad-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/gc_lat_rad-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/gc_lat_rad-eps-converted-to.pdf used on input l
-ine 512.
+ine 477.
 (pdftex.def)             Requested size: 234.87749pt x 176.15327pt.
 Package epstopdf Info: Source file: <./figs/gc_ten.eps>
 (epstopdf)                    date: 2019-11-13 16:29:02
@@ -366,16 +427,17 @@ Package epstopdf Info: Source file: <./figs/gc_ten.eps>
 (epstopdf)                    size: 10889 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figs/gc_ten-eps-converte
 d-to.pdf ./figs/gc_ten.eps>
-(epstopdf)             \includegraphics on input line 519.
+(epstopdf)             \includegraphics on input line 484.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/gc_ten-eps-converted-to.pdf, id=38, 562.1pt x 444.66125pt>
+<./figs/gc_ten-eps-converted-to.pdf, id=61, 562.1pt x 444.66125pt>
 File: ./figs/gc_ten-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/gc_ten-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/gc_ten-eps-converted-to.pdf used on input line 
-519.
+484.
 (pdftex.def)             Requested size: 234.87749pt x 185.79976pt.
+ [4 <./figs/algo-eps-converted-to.pdf> <./figs/CV-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./figs/simd.eps>
 (epstopdf)                    date: 2019-11-13 17:08:49
 (epstopdf)                    size: 27599 bytes
@@ -384,18 +446,19 @@ Package epstopdf Info: Source file: <./figs/simd.eps>
 (epstopdf)                    size: 12183 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figs/simd-eps-converted-
 to.pdf ./figs/simd.eps>
-(epstopdf)             \includegraphics on input line 529.
+(epstopdf)             \includegraphics on input line 494.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/simd-eps-converted-to.pdf, id=39, 562.1pt x 421.575pt>
+<./figs/simd-eps-converted-to.pdf, id=81, 562.1pt x 421.575pt>
 File: ./figs/simd-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/simd-eps-converted-to.pdf>
-Package pdftex.def Info: ./figs/simd-eps-converted-to.pdf used on input line 52
-9.
+Package pdftex.def Info: ./figs/simd-eps-converted-to.pdf used on input line 49
+4.
 (pdftex.def)             Requested size: 234.87749pt x 176.15327pt.
- [4 <./figs/CV-eps-converted-to.pdf> <./figs/gc_lat_rad-eps-converted-to.pdf> <
-./figs/gc_ten-eps-converted-to.pdf>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 Package epstopdf Info: Source file: <./figs/c.eps>
 (epstopdf)                    date: 2019-11-14 07:01:47
 (epstopdf)                    size: 14179 bytes
@@ -404,15 +467,17 @@ Package epstopdf Info: Source file: <./figs/c.eps>
 (epstopdf)                    size: 9066 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figs/c-eps-converted-to.
 pdf ./figs/c.eps>
-(epstopdf)             \includegraphics on input line 539.
+(epstopdf)             \includegraphics on input line 504.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/c-eps-converted-to.pdf, id=67, 562.1pt x 421.575pt>
+<./figs/c-eps-converted-to.pdf, id=82, 562.1pt x 421.575pt>
 File: ./figs/c-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/c-eps-converted-to.pdf>
-Package pdftex.def Info: ./figs/c-eps-converted-to.pdf used on input line 539.
+Package pdftex.def Info: ./figs/c-eps-converted-to.pdf used on input line 504.
 (pdftex.def)             Requested size: 234.87749pt x 176.15327pt.
+ [5 <./figs/gc_lat_rad-eps-converted-to.pdf> <./figs/gc_ten-eps-converted-to.pd
+f> <./figs/simd-eps-converted-to.pdf> <./figs/c-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./figs/exp1.eps>
 (epstopdf)                    date: 2019-11-13 17:40:20
 (epstopdf)                    size: 45954 bytes
@@ -421,15 +486,15 @@ Package epstopdf Info: Source file: <./figs/exp1.eps>
 (epstopdf)                    size: 15058 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figs/exp1-eps-converted-
 to.pdf ./figs/exp1.eps>
-(epstopdf)             \includegraphics on input line 548.
+(epstopdf)             \includegraphics on input line 513.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/exp1-eps-converted-to.pdf, id=68, 562.1pt x 421.575pt>
+<./figs/exp1-eps-converted-to.pdf, id=119, 562.1pt x 421.575pt>
 File: ./figs/exp1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/exp1-eps-converted-to.pdf>
-Package pdftex.def Info: ./figs/exp1-eps-converted-to.pdf used on input line 54
-8.
+Package pdftex.def Info: ./figs/exp1-eps-converted-to.pdf used on input line 51
+3.
 (pdftex.def)             Requested size: 234.87749pt x 176.15327pt.
 Package epstopdf Info: Source file: <./figs/exp1_err.eps>
 (epstopdf)                    date: 2019-11-13 17:32:52
@@ -439,15 +504,15 @@ Package epstopdf Info: Source file: <./figs/exp1_err.eps>
 (epstopdf)                    size: 9972 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figs/exp1_err-eps-conver
 ted-to.pdf ./figs/exp1_err.eps>
-(epstopdf)             \includegraphics on input line 555.
+(epstopdf)             \includegraphics on input line 520.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/exp1_err-eps-converted-to.pdf, id=69, 562.1pt x 421.575pt>
+<./figs/exp1_err-eps-converted-to.pdf, id=120, 562.1pt x 421.575pt>
 File: ./figs/exp1_err-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/exp1_err-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/exp1_err-eps-converted-to.pdf used on input lin
-e 555.
+e 520.
 (pdftex.def)             Requested size: 234.87749pt x 176.15327pt.
 Package epstopdf Info: Source file: <./figs/exp2.eps>
 (epstopdf)                    date: 2019-11-14 07:27:32
@@ -457,55 +522,59 @@ Package epstopdf Info: Source file: <./figs/exp2.eps>
 (epstopdf)                    size: 18442 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figs/exp2-eps-converted-
 to.pdf ./figs/exp2.eps>
-(epstopdf)             \includegraphics on input line 580.
+(epstopdf)             \includegraphics on input line 545.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/exp2-eps-converted-to.pdf, id=70, 562.1pt x 421.575pt>
+<./figs/exp2-eps-converted-to.pdf, id=121, 562.1pt x 421.575pt>
 File: ./figs/exp2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/exp2-eps-converted-to.pdf>
-Package pdftex.def Info: ./figs/exp2-eps-converted-to.pdf used on input line 58
-0.
+Package pdftex.def Info: ./figs/exp2-eps-converted-to.pdf used on input line 54
+5.
 (pdftex.def)             Requested size: 234.87749pt x 176.15327pt.
- [5 <./figs/simd-eps-converted-to.pdf> <./figs/c-eps-converted-to.pdf> <./figs/
-exp1-eps-converted-to.pdf> <./figs/exp1_err-eps-converted-to.pdf>] [6
+ [6 <./figs/exp1-eps-converted-to.pdf> <./figs/exp1_err-eps-converted-to.pdf> <
+./figs/exp2-eps-converted-to.pdf>]
+(./IEEE_WheelSysID.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 42--45
+[]\OT1/ptm/m/n/8 M. Ford. bike-wheel-calc. [On-line]. Avail-able:
+ []
 
- <./figs/exp2-eps-converted-to.pdf>]
-(./IEEE_WheelSysID.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+) [7] (./IEEE_WheelSysID.aux) ) 
 Here is how much of TeX's memory you used:
- 3020 strings out of 492995
- 47322 string characters out of 6132704
- 124580 words of memory out of 5000000
- 6526 multiletter control sequences out of 15000+600000
- 48341 words of font info for 89 fonts, out of 8000000 for 9000
+ 3888 strings out of 492995
+ 62625 string characters out of 6132704
+ 136918 words of memory out of 5000000
+ 7373 multiletter control sequences out of 15000+600000
+ 45917 words of font info for 90 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 39i,15n,28p,1535b,227s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb></usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive
-/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/
-2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2017
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2017/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2017/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2017/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/texmf-dist/f
-onts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
-/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/time
-s/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8a.
-pfb>
-Output written on IEEE_WheelSysID.pdf (6 pages, 1792753 bytes).
+ 39i,15n,49p,1535b,329s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dv
+ips/base/8r.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx5.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmbx7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cme
+x10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6
+.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.p
+fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texm
+f-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fo
+nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
+urw/times/utmri8a.pfb>
+Output written on IEEE_WheelSysID.pdf (7 pages, 3097289 bytes).
 PDF statistics:
- 175 PDF objects out of 1000 (max. 8388607)
- 120 compressed objects within 2 object streams
+ 221 PDF objects out of 1000 (max. 8388607)
+ 156 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -398,40 +398,34 @@ Compute the optimal vector of spoke rotations, ${\bf d}_{ls}$, from the set of m
 \begin{figure}
         \centering
         \begin{subfigure}[b]{0.45\textwidth}
-            \includegraphics[width=\textwidth]{detune_exp}
+            \includegraphics[width=\textwidth]{./figs/exp1}
         \end{subfigure}
         ~
         \begin{subfigure}[b]{0.45\textwidth}
-            \includegraphics[width=\textwidth]{detune_exp_err}
+            \includegraphics[width=\textwidth]{./figs/exp1_err}
         \end{subfigure}
 \end{figure}
 \begin{itemize}
     \item Simulation spoke vector $\bf d$ applied to manually-trued test wheel
     \item Spokes adjusted using lateral feedback
-    \item The model predicts the experimental results well; some residual structure is evident
+    \item The model predicts the experimental results well
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Experiment 2: True Test Wheel}
+\frametitle{Experiment 2: True Test Wheel to 1000N}
 \begin{figure}
-        \centering
-        \begin{subfigure}[b]{0.45\textwidth}
-            \includegraphics[width=\textwidth]{exp2_pre_post}
-        \end{subfigure}
-        ~
-        \begin{subfigure}[b]{0.45\textwidth}
-            \includegraphics[width=\textwidth]{exp2_predict_measure}
-        \end{subfigure}
+    \centering
+    \includegraphics[width=2in]{./figs/exp2}
 \end{figure}
-Wheel measurements ($\mu \pm \sigma$):
+
 \centering
 \begin{tabular}{| l | c | c |}
     \hline
-    Parameter & Inital & Final \\ \hline
-    Lateral [mm] & $0.078\pm0.820$ &$-0.062\pm 0.091$ \\ \hline 
-    Radial [mm] &$-0.067\pm0.122$& $-0.070\pm0.052$ \\ \hline 
-    Tension [N] &$776\pm205$& $849\pm48$ \\ \hline 
+    Parameter & Inital ($\mu \pm \sigma$) & Final ($\mu \pm \sigma$)\\ \hline
+    Lateral [mm] & $0.160\pm0.736$ &$-0.037\pm 0.107$ \\ \hline 
+    Radial [mm] &$0.050\pm0.158$& $-0.046\pm0.047$ \\ \hline 
+    Tension [N] &$556\pm211$& $1009\pm45$ \\ \hline
 \end{tabular}
 \begin{block}{}
     Single iteration effectively trues a wheel
@@ -441,126 +435,20 @@ Wheel measurements ($\mu \pm \sigma$):
 \begin{frame}
 \frametitle{Experiment 3: Iterate Truing Algorithm}
 \begin{figure}
-        \centering
-        \begin{subfigure}[b]{0.45\textwidth}
-            \includegraphics[width=\textwidth]{exp3_pre_post}
-        \end{subfigure}
-        ~
-        \begin{subfigure}[b]{0.45\textwidth}
-            \includegraphics[width=\textwidth]{exp3_predict_measure}
-        \end{subfigure}
+    \centering
+    \includegraphics[width=2in]{./figs/exp3}
 \end{figure}
 Wheel measurements ($\mu \pm \sigma$):
 \centering
 \begin{tabular}{| l | c | c |}
     \hline
     Parameter & Inital & Final \\ \hline
-    Lateral [mm] & $-0.062\pm0.091$ &$-0.029\pm 0.083$ \\ \hline 
-    Radial [mm] &$-0.070\pm0.052$& $-0.052\pm0.032$ \\ \hline 
-    Tension [N] &$849\pm48$& $781\pm33$ \\ \hline 
+    Lateral [mm] & $-0.037\pm0.107$ &$0.028\pm 0.073$ \\ \hline 
+    Radial [mm] &$-0.046\pm0.047$& $-0.031\pm0.034$ \\ \hline 
+    Tension [N] &$1009\pm45$& $989\pm39$ \\ \hline 
 \end{tabular}
 \begin{block}{}
     Small but significant improvement after second iteration
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Experiment 4: Target Tension=1000N}
-\begin{figure}
-        \centering
-        \begin{subfigure}[b]{0.45\textwidth}
-            \includegraphics[width=\textwidth]{exp4_pre_post}
-        \end{subfigure}
-        ~
-        \begin{subfigure}[b]{0.45\textwidth}
-            \includegraphics[width=\textwidth]{exp4_predict_measure}
-        \end{subfigure}
-\end{figure}
-Wheel measurements ($\mu \pm \sigma$):
-\centering
-\begin{tabular}{| l | c | c |}
-    \hline
-    Parameter & Inital & Final \\ \hline
-    Lateral [mm] & $-0.029\pm0.083$ &$0.045\pm 0.063$ \\ \hline 
-    Radial [mm] &$-0.052\pm0.032$& $-0.056\pm0.039$ \\ \hline 
-    Tension [N] &$781\pm33$& $1126\pm76$ \\ \hline 
-\end{tabular}
-\begin{block}{}
-    Tension exceeds target and non-uniform
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Experiment 5: Second Iteration}
-\begin{figure}
-        \centering
-        \begin{subfigure}[b]{0.45\textwidth}
-            \includegraphics[width=\textwidth]{exp5_pre_post}
-        \end{subfigure}
-        ~
-        \begin{subfigure}[b]{0.45\textwidth}
-            \includegraphics[width=\textwidth]{exp5_predict_measure}
-        \end{subfigure}
-\end{figure}
-Wheel measurements ($\mu \pm \sigma$):
-\centering
-\begin{tabular}{| l | c | c |}
-    \hline
-    Parameter & Inital & Final \\ \hline
-    Lateral [mm] & $0.045\pm0.063$ &$-0.012\pm 0.079$ \\ \hline 
-    Radial [mm] &$-0.056\pm0.039$& $-0.037\pm0.050$ \\ \hline 
-    Tension [N] &$1126\pm76$& $914\pm63$ \\ \hline 
-\end{tabular}
-\begin{block}{}
-    Tension below target tension and non-uniform!
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Experiment 4 \& 5: Analysis}
-\begin{figure}
-             \centering
-        \begin{subfigure}[b]{0.45\textwidth}
-            \includegraphics[width=\textwidth]{exp4_model_err}
-        \end{subfigure}
-        ~
-        \begin{subfigure}[b]{0.45\textwidth}
-            \includegraphics[width=\textwidth]{sim_ten_mdls}
-        \end{subfigure}
-\end{figure}
-\begin{itemize}
-\item Model error demonstrates periodic bias in tension 
-\item A constant change in spoke displacement should result in constant tension change
-\item Simulation of a 200N tension change on perfectly true wheel highlights the model error
-\end{itemize}
-\begin{block}{}
-    Change tension model to average 
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Experiment 6: Average Tension Model}
-\begin{figure}
-        \centering
-        \begin{subfigure}[b]{0.45\textwidth}
-            \includegraphics[width=\textwidth]{exp6_pre_post}
-        \end{subfigure}
-        ~
-        \begin{subfigure}[b]{0.45\textwidth}
-            \includegraphics[width=\textwidth]{exp6_predict_measure}
-        \end{subfigure}
-\end{figure}
-Wheel measurements ($\mu \pm \sigma$):
-\centering
-\begin{tabular}{| l | c | c |}
-    \hline
-    Parameter & Inital & Final \\ \hline
-    Lateral [mm] & $-0.012\pm0.079$ &$-0.004\pm 0.098$ \\ \hline 
-    Radial [mm] &$-0.037\pm0.050$& $-0.064\pm0.042$ \\ \hline 
-    Tension [N] &$914\pm63$& $1056\pm48$ \\ \hline 
-\end{tabular}
-\begin{block}{}
-    Symmetric tension model improves tension uniformity
 \end{block}
 \end{frame}
 

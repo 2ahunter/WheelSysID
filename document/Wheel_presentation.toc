@@ -3,6 +3,6 @@
 \beamer@sectionintoc {3}{Apparatus}{7}{0}{3}
 \beamer@sectionintoc {4}{Method}{8}{0}{4}
 \beamer@sectionintoc {5}{Results}{24}{0}{5}
-\beamer@sectionintoc {6}{Conclusions}{36}{0}{6}
-\beamer@sectionintoc {7}{Future Work}{38}{0}{7}
-\beamer@sectionintoc {8}{References}{39}{0}{8}
+\beamer@sectionintoc {6}{Conclusions}{32}{0}{6}
+\beamer@sectionintoc {7}{Future Work}{34}{0}{7}
+\beamer@sectionintoc {8}{References}{35}{0}{8}

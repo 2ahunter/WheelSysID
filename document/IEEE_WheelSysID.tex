@@ -3,26 +3,7 @@
 
 % *** CITATION PACKAGES ***
 %
-%\usepackage{cite}
-% cite.sty was written by Donald Arseneau
-% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
-% \cite{} output to follow that of the IEEE. Loading the cite package will
-% result in citation numbers being automatically sorted and properly
-% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
-% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
-% \cite will automatically add leading space, if needed. Use cite.sty's
-% noadjust option (cite.sty V3.8 and later) if you want to turn this off
-% such as if a citation ever needs to be enclosed in parenthesis.
-% cite.sty is already installed on most LaTeX systems. Be sure and use
-% version 5.0 (2009-03-20) and later if using hyperref.sty.
-% The latest version can be obtained at:
-% http://www.ctan.org/pkg/cite
-% The documentation is contained in the cite.sty file itself.
-
-
-
-
-
+\usepackage{cite}
 
 % *** GRAPHICS RELATED PACKAGES ***
 %
@@ -44,46 +25,10 @@
   % every instance of \includegraphics
   \DeclareGraphicsExtensions{.eps}
 \fi
-% graphicx was written by David Carlisle and Sebastian Rahtz. It is
-% required if you want graphics, photos, etc. graphicx.sty is already
-% installed on most LaTeX systems. The latest version and documentation
-% can be obtained at: 
-% http://www.ctan.org/pkg/graphicx
-% Another good source of documentation is "Using Imported Graphics in
-% LaTeX2e" by Keith Reckdahl which can be found at:
-% http://www.ctan.org/pkg/epslatex
-%
-% latex, and pdflatex in dvi mode, support graphics in encapsulated
-% postscript (.eps) format. pdflatex in pdf mode supports graphics
-% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
-% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
-% not a bitmapped formats (.jpeg, .png). The IEEE frowns on bitmapped formats
-% which can result in "jaggedy"/blurry rendering of lines and letters as
-% well as large increases in file sizes.
-%
-% You can find documentation about the pdfTeX application at:
-% http://www.tug.org/applications/pdftex
-
-
-
-
 
 % *** MATH PACKAGES ***
 %
 \usepackage{amsmath}
-% A popular package from the American Mathematical Society that provides
-% many useful and powerful commands for dealing with mathematics.
-%
-% Note that the amsmath package sets \interdisplaylinepenalty to 10000
-% thus preventing page breaks from occurring within multiline equations. Use:
-%\interdisplaylinepenalty=2500
-% after loading amsmath to restore such page breaks as IEEEtran.cls normally
-% does. amsmath.sty is already installed on most LaTeX systems. The latest
-% version and documentation can be obtained at:
-% http://www.ctan.org/pkg/amsmath
-
-
-
 
 
 % *** SPECIALIZED LIST PACKAGES ***
@@ -131,7 +76,7 @@
 %\ifCLASSOPTIONcompsoc
 %  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
 %\else
-%  \usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage[caption=false,font=footnotesize]{subfig}
 %\fi
 % subfig.sty, written by Steven Douglas Cochran, is the modern replacement
 % for subfigure.sty, the latter of which is no longer maintained and is
@@ -264,12 +209,6 @@
 
 \begin{document}
 %
-% paper title
-% Titles are generally capitalized except for words such as a, an, and, as,
-% at, but, by, for, in, nor, of, on, or, the, to and up, which are usually
-% not capitalized unless they are the first or last word of the title.
-% Linebreaks \\ can be used within to get better formatting as desired.
-% Do not put math or special symbols in the title.
 \title{Bicycle Wheel System Identification and Optimal Truing Control for Mechatronic Systems}
 %
 %
@@ -283,15 +222,15 @@
 %
 
 \author{Aaron~Hunter% <-this % stops a space
-\thanks{A. Hunter is a PhD student at the Department of Computer Science and Engineering, University of California, Santa Cruz, CA, 95054 USA e-mail: aamuhunt@ucsc.edu.}% <-this % stops a space
-\thanks{Manuscript received April 19, 2005; revised August 26, 2015.}}
+\thanks{A. Hunter is a PhD student at the Department of Computer Science and Engineering, University of California, Santa Cruz, CA, 95060 USA e-mail: aamuhunt@ucsc.edu.}% <-this % stops a space
+\thanks{Manuscript received month day, year; revised month day, year.}}
 
 % note the % following the last \IEEEmembership and also \thanks - 
 % these prevent an unwanted space from occurring between the last author name
 % and the end of the author line. i.e., if you had this:
 % 
 % \author{....lastname \thanks{...} \thanks{...} }
-%                     ^------------^------------^----Do not want these spaces!
+%^------------^------------^----Do not want these spaces!
 %
 % a space would be appended to the last name and could cause every name on that
 % line to be shifted left slightly. This is one of those "LaTeX things". For
@@ -307,8 +246,8 @@
 
 
 % The paper headers
-\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
-{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
+\markboth{IEEE/ASME Transactions on Mechatronics,~Vol.~yy, No.~x, Month~Year}%
+{Hunter \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
 % The only time the second header will appear is for the odd numbered pages
 % after the title page when using the twoside option.
 % 
@@ -337,7 +276,7 @@
 % As a general rule, do not put math, special symbols or citations
 % in the abstract or keywords.
 \begin{abstract}
-Put your abstract here
+This paper describes an \emph{in-situ} empirical modeling technique of a conventional bicycle wheel that is employed to determine the optimal tension adjustments necessary to align the wheel in lateral and radial directions while maintaining uniform tension of the spokes. The technique allows the mean tension of the spokes to be adjusted independently from variations around the mean. Additionally, a control algorithm is developed that uses lateral feedback and predicted intermediate wheel states to bring the wheel into alignment to any desired tension in a single iteration of adjustments of the tension of the spokes.  Experimental validation of the algorithm is demonstrated on a poorly tensioned and misaligned wheel. The wheel is taken from an initial state ($\mathbf{\mu \pm \sigma}$): tension $\mathbf{=556 \pm 211}$N, lateral $\mathbf{=0.160 \pm 0.736}$mm, radial $\mathbf{=0.05 \pm 0.158}$mm to a final state: lateral $\mathbf{=-0.037\pm 0.107}$mm, radial $\mathbf{=-0.046\pm0.047}$mm, tension $\mathbf{=1009\pm45}$N in a single iteration of the truing algorithm.
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
@@ -360,33 +299,45 @@ IEEE, IEEEtran, journal.
 \section{Introduction}
 % The very first letter is a 2 line initial drop letter followed
 % by the rest of the first word in caps.
-\IEEEPARstart{T}{he} spoked bicycle wheel is one of the most ubiquitous tensioned structures in the world. While much has been written about modeling the structure itself (reference Ford's thesis for a good literature review) very little has been published regarding the assembly and tuning of the structure itself.  This work presents a framework for a rigorous approach to empirically modeling a bicycle wheel and provides for an optimal tensioning method for all wheels of the same type.  This framework is intended for integration into a mechatronic wheel manufacturing apparatus although the results presented here were produced by hand, albeit with the assistance of measurement sensors and a computer. 
+\IEEEPARstart{T}{he} spoked bicycle wheel is one of the most ubiquitous tensioned structures in the world. While much has been written about modeling the structure itself (see \cite{FordThesis} for a comprehensive literature review) very little has been published regarding the assembly and tuning of the structure itself.  This work presents a framework for a rigorous approach to empirically modeling a bicycle wheel and provides for an optimal tensioning method for all wheels of the same type.  This framework is intended for integration into a mechatronic wheel manufacturing apparatus although the results presented here were produced by hand, albeit with the assistance of measurement sensors and a computer. 
 
-Our approach builds upon the one proposed by Papadapolous (cite patent) and alluded to in (cite Holland patent) for the wheel tensioning method. This approach is to measure the influence of a tension adjustment to a spoke on the lateral, radial, and tension parameters of a specific wheel.  These influence functions are generated for each spoke and input into a model in matrix form.  This model is then employed to compute a weighted least squares estimation of the tension adjustments that minimize the wheel parameter variations for a given wheel under tensioning.  Where this work improves upon previous approaches is to provide tension targeting and a method for feedback control during the tensioning process to minimize cumulative adjustment errors. 
+The approach presented in this paper builds upon the one patented by Papadapolous \cite{Papadapoulos} and alluded to in \cite{HollandMech} for the wheel tensioning method. This approach is to determine the influence of a tension adjustment of each spoke on the lateral, radial and spoke tension parameters of a specific wheel.  These influence functions are placed into a model in matrix form.  This model is then employed to compute a weighted least squares estimation of the tension adjustments that minimize the wheel parameter variations for a given wheel under tensioning.  Where this work improves upon previous approaches is to provide tension targeting and a method for feedback control during the tensioning process to minimize cumulative adjustment errors. 
 
 \section{Background}
-The bicycle wheel structure consists of a rim, spokes, spoke nipples, and a hub (see figure of wheel).  The hub anchors the spoke which is connected to the rim by a nippled threaded onto its end.  The nipple is seated in the rim. The wheel stiffness is generated by providing tension to the spokes by tightening the nipples until the desired tension is achieved. Lateral stiffness of the wheel is provided by the lateral component of the spoke tension due to the spoke angle $\alpha$ in fig(cite fig here). Lateral stiffness prevents rim warping and allows for adjustment of lateral variations. Radial stiffness is provided by the radial component of the spoke tension and allows for compensating for radial variations.  The optimal tension of the wheel is a balance between the two--high enough tension to support the anticipated load, but below the value that begins to induce rim warpage (cite Ford here). 
+The bicycle wheel structure consists of a rim, spokes, spoke nipples, and a hub as shown in Fig(\ref{geom}).  The hub anchors the spoke which is connected to the rim by a nippled threaded onto its end.  The nipple is seated in the rim. The wheel stiffness is generated by providing tension to the spokes by tightening the nipples until the desired tension is achieved. Lateral stiffness of the wheel is provided by the lateral component of the spoke tension due to the spoke angles $\alpha_{nd}$ and $\alpha_d$. Lateral stiffness prevents rim warping out of the wheel plane and allows for adjustment of lateral variations. Radial stiffness and compensation is provided by the radial component of the spoke tension. The optimal tension of the wheel is a balance between the two--high enough tension to support the anticipated load, but below the value that begins to induce rim warpage \cite{FordThesis}. Note that there are two other degrees of freedom for rim displacements:  tangential (rim compression) and torsion around the rim shear center.  The former acts to change the circumference of the rim and is a much smaller effect than the lateral or radial dimensions.  The latter might be of concern for wheels containing spokes significantly offset from the rim center. Both of these effects should be addressed in rim design. 
 
 Spoking patterns vary from purely radial to nearly tangential relative to the hub and determined by angle $\beta$.  Tangential spoke patterns allow for torque transmission from the hub to the rim, as occurs through the drive train or from disc brakes, so most wheels have some tangential component, the exception being front wheels with rim brakes.
 
-The process of adjusting the tension to minimize the lateral and radial variations of the wheel is called truing. The typical procedure for wheel truing by hand is a heuristic where first the average spoke tension is applied, then the lateral variations are iteratively reduced, and finally the radial variations are minimized.  The wheel tension is then increased incrementally and the procedure is repeated until the wheel parameter specifications are met (cite Brandt).
+The process of adjusting the tension to minimize the lateral and radial variations of the wheel is called truing. The typical procedure for wheel truing by hand is a heuristic where first some average spoke tension is applied by tightening all the spoke nipples, then the lateral variations are iteratively reduced, and finally the radial variations are minimized. The wheel tension is then increased incrementally and the procedure is repeated until the wheel parameter specifications are met \cite{Brandt}.
 
-The wheel can be modeled as a system of springs operating in a linear regime (Ford again). Because of this linear property, the wheel parameter variations induced by a set of spokes can be decomposed into superposed individual spoke tensions, lending itself to least squares analysis developed in the next sections.
-
-\section{Apparatus}
-To develop the model a symmetric (i.e., tensioned equally on both sides), front wheel was built by hand using a Stans ZTR Alpha rim, a White Industries MI5 hub, and 32 DT Swiss Competition spokes.  A so-called `three-cross' tangential spoke pattern was employed for the wheel geometry.  All adjustments were performed on a Centrimaster Comfort wheel truing stand.  This stand has radial and lateral mechanical dial gauges to measure the rim displacements with 0.1 mm gauge markings. To obtain optimal resolution and to minimize measurement time, a Canon EOS M digital camera with a 22mm focal length lens was used to capture images from the dial gauges.  A computer vision algorithm was used to analyze the images and calculate the displacements.  Finally, a WheelFanatyk digital tension gauge was used to measure spoke tension. This instrument measures displacement of the spoke under a known spring tension. This displacement is converted to a measured tension based on a lookup table provided by the manufacturer. It has an accuracy of 10 \% and the measurements are discretized to 0.01 mm.
+The wheel can be modeled as a system of springs operating in a linear regime \cite{FordThesis}. Because of this linear property, the wheel parameter variations induced by a set of spokes can be decomposed into superposed individual spoke tensions, lending itself to influence matrix approach developed in the next section.
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=2.5in,angle=-90]{apparatus.jpg}
-\caption{Apparatus used to measure wheel properties}
+    \subfloat[]{
+        \includegraphics[width=0.09\textwidth]{rim_x}
+    }
+    \subfloat[]{
+        \includegraphics[width=0.375\textwidth]{geom}
+    }
+    \caption{Wheel geometry. (a)  Rim cross section.  The lateral direction is defined to point toward the non-drive side of the wheel.  The radial direction points outwards from the hub.  The spoke angles $\alpha_{{nd}}$ and $\alpha_{{d}}$ provide lateral stiffness to the wheel. (b) Side view of a wheel. The rim angle, $\theta$, is referenced to the valve stem.  The angle, $\beta$, results from the wheel spoke pattern,  A purely radially spoked wheel has $\beta = 0$.}
+    \label{geom}
+    \end{figure}
+
+\section{Apparatus}
+To develop the model a symmetric (i.e., tensioned equally on both sides), front wheel was built by hand using a Stans ZTR Alpha rim, a White Industries MI5 hub, and 32 DT Swiss Competition spokes.  A so-called `three-cross' tangential spoke pattern was employed for the wheel geometry.  All adjustments were performed on a Centrimaster Comfort wheel truing stand (Fig \ref{fig:apparatus}).  This stand has radial and lateral mechanical dial gauges to measure the rim displacements with 0.1 mm gauge markings. To obtain optimal resolution and minimize data collection time, a Canon EOS M digital camera with a 22mm focal length lens was used to capture images from the dial gauges.  A computer vision algorithm was used to analyze the images and calculate the displacements.  The spoke tension measurements were taken with a  WheelFanatyk digital tension gauge. This instrument measures displacement of the spoke under a known spring tension. This displacement is converted to a measured tension based on a lookup table provided by the manufacturer. It has an accuracy of 10 \% and the measurements are discretized to 0.01 mm.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=2.5in,angle=-90]{./imgs/apparat.jpg}
+\caption{Apparatus used to measure lateral and radial displacements.}
 \label{fig:apparatus}
 \end{figure}
 
 \section{Method}
 
 \subsection{Wheel Model}
-The approach taken here is to determine the effect of a unit change in spoke tension on the lateral, radial and tension parameters of a wheel as measured as a function of rim angle as illustrated in fig().  The resulting curves are referred to as the influence functions of the spoke. To find these influence functions a series of experiments are performed on a subset of the spokes in a given wheel.  For each experiment a spoke is loosened by one complete rotation and measurements are taken equal increments along the rim for the radial and lateral displacements and tension measurements are taken for every spoke. The data are used to develop the influence functions, either as a discrete sequence or fit to the Fourier series. The influence functions for each spoke are then placed into matrix forms such that each column represents the influence of a given spoke and each row represents a discrete rim angle.  In other words, if $u_s (\theta), v_s(\theta), \text{ and }t_s(\theta)$ are the lateral and radial influence functions for spoke $s \in [1,2, \cdots , n_s]$, then the influence matrices $\Phi_u, \Phi_v \text{ and } \Phi_t$  for the lateral, radial and tension parameters respectively, at the discrete rim angles $\theta \in [\theta_1,\theta_2,\cdots, \theta_n]$ are given by:
+The approach taken here is to determine the effect of a unit change in spoke tension on the lateral, radial and tension parameters of a wheel as a function of rim angle.  The resulting curves are referred to as the influence functions of the spoke. To find these influence functions a series of experiments are performed on a subset of the spokes in a given wheel.  For each experiment a spoke is loosened by one complete rotation and measurements are taken at equal increments along the rim, for the radial and lateral displacements, and the tension of every spoke is measured. The data are used to develop the influence functions, The influence functions for each spoke are then placed into matrix forms such that each column represents the influence of a given spoke and each row represents a discrete rim angle.  In other words, if $u_s (\theta), v_s(\theta), \text{ and }t_s(\theta)$ are the lateral and radial influence functions for spoke $s \in [1,2, \cdots , n_s]$, then the influence matrices $\Phi_u, \Phi_v \text{ and } \Phi_t$  for the lateral, radial and tension parameters respectively, at the discrete rim angles $\theta \in [\theta_1,\theta_2,\cdots, \theta_n]$ are given by:
 
 \begin{align*}
     \bf u_s &=  \begin{bmatrix}
@@ -419,7 +370,7 @@ The approach taken here is to determine the effect of a unit change in spoke ten
      \bf t_1 & \bf t_2& \dots & \bf t_{n_s}
      \end{bmatrix} 
 \end{align*}
- The influence matrices are the models of the wheel for each parameter.  We combine these matrices into a single matrix $\Phi$:
+The influence matrices are the models of the wheel for each parameter.  We combine these matrices into a single matrix $\Phi$:
  \begin{align}
  \Phi = 
      \begin{bmatrix}
@@ -437,7 +388,7 @@ Given a vector of tension adjustments (i.e., rotations of the spoke nipples), $\
  \end{align}
 where $\mathbf{\hat Y}$ is the predicted state of the wheel after tensioning and $\mathbf{Y_b}$ is the state of the wheel prior to tensioning. 
 
-To find the optimal vector of spoke tension adjustments $\mathbf{d}_{ls}$ that result in a measured state relative to a perfect wheel at average tention $\bar T$ we set up a weighted least squares approximation using a set of measurements $ [ {\bf u,v,T}-\bar T ]$, and the weights $\mu_v \text{ and }\mu_t$:
+To find the optimal vector of spoke tension adjustments $\mathbf{d}_{ls}$ that result in a measured state relative to a perfect wheel at average tention $\bar T$ we solve the weighted least squares approximation using a set of measurements $ [ {\bf u,v,T}-\bar T ]$, and the weights $\mu_v \text{ and }\mu_t$:
 \begin{align*}
     \tilde \Phi &= \begin{bmatrix}
     \Phi_u\\
@@ -454,20 +405,20 @@ To find the optimal vector of spoke tension adjustments $\mathbf{d}_{ls}$ that r
         {\bf d}_{ls} &= \tilde \Phi^\dagger {\bf \tilde Y}
         \label{eq:dls}
 \end{align}
-Where $\tilde \Phi^\dagger$ is the pseudo-inverse of $\tilde \Phi$.  Typically $u_0$ and $v_0$ are zero reflecting the fact that the gauge has been set to zero at the desired lateral and radial locations during setup. The weighting factors represent the tradeoff between the lateral, radial, and tension variables and account for the difference in units, the quality of measurements, as well as the specification for each parameter. We will determine the weighting factors through simulation and validate them experimentally. Once ${\bf d}_{ls}$ is found the wheel is trued to its optimal state, ${\bf \hat Y}_{ls}$ by applying $\mathbf{d}_{adj} = -{\bf d}_{ls}$ to the wheel:
+Where $\tilde \Phi^\dagger$ is the pseudo-inverse of $\tilde \Phi$.  Typically $u_0$ and $v_0$ are zero reflecting the fact that the gauge has been set to zero at the desired lateral and radial locations during setup. The weighting factors represent the tradeoff between the lateral, radial, and tension variables and account for the difference in units, the quality of measurements, as well as the specification for each parameter. The weighting factors are determined through simulation and validated experimentally. Once ${\bf d}_{ls}$ is found the wheel is trued to its optimal state, ${\bf \hat Y}_{ls}$ by applying $\mathbf{d}_{adj} = -{\bf d}_{ls}$ to the wheel:
 \begin{align}
 \mathbf{\hat Y}_{ls} &= \mathbf{Y_b} + \Phi  \mathbf{d} _{adj}
 \label{eq:Yls}
 \end{align}
 
 \subsection{Tension Targeting}
-In theory adjusting a wheel to any arbitrary average tension is accomplished by setting $\bar T = T_d$, where $T_d$ is the desired tension.  In practice however, the tension influence functions are noisy and lack the necessary precision to target tension accurately.  However, we can exploit the wheel symmetry to make the following observation.  For a symmetric wheel, if every spoke is tightened by the same amount then the radial and lateral displacements are unaffected and only the mean tension is changed. It is possible therefore to decouple the average tension change from spoke tension non-uniformity. It should be apparent that this is possible for asymmetric wheels as well, such as a drive wheel or wheel with a disc brake, by compensating for the different spoke angles. 
+In theory adjusting a wheel to any arbitrary average tension is accomplished by setting $\bar T = T_d$, where $T_d$ is the desired tension.  In practice however, the tension influence functions are noisy and lack the necessary precision to target tension accurately.  However, the wheel symmetry can be exploited to make the following observation.  If every spoke of a symmetric wheel is tightened by the same amount then the radial and lateral displacements are unaffected and only the mean tension is changed. It is possible therefore to decouple the average tension change from spoke tension non-uniformity. It should be apparent that this is possible for asymmetric wheels as well, such as a drive wheel or wheel with a disc brake, by compensating for the different spoke angles. 
 
-Our approach is as follows.  We calculate ${\bf d}_{ls}$ as in (\ref{eq:2}) and subtract its mean value:
+The approach is as follows.  First calculate ${\bf d}_{ls}$ as in (\ref{eq:dls}) and subtract its mean value:
 \begin{align*}
     \mathbf{d} &= -(\mathbf{d}_{ls} - \bar d_{ls})\\
 \end{align*}
-If we apply $\bf d$ to a wheel it will minimize lateral, radial and tension variations as before, but without affecting the average tension.  We then calculate the necessary constant shift $d_{cm}$ to bring the average tension to $T_d$:
+If the adjustments, $\bf d$, are applied to the spokes, the lateral, radial and tension variations will be minimized as before, but without affecting the average tension.  Then calculate the necessary constant shift $d_{cm}$ to bring the average tension to $T_d$:
 \begin{align*}
     d_{cm} &=  (T_d - \bar T)/c
 \end{align*}
@@ -477,13 +428,27 @@ Where the proportionality constant, $c$, is determined experimentally. The spoke
 \end{align}
 
 \subsection{Optical Digitization}
-The method for converting the analog dial gauge readings into digital measurements merits some discussion.  Although a mechatronic implementation of a wheel tensioning machine would likely use digital gauges, it is instructive to demonstrate the effectiveness of optical digitization.  Prior to taking measurements two  images are collected.  The first is a reference image taken with the gauge needles outside the range of expected data range.  The second image is taken with the needles set to zero.  With these two images any subsequent image of a measurement is processed in the following manner.  The measurement image is subtracted from the reference image after appropriate smoothing.  If the images are taken under the same conditions, what remains after subtraction is a ghost image of the needles themselves. A binary threshold is applied to the subtracted image and masked.  Finally, the centroid of the needle tip is determined and an angle from the gauge center to the tip is calculated and compared to the measurement at zero.  The angle is then converted into displacement using the gauge resolution. This process is shown in Fig().  
+The method for converting the analog dial gauge readings into digital measurements merits some discussion.  Although a mechatronic implementation of a wheel tensioning machine would likely use digital gauges, it is instructive to demonstrate the effectiveness of optical digitization.  Prior to taking measurements two  images are collected.  The first is a reference image taken with the gauge needles outside the range of expected data range.  The second image is taken with the needles set to zero.  With these two images any subsequent image of a measurement is processed in the following manner.  The measurement image is subtracted from the reference image after appropriate smoothing.  If the images are taken under the same conditions, what remains after subtraction is a ghost image of the needles themselves. A binary threshold is applied to the subtracted image and masked.  Finally, the centroid of the needle tip is determined and an angle from the gauge center to the tip is calculated and compared to the measurement at zero.  The angle is then converted into displacement using the gauge resolution. This process is shown in Fig(\ref{fig:cv_img}).  
+
+
+\begin{figure}[!t]
+    \centering
+    \subfloat[]{
+        \includegraphics[width=0.2\textwidth]{./imgs/zero}
+    }
+    \quad
+    \subfloat[]{
+        \includegraphics[width=0.2\textwidth]{./imgs/threshold_img}
+    }
+    \caption{Images used to measure analog dial gauges with computer vision. Image (a) is the measurement image.  Image (b) is generated by subtracting the measurement image from a reference image and applying binary threshold and masking operations (concentric circles). The angle of the needles is measured relative to the gauge center and the converted to a displacement measurement.}
+    \label{fig:cv_img}
+\end{figure}
 
 
 \subsection{Wheel Truing Algorithm}
-Having determined the optimal spoke adjustments, ${\bf d}_{adj}$, the remaining task is to apply them to the wheel. Although this sounds deceptively simple, there are some difficulties doing this accurately.  The main one is a problem of spoke twist. Spokes are not torsionally stiff and will twist significantly during nipple rotation.  Thus it is difficult to precisely determine how far the spoke nipple has been adjusted based entirely on the rotation angle of the spoke nipple. The servo accuracy or precision may also be inadequate, leading to the accumulation of errors over multiple spoke adjustments. This is particularly true at higher spoke tensions where the friction of the nipple-spoke interface can lead to discrete jumps in nipple rotation. Finally, even if the nipple has been adjusted properly but the spoke is twisted, over time it can un-twist which may result in tension loss of the spoke and causing the wheel to go out of true. 
+Having determined the optimal spoke adjustments, ${\bf d}_{adj}$, the remaining task is to apply them to the wheel. Although this sounds deceptively simple, there are some difficulties doing this accurately.  The main one is a problem of spoke twist. Spokes are not torsionally stiff and will twist significantly during nipple rotation.  Thus it is difficult to precisely determine how far the spoke nipple has been adjusted based entirely on the rotation angle of the spoke nipple. The servo accuracy or precision may also be inadequate, leading to the accumulation of errors over multiple spoke adjustments. This is particularly true at higher spoke tensions where the friction of the nipple-spoke interface can lead to discrete jumps in nipple rotation. Finally, even if the nipple has been adjusted properly but the spoke is twisted, over time it can un-twist which may result in tension loss of the spoke and cause the wheel to go out of true. 
 
-Although the use of high precision servos and clamping the spoke during adjustment improve the wheel truing process,  we have developed a method which minimize these sources of variability using lateral feedback during each spoke adjustment. The method begins with the first element of ${\bf d}_{adj}$. Using (\ref{eq:Y_hat}) the post-adjustment lateral displacement at the rim angle of that spoke is predicted as the target displacement.  The spoke tension is then adjusted until the lateral measurement equals the target displacement. Spoke twist is then eliminated by measuring the spoke rotation hysteresis and setting the spoke nipple angle midway in the hysteresis regime. Note that this lateral target is not zero, but rather the intermediate state of the wheel after the adjustment of the first spoke.  Then a prediction is made of the lateral state at the rim angle of the second spoke after the first \emph{two} adjustments have been performed.  The second spoke tension is adjusted until the target is reached in the same manner of the first. This process continues sequentially for every element in ${\bf d}_{adj}$. This method minimizes any accumulation of adjustment error while eliminating spoke twist.  Fig(\ref{fig:algo}) shows the intermediate lateral states of a wheel undergoing this method along with the lateral targets for each spoke adjustment. 
+Although the use of high precision servos and clamping the spoke during adjustment improve the wheel truing process, this paper demonstrates a method that minimizes these sources of variability using lateral feedback during each spoke adjustment. The method begins with the first element of ${\bf d}_{adj}$. Using (\ref{eq:Y_hat}) the post-adjustment lateral displacement at the rim angle of that spoke is predicted for a target displacement.  The spoke tension is then adjusted until the lateral measurement equals the target displacement. Spoke twist is then eliminated by measuring the spoke rotation hysteresis and setting the spoke nipple angle midway in the hysteresis regime. Note that this lateral target is not zero, but rather the intermediate state of the wheel after the adjustment of the first spoke.  Then a prediction is made of the lateral state at the rim angle of the second spoke after the first \emph{two} adjustments have been performed.  The second spoke tension is adjusted until the target is reached in the same manner of the first. This process continues sequentially for every element in ${\bf d}_{adj}$. This method minimizes any accumulation of adjustment error while eliminating spoke twist.  Fig(\ref{fig:algo}) shows the intermediate lateral states of a wheel undergoing this method along with the lateral targets for each spoke adjustment. 
 
 \begin{figure}[!t]
 \centering
@@ -505,7 +470,7 @@ To provide for higher precision measurements and to automate analog to digital c
 \subsection{Influence Curves}
 The influence curves for the lateral and radial displacements were taken at 64 equally spaced locations on the rim--at each spoke and halfway between each spoke.  32 curves were measured, one for each spoke in the wheel.  These curves were averaged and in the case of the radial displacement, the mean value subtracted (for our purposes the rim is considered incompressible in the tangential direction, thus a tension change should not induce an average radial change).  The subsequent influence curves are shown in Fig(\ref{fig:gclr}).  The tension influence curves were measured for each spoke.  This particular spoking geometry results in four distinct tension curves, depending on whether the spoke is on the drive side of the wheel, or the non-drive side, and whether it is a `leading' spoke or a `trailing' spoke, that is whether its spoke angle, $\beta$, is positive or negative (see Fig()).  Because this is a symmetric wheel, however, the non-drive side leading spoke influence curve is a mirror image of the drive side trailing one.  Similarly, the non-drive side trailing spoke influence curve is a mirror image of the drive side leading one. This symmetry was exploited to generate the four tension influence curves in Fig(\ref{fig:gc_ten}), such that each curve represents the average of 16 curves and is mirrored when necessary.
 
-The lateral and radial influence curves can be used directly and put into the influence matrices.  Alternatively, they can be fit to the Fourier series. The Fourier series is an ideal modeling method for these curves due to their continuous nature and $2\pi$ periodicity. The tension measurements are inherently discrete, however, so modeling them in this manner, while feasible, is not useful as the model requires as many terms as there are measurement for fidelity. There are analytical models available (cite Ford again), however, they require extensive characterization of the rim that is not possible \emph{in-situ}.  Therefore, for this work only the smoothed data were used for the influence matrices.  
+The lateral and radial influence curves can be used directly and put into the influence matrices.  Alternatively, they can be fit to the Fourier series. The Fourier series is an ideal modeling method for these curves due to their continuous nature and $2\pi$ periodicity. The tension measurements are inherently discrete, however, so modeling them in this manner, while feasible, is not useful as the model requires as many terms as there are measurement for fidelity. There are analytical models available (see \cite{ModeMatrix} for an open source example), however, they require extensive characterization of the rim that is not possible \emph{in-situ}.  Therefore, for this work only the smoothed data were used for the influence matrices.  
 
 \begin{figure}[!t]
 \centering
@@ -532,7 +497,7 @@ With the influence matrices developed as in (\ref{eq:phi}) the state of the whee
 \end{figure}
 
 \subsection{Model Validation}
-The model is separated into two parts, spoke adjustments which affect the variation of the three wheel parameters around a mean value, and adjustments which affect the mean tension.  The latter part of the model is found by determining the coefficient, $c$ between the average of the spoke adjustment vector and the average tension change of the wheel.  Fig(\ref{fig:c}) demonstrates the results of seven experiments. A linear fit to these data finds $c=-$473. In practice, this constant could be derived from a single experiment where every spoke is adjusted by one revolution. 
+The model is separated into two parts, spoke adjustments which affect the variation of the three wheel parameters around a mean value, and adjustments which affect the mean tension.  The latter part of the model is found by determining the coefficient, $c$ between the average of the spoke adjustment vector and the average tension change of the wheel.  Fig(\ref{fig:c}) demonstrates the results of seven experiments. A linear fit to these data finds $c=-$473 N/rev. In practice, this constant could be derived from a single experiment where every spoke is adjusted by one revolution. 
 
  \begin{figure}[!t]
 \centering
@@ -700,14 +665,21 @@ Finally, to see whether the performance of the truing algorithm could improve th
 
 
 \section{Conclusion}
-The conclusion goes here.
+These results successfully demonstrate that a linear wheel model can be developed empirically using standard system identification methodology.  This methodology consists of perturbing the wheel with known tension changes and measuring the resulting wheel state.  An optimal spoke tension adjustment vector can be found using weighted linear least squares analysis of the wheel errors.  This vector represents the best estimate for the adjustments  necessary to true the wheel. The weighting factors are determined by an analysis of their relative magnitudes as well as to meet a desired specification. In addition, the mean spoke tension can be separated from the spoke variation around the mean.  This allows accurate tension targeting even with relatively large errors in the tension influence matrix.
+
+A truing algorithm that minimizes adjustment errors using a prediction of intermediate wheel states after adjustment of each spoke and lateral measurement feedback was demonstrated. This algorithm trues a wheel in a single iteration even to a significantly different tension. A second iteration of the truing algorithm can bring a small but significant improvement. The truing algorithm is also effective at minimizing spoke twist by detecting the hysteresis in the spoke nipple rotation and adjusting the nipple to the approximate midpoint of the hysteresis region once the lateral target is reached. 
+
+The main limitation to the model is the inaccuracy and perhaps more importantly the coarse discretization of the tension measurements.  Because of this, the tension parameter is weighted relatively less than the radial and lateral parameters.  The resulting wheel states after a truing operation reflect this weighting and the tension errors away from the target tension approach 10\% in the worst case. The main limitation to the truing algorithm is the precision of the spoke tension adjustment.  Some spoke nipples didn't rotate smoothly on the test wheel, particularly at high tension.  Rather the nipple rotated in small discrete jumps as torque was applied.  Thus the error in the lateral target adjustment approached 0.1mm.  Using new components and appropriate lubrication would improve the precision of the adjustment and likely result in better performance.  Even despite these limitations, the test wheel was trued to tight specifications.
+
+To improve upon the tension performance a higher resolution and more repeatable tension measurement is desired. One approach that has been suggested (ref Papadopoulos) is to estimate the frequency the first vibrational mode of the spoke after plucking the spoke as one would a guitar string.  The frequency is proportional to the square root of the tension thus the tension can be measured acoustically.  Another alternative is to measure the torque required to adjust the spoke. The tension can be determined from the torque. However, this approach is sensitive to lubrication as well as mechanical imperfections of the components and may not be as reliable. An alternative to measuring the spoke tension is to use a regularization technique instead of a full influence matrix.  Regularization places a cost on the amount of tension adjustment which is minimized along with the lateral and radial errors.  This was approach was tested in simulation and found to have higher error than using the tension influence matrix. 
+
+As an aside, In this work an optical digitization of analog dial gauges was demonstrated to provide high precision measurements, at least as good as a pixel-level evaluation of images of the dial gauges.  This technique provides an effective alternative to digital gauges. 
 
 
 % use section* for acknowledgment
 \section*{Acknowledgment}
 
-
-The authors would like to thank...
+The authors would like to thank Matthew Ford for modeling discussions and Stuart Davis of Santa Cruz Bicycles for providing the initial inspiration for the study.
 
 
 % Can use something like this to put references on a page
@@ -733,20 +705,9 @@ The authors would like to thank...
 % http://mirror.ctan.org/biblio/bibtex/contrib/doc/
 % The IEEEtran BibTeX style support page is at:
 % http://www.michaelshell.org/tex/ieeetran/bibtex/
-%\bibliographystyle{IEEEtran}
+\bibliographystyle{IEEEtran}
 % argument is your BibTeX string definitions and bibliography database(s)
-%\bibliography{IEEEabrv,../bib/paper}
-%
-% <OR> manually copy in the resultant .bbl file
-% set second argument of \begin to the number of references
-% (used to reserve space for the reference number labels box)
-\begin{thebibliography}{1}
-
-\bibitem{IEEEhowto:kopka}
-H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
-
-\end{thebibliography}
+\bibliography{WheelSysID}
 
 % biography section
 % 
@@ -759,7 +720,7 @@ H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
 %\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
 % or if you just want to reserve a space for a photo:
 
-\begin{IEEEbiography}{Michael Shell}
+\begin{IEEEbiography}{Aaron Hunter}
 Biography text here.
 \end{IEEEbiography}
 
