@@ -14,7 +14,7 @@ load('gainCurves.mat')
 mu2 = sqrt(5e-5);
 
 % load pre-tuning data (the post data from previous experiment, usually
-preNum = 10;
+preNum = 9;
 oldExperiment = strcat('exp',num2str(preNum),'.mat');
 load(oldExperiment)
 Y_pre = Y_post;
@@ -81,7 +81,7 @@ D = WF_cal_18(:,1);
 T = WF_cal_18(:,2);
 
 % load lateral and radial displacements:
-expNum = 11;
+expNum = 10;
 % filename for the post exerimental data
 fn1 = strcat('valid_32_',num2str(expNum),'.mat');
 load(fn1)

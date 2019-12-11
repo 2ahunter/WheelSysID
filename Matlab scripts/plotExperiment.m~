@@ -36,41 +36,34 @@ plot(theta_r,Y_rad_hat,'k-.','LineWidth',1)
 plot(theta_r,Y_rad,'kx','LineWidth',1)
 hold off
 ylabel('Radial [mm]')
-legend('Predict','Measure','Location','southeast')
+legend('Predict','Measure')
 ax = gca;
 ax.FontSize = 16;
 subplot(3,1,3)
 data = cat(2,Y_ten_hat+delta_ten,Y_ten);
-b = bar(theta_s,data,1);
-b(1).EdgeColor = 'k';
-b(1).FaceColor = [0.5,0.5,0.5];
-b(2).EdgeColor = 'k';
-b(2).FaceColor = 'w';
+bar(theta_s,data)
 ylabel('Tension [N]')
 xlabel('Rim Angle [rad]')
 legend('Predict','Measure')
 ax = gca;
 ax.FontSize = 16;
 
-% plot model error
 figure()
 subplot(3,1,1)
-plot(theta_r,Y_lat_hat- Y_lat,'kx-.','LineWidth',1)
+plot(theta_r,Y_lat_hat- Y_lat,'b-','LineWidth',1)
 ylabel('Lateral [mm]')
 title('Model Error')
 ax = gca;
 ax.FontSize = 16;
 
 subplot(3,1,2)
-plot(theta_r,Y_rad_hat- Y_rad,'kx-.','LineWidth',1)
+plot(theta_r,Y_rad_hat- Y_rad,'b-','LineWidth',1)
 ylabel('Radial [mm]')
 ax = gca;
 ax.FontSize = 16;
 
 subplot(3,1,3)
-b= bar(theta_s,Y_ten_hat - (Y_ten-delta_ten),0.8);
-b(1).EdgeColor = 'k';
-b(1).FaceColor = [0.5,0.5,0.5];
+bar(theta_s,Y_ten_hat - (Y_ten-delta_ten))
 ylabel('Tension [N]')
 xlabel('Rim Angle [rad]')
 ax = gca;
