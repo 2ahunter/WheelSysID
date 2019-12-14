@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  20 NOV 2019 17:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  14 DEC 2019 09:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -321,44 +321,44 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-<rim_x.pdf, id=1, 73.72644pt x 282.78249pt>
-File: rim_x.pdf Graphic file (type pdf)
- <use rim_x.pdf>
-Package pdftex.def Info: rim_x.pdf used on input line 319.
-(pdftex.def)             Requested size: 46.43811pt x 178.12369pt.
-
-<geom.pdf, id=2, 262.56496pt x 240.2034pt>
-File: geom.pdf Graphic file (type pdf)
- <use geom.pdf>
-Package pdftex.def Info: geom.pdf used on input line 322.
-(pdftex.def)             Requested size: 193.5pt x 177.01834pt.
-
-Overfull \hbox (1.93835pt too wide) in paragraph at lines 319--323
- [][][] 
- []
-
 [1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-<./imgs/apparat.jpg, id=17, 3276.24pt x 2457.18pt>
+<rim_x.pdf, id=14, 73.72644pt x 282.78249pt>
+File: rim_x.pdf Graphic file (type pdf)
+ <use rim_x.pdf>
+Package pdftex.def Info: rim_x.pdf used on input line 327.
+(pdftex.def)             Requested size: 46.43811pt x 178.12369pt.
+
+<geom.pdf, id=15, 262.56496pt x 240.2034pt>
+File: geom.pdf Graphic file (type pdf)
+ <use geom.pdf>
+Package pdftex.def Info: geom.pdf used on input line 330.
+(pdftex.def)             Requested size: 193.5pt x 177.01834pt.
+
+Overfull \hbox (1.93835pt too wide) in paragraph at lines 327--331
+ [][][] 
+ []
+
+<./imgs/apparat.jpg, id=16, 3276.24pt x 2457.18pt>
 File: ./imgs/apparat.jpg Graphic file (type jpg)
  <use ./imgs/apparat.jpg>
-Package pdftex.def Info: ./imgs/apparat.jpg used on input line 332.
+Package pdftex.def Info: ./imgs/apparat.jpg used on input line 340.
 (pdftex.def)             Requested size: 180.67499pt x 135.5015pt.
 
 [2 <./rim_x.pdf> <./geom.pdf> <./imgs/apparat.jpg>]
-<./imgs/zero.png, id=53, 1040.88875pt x 1387.1825pt>
+<./imgs/zero.png, id=51, 1040.88875pt x 1387.1825pt>
 File: ./imgs/zero.png Graphic file (type png)
  <use ./imgs/zero.png>
-Package pdftex.def Info: ./imgs/zero.png used on input line 438.
+Package pdftex.def Info: ./imgs/zero.png used on input line 447.
 (pdftex.def)             Requested size: 103.19843pt x 137.51987pt.
 
-<./imgs/threshold_img.png, id=54, 1040.88875pt x 1387.1825pt>
+<./imgs/threshold_img.png, id=52, 1040.88875pt x 1387.1825pt>
 File: ./imgs/threshold_img.png Graphic file (type png)
 
 <use ./imgs/threshold_img.png>
-Package pdftex.def Info: ./imgs/threshold_img.png used on input line 442.
+Package pdftex.def Info: ./imgs/threshold_img.png used on input line 451.
 (pdftex.def)             Requested size: 103.19843pt x 137.51987pt.
  [3 <./imgs/zero.png (PNG copy)> <./imgs/threshold_img.png (PNG copy)>]
 Package epstopdf Info: Source file: <./figs/algo.eps>
@@ -369,18 +369,18 @@ Package epstopdf Info: Source file: <./figs/algo.eps>
 (epstopdf)                    size: 20503 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figs/algo-eps-converted-
 to.pdf ./figs/algo.eps>
-(epstopdf)             \includegraphics on input line 455.
+(epstopdf)             \includegraphics on input line 464.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/algo-eps-converted-to.pdf, id=58, 610.28pt x 421.575pt>
+<./figs/algo-eps-converted-to.pdf, id=57, 610.28pt x 421.575pt>
 File: ./figs/algo-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/algo-eps-converted-to.pdf>
-Package pdftex.def Info: ./figs/algo-eps-converted-to.pdf used on input line 45
-5.
+Package pdftex.def Info: ./figs/algo-eps-converted-to.pdf used on input line 46
+4.
 (pdftex.def)             Requested size: 252.94499pt x 174.73164pt.
 
-Overfull \hbox (0.94499pt too wide) in paragraph at lines 455--456
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 464--465
  [][] 
  []
 
@@ -392,14 +392,36 @@ Package epstopdf Info: Source file: <./figs/CV.eps>
 (epstopdf)                    size: 8650 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figs/CV-eps-converted-to
 .pdf ./figs/CV.eps>
-(epstopdf)             \includegraphics on input line 465.
+(epstopdf)             \includegraphics on input line 474.
 Package epstopdf Info: Output file is already uptodate.
-<./figs/CV-eps-converted-to.pdf, id=59, 562.1pt x 421.575pt>
+<./figs/CV-eps-converted-to.pdf, id=58, 562.1pt x 421.575pt>
 File: ./figs/CV-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/CV-eps-converted-to.pdf>
-Package pdftex.def Info: ./figs/CV-eps-converted-to.pdf used on input line 465.
+Package pdftex.def Info: ./figs/CV-eps-converted-to.pdf used on input line 474.
 
+(pdftex.def)             Requested size: 234.87749pt x 176.15327pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./figs/algo-eps-converted-to.pdf> <./figs/CV-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./figs/Fourier.eps>
+(epstopdf)                    date: 2019-12-10 20:04:19
+(epstopdf)                    size: 39934 bytes
+(epstopdf)             Output file: <./figs/Fourier-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-12-13 13:33:04
+(epstopdf)                    size: 10196 bytes
+(epstopdf)             Command: <repstopdf --outfile=./figs/Fourier-eps-convert
+ed-to.pdf ./figs/Fourier.eps>
+(epstopdf)             \includegraphics on input line 490.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figs/Fourier-eps-converted-to.pdf, id=78, 562.1pt x 421.575pt>
+File: ./figs/Fourier-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./figs/Fourier-eps-converted-to.pdf>
+Package pdftex.def Info: ./figs/Fourier-eps-converted-to.pdf used on input line
+ 490.
 (pdftex.def)             Requested size: 234.87749pt x 176.15327pt.
 Package epstopdf Info: Source file: <./figs/gc_lat_rad.eps>
 (epstopdf)                    date: 2019-11-13 16:22:46
@@ -409,172 +431,210 @@ Package epstopdf Info: Source file: <./figs/gc_lat_rad.eps>
 (epstopdf)                    size: 14964 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figs/gc_lat_rad-eps-conv
 erted-to.pdf ./figs/gc_lat_rad.eps>
-(epstopdf)             \includegraphics on input line 477.
+(epstopdf)             \includegraphics on input line 499.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/gc_lat_rad-eps-converted-to.pdf, id=60, 562.1pt x 421.575pt>
+<./figs/gc_lat_rad-eps-converted-to.pdf, id=79, 562.1pt x 421.575pt>
 File: ./figs/gc_lat_rad-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/gc_lat_rad-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/gc_lat_rad-eps-converted-to.pdf used on input l
-ine 477.
+ine 499.
 (pdftex.def)             Requested size: 234.87749pt x 176.15327pt.
 Package epstopdf Info: Source file: <./figs/gc_ten.eps>
-(epstopdf)                    date: 2019-11-13 16:29:02
-(epstopdf)                    size: 45321 bytes
+(epstopdf)                    date: 2019-12-11 17:39:06
+(epstopdf)                    size: 45751 bytes
 (epstopdf)             Output file: <./figs/gc_ten-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-11-13 16:35:02
-(epstopdf)                    size: 10889 bytes
+(epstopdf)                    date: 2019-12-11 17:39:31
+(epstopdf)                    size: 10605 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figs/gc_ten-eps-converte
 d-to.pdf ./figs/gc_ten.eps>
-(epstopdf)             \includegraphics on input line 484.
+(epstopdf)             \includegraphics on input line 506.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/gc_ten-eps-converted-to.pdf, id=61, 562.1pt x 444.66125pt>
+<./figs/gc_ten-eps-converted-to.pdf, id=80, 562.1pt x 457.71pt>
 File: ./figs/gc_ten-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/gc_ten-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/gc_ten-eps-converted-to.pdf used on input line 
-484.
-(pdftex.def)             Requested size: 234.87749pt x 185.79976pt.
- [4 <./figs/algo-eps-converted-to.pdf> <./figs/CV-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <./figs/simd.eps>
-(epstopdf)                    date: 2019-11-13 17:08:49
-(epstopdf)                    size: 27599 bytes
-(epstopdf)             Output file: <./figs/simd-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-11-13 17:11:07
-(epstopdf)                    size: 12183 bytes
-(epstopdf)             Command: <repstopdf --outfile=./figs/simd-eps-converted-
-to.pdf ./figs/simd.eps>
-(epstopdf)             \includegraphics on input line 494.
+506.
+(pdftex.def)             Requested size: 234.87749pt x 191.25214pt.
+Package epstopdf Info: Source file: <./figs/svd.eps>
+(epstopdf)                    date: 2019-12-11 09:28:20
+(epstopdf)                    size: 27815 bytes
+(epstopdf)             Output file: <./figs/svd-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-12-14 09:01:51
+(epstopdf)                    size: 12264 bytes
+(epstopdf)             Command: <repstopdf --outfile=./figs/svd-eps-converted-t
+o.pdf ./figs/svd.eps>
+(epstopdf)             \includegraphics on input line 515.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/simd-eps-converted-to.pdf, id=81, 562.1pt x 421.575pt>
-File: ./figs/simd-eps-converted-to.pdf Graphic file (type pdf)
+<./figs/svd-eps-converted-to.pdf, id=81, 562.1pt x 421.575pt>
+File: ./figs/svd-eps-converted-to.pdf Graphic file (type pdf)
 
-<use ./figs/simd-eps-converted-to.pdf>
-Package pdftex.def Info: ./figs/simd-eps-converted-to.pdf used on input line 49
-4.
+<use ./figs/svd-eps-converted-to.pdf>
+Package pdftex.def Info: ./figs/svd-eps-converted-to.pdf used on input line 515
+.
+(pdftex.def)             Requested size: 234.87749pt x 176.15327pt.
+ [5 <./figs/Fourier-eps-converted-to.pdf> <./figs/gc_lat_rad-eps-converted-to.p
+df>]
+Package epstopdf Info: Source file: <./figs/simd2.eps>
+(epstopdf)                    date: 2019-12-11 10:15:59
+(epstopdf)                    size: 28952 bytes
+(epstopdf)             Output file: <./figs/simd2-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-12-14 09:10:48
+(epstopdf)                    size: 12750 bytes
+(epstopdf)             Command: <repstopdf --outfile=./figs/simd2-eps-converted
+-to.pdf ./figs/simd2.eps>
+(epstopdf)             \includegraphics on input line 525.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figs/simd2-eps-converted-to.pdf, id=101, 562.1pt x 421.575pt>
+File: ./figs/simd2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./figs/simd2-eps-converted-to.pdf>
+Package pdftex.def Info: ./figs/simd2-eps-converted-to.pdf used on input line 5
+25.
 (pdftex.def)             Requested size: 234.87749pt x 176.15327pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package epstopdf Info: Source file: <./figs/c.eps>
-(epstopdf)                    date: 2019-11-14 07:01:47
-(epstopdf)                    size: 14179 bytes
+(epstopdf)                    date: 2019-12-11 17:44:09
+(epstopdf)                    size: 14203 bytes
 (epstopdf)             Output file: <./figs/c-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-11-14 07:06:12
-(epstopdf)                    size: 9066 bytes
+(epstopdf)                    date: 2019-12-11 17:44:17
+(epstopdf)                    size: 9061 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figs/c-eps-converted-to.
 pdf ./figs/c.eps>
-(epstopdf)             \includegraphics on input line 504.
+(epstopdf)             \includegraphics on input line 535.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/c-eps-converted-to.pdf, id=82, 562.1pt x 421.575pt>
+<./figs/c-eps-converted-to.pdf, id=102, 562.1pt x 421.575pt>
 File: ./figs/c-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/c-eps-converted-to.pdf>
-Package pdftex.def Info: ./figs/c-eps-converted-to.pdf used on input line 504.
+Package pdftex.def Info: ./figs/c-eps-converted-to.pdf used on input line 535.
 (pdftex.def)             Requested size: 234.87749pt x 176.15327pt.
- [5 <./figs/gc_lat_rad-eps-converted-to.pdf> <./figs/gc_ten-eps-converted-to.pd
-f> <./figs/simd-eps-converted-to.pdf> <./figs/c-eps-converted-to.pdf>]
+ [6 <./figs/gc_ten-eps-converted-to.pdf> <./figs/svd-eps-converted-to.pdf> <./f
+igs/simd2-eps-converted-to.pdf> <./figs/c-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./figs/exp1.eps>
-(epstopdf)                    date: 2019-11-13 17:40:20
-(epstopdf)                    size: 45954 bytes
+(epstopdf)                    date: 2019-12-11 18:24:02
+(epstopdf)                    size: 46177 bytes
 (epstopdf)             Output file: <./figs/exp1-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-11-13 17:40:25
-(epstopdf)                    size: 15058 bytes
+(epstopdf)                    date: 2019-12-11 18:24:07
+(epstopdf)                    size: 15015 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figs/exp1-eps-converted-
 to.pdf ./figs/exp1.eps>
-(epstopdf)             \includegraphics on input line 513.
+(epstopdf)             \includegraphics on input line 546.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/exp1-eps-converted-to.pdf, id=119, 562.1pt x 421.575pt>
+<./figs/exp1-eps-converted-to.pdf, id=139, 562.1pt x 421.575pt>
 File: ./figs/exp1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/exp1-eps-converted-to.pdf>
-Package pdftex.def Info: ./figs/exp1-eps-converted-to.pdf used on input line 51
-3.
+Package pdftex.def Info: ./figs/exp1-eps-converted-to.pdf used on input line 54
+6.
 (pdftex.def)             Requested size: 234.87749pt x 176.15327pt.
 Package epstopdf Info: Source file: <./figs/exp1_err.eps>
-(epstopdf)                    date: 2019-11-13 17:32:52
-(epstopdf)                    size: 27929 bytes
+(epstopdf)                    date: 2019-12-11 18:14:18
+(epstopdf)                    size: 42046 bytes
 (epstopdf)             Output file: <./figs/exp1_err-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-11-13 17:36:00
-(epstopdf)                    size: 9972 bytes
+(epstopdf)                    date: 2019-12-11 18:14:26
+(epstopdf)                    size: 12946 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figs/exp1_err-eps-conver
 ted-to.pdf ./figs/exp1_err.eps>
-(epstopdf)             \includegraphics on input line 520.
+(epstopdf)             \includegraphics on input line 553.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/exp1_err-eps-converted-to.pdf, id=120, 562.1pt x 421.575pt>
+<./figs/exp1_err-eps-converted-to.pdf, id=140, 562.1pt x 421.575pt>
 File: ./figs/exp1_err-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/exp1_err-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/exp1_err-eps-converted-to.pdf used on input lin
-e 520.
+e 553.
 (pdftex.def)             Requested size: 234.87749pt x 176.15327pt.
-Package epstopdf Info: Source file: <./figs/exp2.eps>
-(epstopdf)                    date: 2019-11-14 07:27:32
-(epstopdf)                    size: 60630 bytes
-(epstopdf)             Output file: <./figs/exp2-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-11-14 07:30:28
-(epstopdf)                    size: 18442 bytes
-(epstopdf)             Command: <repstopdf --outfile=./figs/exp2-eps-converted-
-to.pdf ./figs/exp2.eps>
-(epstopdf)             \includegraphics on input line 545.
+Package epstopdf Info: Source file: <./figs/exp_cnst_shift.eps>
+(epstopdf)                    date: 2019-12-11 18:12:25
+(epstopdf)                    size: 60747 bytes
+(epstopdf)             Output file: <./figs/exp_cnst_shift-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2019-12-12 14:21:41
+(epstopdf)                    size: 18320 bytes
+(epstopdf)             Command: <repstopdf --outfile=./figs/exp_cnst_shift-eps-
+converted-to.pdf ./figs/exp_cnst_shift.eps>
+(epstopdf)             \includegraphics on input line 560.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/exp2-eps-converted-to.pdf, id=121, 562.1pt x 421.575pt>
+<./figs/exp_cnst_shift-eps-converted-to.pdf, id=141, 562.1pt x 421.575pt>
+File: ./figs/exp_cnst_shift-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./figs/exp_cnst_shift-eps-converted-to.pdf>
+Package pdftex.def Info: ./figs/exp_cnst_shift-eps-converted-to.pdf used on inp
+ut line 560.
+(pdftex.def)             Requested size: 234.87749pt x 176.15327pt.
+Package epstopdf Info: Source file: <./figs/exp2.eps>
+(epstopdf)                    date: 2019-12-12 07:54:37
+(epstopdf)                    size: 60809 bytes
+(epstopdf)             Output file: <./figs/exp2-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-12-12 07:54:40
+(epstopdf)                    size: 18374 bytes
+(epstopdf)             Command: <repstopdf --outfile=./figs/exp2-eps-converted-
+to.pdf ./figs/exp2.eps>
+(epstopdf)             \includegraphics on input line 598.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figs/exp2-eps-converted-to.pdf, id=142, 562.1pt x 421.575pt>
 File: ./figs/exp2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/exp2-eps-converted-to.pdf>
-Package pdftex.def Info: ./figs/exp2-eps-converted-to.pdf used on input line 54
-5.
+Package pdftex.def Info: ./figs/exp2-eps-converted-to.pdf used on input line 59
+8.
 (pdftex.def)             Requested size: 234.87749pt x 176.15327pt.
- [6 <./figs/exp1-eps-converted-to.pdf> <./figs/exp1_err-eps-converted-to.pdf> <
-./figs/exp2-eps-converted-to.pdf>]
-(./IEEE_WheelSysID.bbl
+ [7 <./figs/exp1-eps-converted-to.pdf> <./figs/exp1_err-eps-converted-to.pdf> <
+./figs/exp_cnst_shift-eps-converted-to.pdf>] (./IEEE_WheelSysID.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 42--45
 []\OT1/ptm/m/n/8 M. Ford. bike-wheel-calc. [On-line]. Avail-able:
  []
 
-) [7] (./IEEE_WheelSysID.aux) ) 
+) [8 <./figs/exp2-eps-converted-to.pdf>] [9
+
+] (./IEEE_WheelSysID.aux) ) 
 Here is how much of TeX's memory you used:
- 3888 strings out of 492995
- 62625 string characters out of 6132704
- 136918 words of memory out of 5000000
- 7373 multiletter control sequences out of 15000+600000
- 45917 words of font info for 90 fonts, out of 8000000 for 9000
+ 3906 strings out of 492995
+ 63211 string characters out of 6132704
+ 138963 words of memory out of 5000000
+ 7389 multiletter control sequences out of 15000+600000
+ 45609 words of font info for 89 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 39i,15n,49p,1535b,329s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dv
-ips/base/8r.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmbx5.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmbx7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cme
-x10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6
-.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.p
-fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
-></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
-al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/
-texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texli
-ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
-/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texm
-f-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fo
-nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
-urw/times/utmri8a.pfb>
-Output written on IEEE_WheelSysID.pdf (7 pages, 3097289 bytes).
+ 39i,15n,49p,2051b,329s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/
+base/8r.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx5.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
+x7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
+0.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10
+.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.p
+fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/te
+xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-
+dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/font
+s/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/ur
+w/times/utmri8a.pfb>
+Output written on IEEE_WheelSysID.pdf (9 pages, 3136471 bytes).
 PDF statistics:
- 221 PDF objects out of 1000 (max. 8388607)
- 156 compressed objects within 2 object streams
+ 250 PDF objects out of 1000 (max. 8388607)
+ 175 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

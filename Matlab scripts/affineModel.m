@@ -21,9 +21,9 @@ A_tilde = x;
 DT_hat = A_tilde*c;
 
 figure()
-plot(x,DT_hat, 'LineWidth',1)
+plot(x,DT_hat,'Color',[0.5 0.5 0.5], 'LineWidth',1)
 hold on
-plot(X(:,1),DT,'kx', 'MarkerSize',10)
+plot(X(:,1),DT,'kx', 'MarkerSize',10, 'LineWidth',2)
 hold off
 ylabel('Tension [N]')
 xlabel('Spoke Adjustment [rev]')

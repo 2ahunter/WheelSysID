@@ -73,7 +73,7 @@ hold off
 title('Radial Fit')
 legend('Model','Test')
 ylabel('Error [mm^2]')
-xlabel('Number Fitting Coefficients')
+xlabel('Number of Fitting Coefficients')
 ylim([10^-6 10^0])
 ax = gca;
 ax.FontSize=16;
@@ -88,21 +88,49 @@ plot(theta, y_rt, 'x')
 hold on
 plot(theta, B(:,1:26)*b_coef(1:26))
 
+%% build IM with model rather than data
+gc_lat_m = mean(gc_lat,2);
+gc_rad_m = mean(gc_rad,2);
+
+[L,l_coef] = fitData(gc_lat_m,spoke);
+[R,r_coef] = fitData(gc_rad_m,spoke);
+
+gcl_hat = L(:,1:13)*a_coef(1:13);
+    y_rhat = B(:,1:i)*b_coef(1:i);
+
+
 %% Evaluate Influence Matrices
 
 IM_lat = Phi(1:64,:);
 IM_rad = Phi(65:128,:);
 IM_ten = Phi(129:end,:);
 
-[U_l,S_l,V_l] = svd(IM_lat)
-[U_r,S_r,V_r] = svd(IM_rad)
-[U_t,S_t,V_t] = svd(IM_ten)
-[U,S,V] = svd(Phi)
+[U_l,S_l,V_l] = svd(IM_lat);
+[U_r,S_r,V_r] = svd(IM_rad);
+[U_t,S_t,V_t] = svd(IM_ten);
 
-s_l = diag(S_l)
-s_r = diag(S_r)
-s_t = diag(S_t)
+Phi_lr = cat(1,IM_lat,IM_rad);
+[U_lr,S_lr,V_lr] = svd(Phi_lr);
+
+Phi_w = cat(1,IM_lat,IM_rad*mu1,IM_ten*mu2)
+[U,S,V] = svd(Phi_w)
+
+s_l = diag(S_l);
+s_r = diag(S_r);
+s_t = diag(S_t);
+s_lr = diag(S_lr);
+s = diag(S);
+
 
 figure(3)
-plot(s_l)
+plot(s_l,'kx:')
 hold on
+plot(s_lr,'kd-.')
+plot(s,'ko-')
+hold off
+title('Singular Values of Models')
+legend('Lateral only','Lateral and Radial','Full Model')
+ylabel('Magnitude [au]')
+xlabel('Singular Value Order [int]')
+ax = gca;
+ax.FontSize=16;

@@ -6,6 +6,7 @@ load('gainCurves.mat')
 %% Model the gain curves using a Fourier series
 
 % gain curve data normalized to spoke 16
+numSpokes = 32;
 spoke=16;
 theta = pi/32:pi/32:2*pi;
 %% Randomly divide the data betwween model and test:
@@ -88,6 +89,52 @@ plot(theta, y_rt, 'x')
 hold on
 plot(theta, B(:,1:26)*b_coef(1:26))
 
+%% build IM with model rather than data
+gc_lat_m = mean(gc_lat,2);
+gc_rad_m = mean(gc_rad,2);
+
+[L,l_coef] = fitData(gc_lat_m,spoke);
+[R,r_coef] = fitData(gc_rad_m,spoke);
+
+gcl_hat = L(:,1:13)*l_coef(1:13);
+gcr_hat = R(:,1:27)*r_coef(1:27);
+
+figure(3)
+subplot(2,1,1)
+plot(gc_lat_m,'x')
+hold on
+plot(gcl_hat,'--')
+hold off
+subplot(2,1,2)
+plot(gc_rad_m,'x')
+hold on
+plot(gcr_hat,'--')
+hold off
+
+IM_lat_m = zeros(2*numSpokes,numSpokes);
+IM_rad_m = IM_lat_m;
+for spoke = 1:numSpokes
+    s = rem(spoke,2);
+    if s==1
+        IM_lat_m(:,spoke) = shiftGC(gcl_hat, spoke);
+        IM_rad_m(:,spoke) = shiftGC(gcr_hat, spoke);
+    else
+        IM_lat_m(:,spoke) = -shiftGC(gcl_hat, spoke);
+        IM_rad_m(:,spoke) = shiftGC(gcr_hat, spoke);
+    end
+end
+
+% verify gain curves:
+
+figure(4)
+subplot(2,1,1)
+plot(IM_lat)
+subplot(2,1,2)
+plot(IM_rad)
+
+
+
+
 %% Evaluate Influence Matrices
 
 IM_lat = Phi(1:64,:);
@@ -101,8 +148,8 @@ IM_ten = Phi(129:end,:);
 Phi_lr = cat(1,IM_lat,IM_rad);
 [U_lr,S_lr,V_lr] = svd(Phi_lr);
 
-Phi_w = cat(1,IM_lat,IM_rad*mu1,IM_ten*mu2)
-[U,S,V] = svd(Phi_w)
+Phi_w = cat(1,IM_lat,IM_rad*mu1,IM_ten*mu2);
+[U,S,V] = svd(Phi_w);
 
 s_l = diag(S_l);
 s_r = diag(S_r);
@@ -111,7 +158,7 @@ s_lr = diag(S_lr);
 s = diag(S);
 
 
-figure(3)
+figure(5)
 plot(s_l,'kx:')
 hold on
 plot(s_lr,'kd-.')

@@ -108,26 +108,34 @@ sym_ten_off = (DL_mean + shiftTC(flip(NDT_mean),1))/2 + offset_sym;
 theta_s = pi/32:pi/16:2*pi;
 figure(1)
 subplot(4,1,1)
-bar(theta_s,asym_ten)
+b = bar(theta_s,asym_ten);
+b(1).EdgeColor = 'k';
+b(1).FaceColor = [0.5,0.5,0.5];
 title('Tension Gain Curves')
 ylabel('Tension [N]')
 ax = gca; % current axes
 ax.FontSize = 16;
 ylim([-250,150])
 subplot(4,1,2)
-bar(theta_s,sym_ten)
+b=bar(theta_s,sym_ten);
+b(1).EdgeColor = 'k';
+b(1).FaceColor = [0.5,0.5,0.5];
 ylabel('Tension [N]')
 ax = gca; % current axes
 ax.FontSize = 16;
 ylim([-250,150])
 subplot(4,1,3)
-bar(theta_s,shiftTC(flip(sym_ten),1))
+b = bar(theta_s,shiftTC(flip(sym_ten),1));
+b(1).EdgeColor = 'k';
+b(1).FaceColor = [0.5,0.5,0.5];
 ylabel('Tension [N]')
 ax = gca; % current axes
 ax.FontSize = 16;
 ylim([-250,150])
 subplot(4,1,4)
-bar(theta_s,shiftTC(flip(asym_ten),1))
+b= bar(theta_s,shiftTC(flip(asym_ten),1));
+b(1).EdgeColor = 'k';
+b(1).FaceColor = [0.5,0.5,0.5];
 xlabel('Rim Angle [rad]')
 ylabel('Tension [N]')
 ax = gca; % current axes

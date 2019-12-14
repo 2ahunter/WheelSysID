@@ -26,7 +26,7 @@ plot(theta_r,Y_lat,'kx','LineWidth',1)
 hold off
 ylabel('Lateral [mm]')
 legend('Predict','Measure')
-title('Prediction and Measurement After Truing Operation')
+title('Prediction and Measurement of Truing Operation')
 ax = gca;
 ax.FontSize = 16;
 
@@ -98,13 +98,13 @@ ylabel('Radial [mm]')
 ax = gca;
 ax.FontSize = 16;
 subplot(3,1,3)
-b = bar(theta_s, tension_m);
+b = bar(theta_s, tension_m,1);
 b(1).EdgeColor = 'k';
 b(1).FaceColor = [0.5,0.5,0.5];
 b(2).EdgeColor = 'k';
 b(2).FaceColor = 'w';
 
-%ylim([800,1200])
+%ylim([600,1200])
 legend('pre','post')
 ylabel('Tension [N]')
 xlabel('Rim Angle [rad]')
