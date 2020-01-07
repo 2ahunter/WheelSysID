@@ -18,7 +18,7 @@
 \newlabel{fig:apparatus}{{2}{2}}
 \newlabel{eq:phi}{{1}{2}}
 \newlabel{eq:Y_hat}{{2}{2}}
-\newlabel{eq:y_tilde}{{3}{3}}
+\newlabel{eq:y_tilde}{{3}{2}}
 \newlabel{eq:dls}{{4}{3}}
 \newlabel{eq:Yls}{{5}{3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Tension Targeting}{3}}
@@ -30,38 +30,36 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-D}}Wheel Truing Algorithm}{3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Example of the truing algorithm. The dashed line is the baseline lateral state. The thin lines are the predicted states after each spoke adjustment. The spoke tension is adjusted until the lateral measurement equals the diamond target and proceeds from the first spoke (leftmost) to the last. The thick line is the predicted final state with its truing target. }}{4}}
 \newlabel{fig:algo}{{4}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Validation of the computer vision algorithm developed to interpret analog dial gauge measurements. Both the lateral and radial dials were set to approximately 1, 0.5, 0.25, and 0.0mm. The measurements were interpreted through visual estimation of the images as well as by the algorithm. The results agree to better than the estimate of the resolution of the manual technique.}}{4}}
-\newlabel{fig:cv}{{5}{4}}
 \@writefile{toc}{\contentsline {section}{\numberline {V}Results}{4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Optical Digitization of Lateral and Radial Measurements}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Validation of the computer vision algorithm developed to interpret analog dial gauge measurements. The results of the two approaches are within the estimate of the resolution of the manual technique.}}{4}}
+\newlabel{fig:cv}{{5}{4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Influence Functions}{4}}
 \citation{ModeMatrix}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Residual error vs fitting coefficient number for the lateral and radial influence functions when fit to a Fourier series. The residual of the testing set is used to determine the highest spatial frequency to be used for the model. Although difficult to discern due to the log scale, the residual error increases in the lateral testing set for fitting coefficients beyond 13, corresponding to $N_{lat}=6$. Similarly the highest mode of oscillation for the radial influence function is determined to be $N_{rad} = 13$.}}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Residual error vs fitting coefficient number for the lateral and radial influence functions when fit to a Fourier series. I used the residual of the testing set to determine the highest spatial frequency to be used for the model. Although difficult to discern due to the log scale, the residual error increases in the lateral testing set for fitting coefficients beyond 13, corresponding to $N_{lat}=6$. Similarly I determined the highest mode of oscillation for the radial influence function to be $N_{rad} = 13$.}}{5}}
 \newlabel{fig:Fourier}{{6}{5}}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The mean influence functions for the lateral and radial parameters. These functions are the average of 32 measured curves after normalizing them to the angle of the 16th spoke.}}{5}}
 \newlabel{fig:gclr}{{7}{5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Simulation}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The mean influence functions for spoke tension. From top to bottom: (a) Non-drive side leading. (b) Drive-side leading. (c) Non-drive side trailing. (d) Drive side trailing. Note that (a) and (d) are mirror images, as are (b) and (c).}}{6}}
-\newlabel{fig:gc_ten}{{8}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The mean influence functions for spoke tension. From top to bottom: (a) Non-drive side leading. (b) Drive-side leading. (c) Non-drive side trailing. (d) Drive side trailing. Note that (a) and (d) are mirror images, as are (b) and (c).}}{5}}
+\newlabel{fig:gc_ten}{{8}{5}}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces The singular values associated with the singular value decomposition of the following influence matrices: lateral, the concatenation of the lateral and the radial, and the full model.}}{6}}
 \newlabel{fig:svd}{{9}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Simulation}{6}}
+\newlabel{eq:y_tilde2}{{7}{6}}
 \@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Example of the simulation process used to determine the weighting factors for the multi-objective least squares approximation. The circles represent the actual spoke adjustments for a given simulation and the other symbols represent the approximations from two different approaches: a regularized model and the full model. On average, regularization resulted in estimation errors 2$\times $ worse than when using the full model.}}{6}}
 \newlabel{fig:simd}{{10}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces The average tension change of a wheel due to the average spoke adjustment. A linear fit to the data finds $c=-473 N/rev$.}}{6}}
-\newlabel{fig:c}{{11}{6}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-D}}Model Validation}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces The average tension change of a wheel due to the average spoke adjustment. A linear fit to the data finds $c=-473 N/rev$.}}{7}}
+\newlabel{fig:c}{{11}{7}}
 \@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces The actual and predicted lateral, radial, and tension values for the random de-truing experiment.}}{7}}
 \newlabel{fig:exp1}{{12}{7}}
-\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Results of Changing Tension}}{7}}
-\newlabel{tbl:const_shift}{{I}{7}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-E}}Wheel Truing Validation}{7}}
 \@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces The model error relative to the measurements for the random de-truing experiment. The rms errors are found to be 0.123 mm (lateral), 0.049 mm (radial), and 33 N (tension).}}{7}}
 \newlabel{fig:exp1_err}{{13}{7}}
 \@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Changing the tension of true wheel using the model described in (3\hbox {}). Although the wheel remains true the tension target of 1000N is significantly exceeded and has more variability. }}{7}}
 \newlabel{fig:exp_cnst_shift}{{14}{7}}
-\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Truing algorithm results}}{7}}
-\newlabel{tbl:exp2}{{II}{7}}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{7}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Results of Changing Tension}}{7}}
+\newlabel{tbl:const_shift}{{I}{7}}
 \bibstyle{IEEEtran}
 \bibdata{WheelSysID}
 \bibcite{FordThesis}{1}
@@ -69,12 +67,13 @@
 \bibcite{HollandMech}{3}
 \bibcite{Brandt}{4}
 \bibcite{ModeMatrix}{5}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Truing algorithm results}}{8}}
+\newlabel{tbl:exp2}{{II}{8}}
 \@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces The state of the wheel is shown before and after the truing operation. The results are summarized in Table(II\hbox {}).}}{8}}
 \newlabel{fig:exp2}{{15}{8}}
 \@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Second iteration of truing}}{8}}
 \newlabel{tbl:exp3}{{III}{8}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{8}}
 \@writefile{toc}{\contentsline {section}{References}{8}}
-\@writefile{toc}{\contentsline {section}{Biographies}{8}}
-\@writefile{toc}{\contentsline {subsection}{Aaron Hunter}{8}}
-\@writefile{toc}{\contentsline {subsection}{John Doe}{8}}
-\@writefile{toc}{\contentsline {subsection}{Jane Doe}{9}}
+\@writefile{toc}{\contentsline {section}{Biographies}{9}}
+\@writefile{toc}{\contentsline {subsection}{Aaron Hunter}{9}}
