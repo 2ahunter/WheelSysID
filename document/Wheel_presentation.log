@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  14 NOV 2019 16:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  10 JUN 2020 16:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1255,316 +1255,334 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 
 ] [3
 
-] [4
+]
+<geom.pdf, id=118, 262.56496pt x 240.2034pt>
+File: geom.pdf Graphic file (type pdf)
+ <use geom.pdf>
+Package pdftex.def Info: geom.pdf used on input line 44.
+(pdftex.def)             Requested size: 116.29527pt x 106.38986pt.
+
+Overfull \vbox (0.61711pt too high) detected at line 44
+ []
+
+[4
+
+ <./geom.pdf>]
+File: geom.pdf Graphic file (type pdf)
+ <use geom.pdf>
+Package pdftex.def Info: geom.pdf used on input line 59.
+(pdftex.def)             Requested size: 159.90933pt x 146.28928pt.
+ <rim_x.pdf, id=139, 73.72644pt x 282.78249pt>
+File: rim_x.pdf Graphic file (type pdf)
+
+<use rim_x.pdf>
+Package pdftex.def Info: rim_x.pdf used on input line 59.
+(pdftex.def)             Requested size: 37.79796pt x 144.98088pt.
+ [5
+
+ <./rim_x.pdf>] [6
 
 ]
-<fig_geometry.pdf, id=127, 465.7003pt x 238.06088pt>
-File: fig_geometry.pdf Graphic file (type pdf)
- <use fig_geometry.pdf>
-Package pdftex.def Info: fig_geometry.pdf used on input line 51.
-(pdftex.def)             Requested size: 289.07999pt x 147.77785pt.
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <6> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 51.
-
-[5
-
- <./fig_geometry.pdf>] [6
-
-] <apparatus.jpg, id=217, 3276.24pt x 2457.18pt>
+<apparatus.jpg, id=187, 3276.24pt x 2457.18pt>
 File: apparatus.jpg Graphic file (type jpg)
-
-<use apparatus.jpg>
-Package pdftex.def Info: apparatus.jpg used on input line 84.
+ <use apparatus.jpg>
+Package pdftex.def Info: apparatus.jpg used on input line 92.
 (pdftex.def)             Requested size: 189.66711pt x 142.26378pt.
  [7
 
- <./apparatus.jpg>]
-<GainCurveTheory.png, id=232, 722.7pt x 722.7pt>
+ <./apparatus.jpg>] <GainCurveTheory.png, id=203, 722.7pt x 722.7pt>
 File: GainCurveTheory.png Graphic file (type png)
- <use GainCurveTheory.png>
-Package pdftex.def Info: GainCurveTheory.png used on input line 96.
+
+<use GainCurveTheory.png>
+Package pdftex.def Info: GainCurveTheory.png used on input line 104.
 (pdftex.def)             Requested size: 166.2175pt x 166.2212pt.
 
-Overfull \vbox (2.71913pt too high) detected at line 96
+Overfull \vbox (2.71913pt too high) detected at line 104
  []
 
 [8
 
- <./GainCurveTheory.png>] <ref.png, id=248, 1040.88875pt x 1387.1825pt>
+ <./GainCurveTheory.png>] <ref.png, id=220, 1040.88875pt x 1387.1825pt>
 File: ref.png Graphic file (type png)
 
 <use ref.png>
-Package pdftex.def Info: ref.png used on input line 132.
+Package pdftex.def Info: ref.png used on input line 140.
 (pdftex.def)             Requested size: 58.14763pt x 77.49118pt.
- <zero.png, id=249, 1040.88875pt x 1387.1825pt>
+ <zero.png, id=221, 1040.88875pt x 1387.1825pt>
 File: zero.png Graphic file (type png)
  <use zero.png>
-Package pdftex.def Info: zero.png used on input line 132.
+Package pdftex.def Info: zero.png used on input line 140.
 (pdftex.def)             Requested size: 58.14763pt x 77.49118pt.
 
-<delta_img.png, id=250, 1040.88875pt x 1387.1825pt>
+<delta_img.png, id=222, 1040.88875pt x 1387.1825pt>
 File: delta_img.png Graphic file (type png)
  <use delta_img.png>
-Package pdftex.def Info: delta_img.png used on input line 132.
+Package pdftex.def Info: delta_img.png used on input line 140.
 (pdftex.def)             Requested size: 58.14763pt x 77.49118pt.
 
-<threshold_img.png, id=251, 1040.88875pt x 1387.1825pt>
+<threshold_img.png, id=223, 1040.88875pt x 1387.1825pt>
 File: threshold_img.png Graphic file (type png)
 
 <use threshold_img.png>
-Package pdftex.def Info: threshold_img.png used on input line 132.
+Package pdftex.def Info: threshold_img.png used on input line 140.
 (pdftex.def)             Requested size: 58.14763pt x 77.49118pt.
  [9
 
  <./ref.png (PNG copy)> <./zero.png (PNG copy)> <./delta_img.png (PNG copy)> <.
 /threshold_img.png (PNG copy)>]
-<wheelfanatyk.jpg, id=266, 752.8125pt x 798.985pt>
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 176.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 176.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 176.
+ [10
+
+] [11
+
+] [12
+
+]
+[13
+
+]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 239.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 239.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 239.
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 239.
+ [14
+
+] [15
+
+] <algo_flow.pdf, id=341, 291.00719pt x 207.65579pt>
+File: algo_flow.pdf Graphic file (type pdf)
+
+<use algo_flow.pdf>
+Package pdftex.def Info: algo_flow.pdf used on input line 265.
+(pdftex.def)             Requested size: 145.3713pt x 103.73573pt.
+ [16
+
+ <./algo_flow.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./algo_flow.pdf): PDF inclus
+ion: invalid other resource which is no dict (key 'ProcSets', type <array>); ig
+nored.
+>] <true1.png, id=375, 1124.2pt x 843.15pt>
+File: true1.png Graphic file (type png)
+ <use true1.png>
+Package pdftex.def Info: true1.png used on input line 279.
+(pdftex.def)             Requested size: 227.62204pt x 170.7112pt.
+ [17
+
+ <./true1.png (PNG copy)>] <true2.png, id=392, 1124.2pt x 843.15pt>
+File: true2.png Graphic file (type png)
+ <use true2.png>
+Package pdftex.def Info: true2.png used on input line 279.
+(pdftex.def)             Requested size: 227.62204pt x 170.7112pt.
+ [18
+
+ <./true2.png (PNG copy)>] <true3.png, id=408, 1124.2pt x 843.15pt>
+File: true3.png Graphic file (type png)
+ <use true3.png>
+Package pdftex.def Info: true3.png used on input line 279.
+(pdftex.def)             Requested size: 227.62204pt x 170.7112pt.
+
+[19
+
+ <./true3.png (PNG copy)>] <true4.png, id=425, 1124.2pt x 843.15pt>
+File: true4.png Graphic file (type png)
+
+<use true4.png>
+Package pdftex.def Info: true4.png used on input line 279.
+(pdftex.def)             Requested size: 227.62204pt x 170.7112pt.
+ [20
+
+ <./true4.png (PNG copy)>]
+<true_final.png, id=441, 1124.2pt x 843.15pt>
+File: true_final.png Graphic file (type png)
+ <use true_final.png>
+Package pdftex.def Info: true_final.png used on input line 279.
+(pdftex.def)             Requested size: 227.62204pt x 170.7112pt.
+ [21
+
+ <./true_final.png (PNG copy)>] <algorithm.png, id=457, 1537.745pt x 843.15pt>
+File: algorithm.png Graphic file (type png)
+
+<use algorithm.png>
+Package pdftex.def Info: algorithm.png used on input line 291.
+(pdftex.def)             Requested size: 259.44221pt x 142.26378pt.
+ [22
+
+ <./algorithm.png (PNG copy)>]
+<gaugeCV_validation.pdf, id=473, 614.295pt x 794.97pt>
+File: gaugeCV_validation.pdf Graphic file (type pdf)
+
+<use gaugeCV_validation.pdf>
+Package pdftex.def Info: gaugeCV_validation.pdf used on input line 309.
+(pdftex.def)             Requested size: 199.16928pt x 127.56972pt.
+ [23
+
+ <./gaugeCV_validation.pdf>]
+<TensionGC.png, id=491, 1124.2pt x 1246.6575pt>
+File: TensionGC.png Graphic file (type png)
+ <use TensionGC.png>
+Package pdftex.def Info: TensionGC.png used on input line 330.
+(pdftex.def)             Requested size: 153.939pt x 170.71652pt.
+
+Overfull \hbox (11.67522pt too wide) in paragraph at lines 330--330
+[][]  
+ []
+
+[24
+
+ <./TensionGC.png (PNG copy)>]
+<lat_rad_GC_raw.png, id=508, 1124.2pt x 843.15pt>
+File: lat_rad_GC_raw.png Graphic file (type png)
+ <use lat_rad_GC_raw.png>
+Package pdftex.def Info: lat_rad_GC_raw.png used on input line 350.
+(pdftex.def)             Requested size: 138.10452pt x 103.56659pt.
+
+<lat_rad_GC_mean.png, id=509, 562.1pt x 421.575pt>
+File: lat_rad_GC_mean.png Graphic file (type png)
+ <use lat_rad_GC_mean.png>
+Package pdftex.def Info: lat_rad_GC_mean.png used on input line 350.
+(pdftex.def)             Requested size: 138.10452pt x 103.57303pt.
+
+[25
+
+ <./lat_rad_GC_raw.png (PNG copy)> <./lat_rad_GC_mean.png (PNG copy)>]
+<detune.png, id=526, 562.1pt x 421.575pt>
+File: detune.png Graphic file (type png)
+ <use detune.png>
+Package pdftex.def Info: detune.png used on input line 370.
+(pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
+
+<simtrue.png, id=527, 562.1pt x 421.575pt>
+File: simtrue.png Graphic file (type png)
+ <use simtrue.png>
+Package pdftex.def Info: simtrue.png used on input line 370.
+(pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
+ [26
+
+ <./detune.png (PNG copy)> <./simtrue.png (PNG copy)>]
+<simerr.png, id=543, 562.1pt x 652.4375pt>
+File: simerr.png Graphic file (type png)
+ <use simerr.png>
+Package pdftex.def Info: simerr.png used on input line 390.
+(pdftex.def)             Requested size: 142.26378pt x 165.11995pt.
+ [27
+
+ <./simerr.png (PNG copy)>] <./figs/exp1.pdf, id=559, 562.1pt x 421.575pt>
+File: ./figs/exp1.pdf Graphic file (type pdf)
+
+<use ./figs/exp1.pdf>
+Package pdftex.def Info: ./figs/exp1.pdf used on input line 409.
+(pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
+ <./figs/exp1_err.pdf, id=560, 562.1pt x 421.575pt>
+File: ./figs/exp1_err.pdf Graphic file (type pdf)
+
+<use ./figs/exp1_err.pdf>
+Package pdftex.def Info: ./figs/exp1_err.pdf used on input line 409.
+(pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
+ [28
+
+ <./figs/exp1.pdf> <./figs/exp1_err.pdf>]
+<./figs/exp2.pdf, id=592, 562.1pt x 421.575pt>
+File: ./figs/exp2.pdf Graphic file (type pdf)
+ <use ./figs/exp2.pdf>
+Package pdftex.def Info: ./figs/exp2.pdf used on input line 429.
+(pdftex.def)             Requested size: 144.54pt x 108.40399pt.
+ [29
+
+ <./figs/exp2.pdf>] <./figs/exp3.pdf, id=616, 562.1pt x 421.575pt>
+File: ./figs/exp3.pdf Graphic file (type pdf)
+
+<use ./figs/exp3.pdf>
+Package pdftex.def Info: ./figs/exp3.pdf used on input line 449.
+(pdftex.def)             Requested size: 144.54pt x 108.40399pt.
+
+Overfull \vbox (1.8143pt too high) detected at line 449
+ []
+
+[30
+
+ <./figs/exp3.pdf>] [31
+
+] [32
+
+]
+Missing character: There is no â in font phvr7t!
+Missing character: There is no € in font phvr7t!
+Missing character: There is no ¢ in font phvr7t!
+ [33
+
+] (./Wheel_presentation.bbl
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <6> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 25.
+
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `English'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `English'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `en'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `en'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `en'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `en'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `en'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `en'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `en'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `en'. Using the pattern for
+** the default language instead.
+Missing character: There is no Ã in font phvr7t!
+Missing character: There is no ¡ in font phvr7t!
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `en'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `en'. Using the pattern for
+** the default language instead.
+Missing character: There is no â in font phvro7t!
+Missing character: There is no € in font phvro7t!
+Missing character: There is no “ in font phvro7t!
+) [34
+
+ </usr/local/texlive/2017/texmf-dist/tex/latex/beamer/art/beamericonarticle.pdf
+>] [35
+
+
+] <wheelfanatyk.jpg, id=736, 752.8125pt x 798.985pt>
 File: wheelfanatyk.jpg Graphic file (type jpg)
- <use wheelfanatyk.jpg>
-Package pdftex.def Info: wheelfanatyk.jpg used on input line 148.
+
+<use wheelfanatyk.jpg>
+Package pdftex.def Info: wheelfanatyk.jpg used on input line 521.
 (pdftex.def)             Requested size: 67.01503pt x 71.13188pt.
 Missing character: There is no â in font phvr7t!
 Missing character: There is no € in font phvr7t!
 Missing character: There is no ¢ in font phvr7t!
-
-[10
+ [36
 
  <./wheelfanatyk.jpg>]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 183.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 183.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 183.
- [11
-
-] [12
-
-] [13
-
-] [14
-
-]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 246.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 246.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 246.
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 246.
- [15
-
-] [16
-
-] [17
-
-]
-<true1.png, id=392, 1124.2pt x 843.15pt>
-File: true1.png Graphic file (type png)
- <use true1.png>
-Package pdftex.def Info: true1.png used on input line 285.
-(pdftex.def)             Requested size: 227.62204pt x 170.7112pt.
- [18
-
- <./true1.png (PNG copy)>] <true2.png, id=408, 1124.2pt x 843.15pt>
-File: true2.png Graphic file (type png)
- <use true2.png>
-Package pdftex.def Info: true2.png used on input line 285.
-(pdftex.def)             Requested size: 227.62204pt x 170.7112pt.
- [19
-
- <./true2.png (PNG copy)>] <true3.png, id=424, 1124.2pt x 843.15pt>
-File: true3.png Graphic file (type png)
- <use true3.png>
-Package pdftex.def Info: true3.png used on input line 285.
-(pdftex.def)             Requested size: 227.62204pt x 170.7112pt.
-
-[20
-
- <./true3.png (PNG copy)>] <true4.png, id=439, 1124.2pt x 843.15pt>
-File: true4.png Graphic file (type png)
-
-<use true4.png>
-Package pdftex.def Info: true4.png used on input line 285.
-(pdftex.def)             Requested size: 227.62204pt x 170.7112pt.
- [21
-
- <./true4.png (PNG copy)>]
-<true_final.png, id=454, 1124.2pt x 843.15pt>
-File: true_final.png Graphic file (type png)
- <use true_final.png>
-Package pdftex.def Info: true_final.png used on input line 285.
-(pdftex.def)             Requested size: 227.62204pt x 170.7112pt.
- [22
-
- <./true_final.png (PNG copy)>] <algorithm.png, id=469, 1537.745pt x 843.15pt>
-File: algorithm.png Graphic file (type png)
-
-<use algorithm.png>
-Package pdftex.def Info: algorithm.png used on input line 297.
-(pdftex.def)             Requested size: 259.44221pt x 142.26378pt.
- [23
-
- <./algorithm.png (PNG copy)>]
-<gaugeCV_validation.pdf, id=484, 614.295pt x 794.97pt>
-File: gaugeCV_validation.pdf Graphic file (type pdf)
-
-<use gaugeCV_validation.pdf>
-Package pdftex.def Info: gaugeCV_validation.pdf used on input line 313.
-(pdftex.def)             Requested size: 199.16928pt x 127.56972pt.
- [24
-
- <./gaugeCV_validation.pdf>]
-<TensionGC.png, id=501, 1124.2pt x 1246.6575pt>
-File: TensionGC.png Graphic file (type png)
- <use TensionGC.png>
-Package pdftex.def Info: TensionGC.png used on input line 334.
-(pdftex.def)             Requested size: 153.939pt x 170.71652pt.
-
-Overfull \hbox (11.67522pt too wide) in paragraph at lines 334--334
-[][]  
- []
-
-[25
-
- <./TensionGC.png (PNG copy)>]
-<lat_rad_GC_raw.png, id=518, 1124.2pt x 843.15pt>
-File: lat_rad_GC_raw.png Graphic file (type png)
- <use lat_rad_GC_raw.png>
-Package pdftex.def Info: lat_rad_GC_raw.png used on input line 354.
-(pdftex.def)             Requested size: 138.10452pt x 103.56659pt.
-
-<lat_rad_GC_mean.png, id=519, 562.1pt x 421.575pt>
-File: lat_rad_GC_mean.png Graphic file (type png)
- <use lat_rad_GC_mean.png>
-Package pdftex.def Info: lat_rad_GC_mean.png used on input line 354.
-(pdftex.def)             Requested size: 138.10452pt x 103.57303pt.
-
-[26
-
- <./lat_rad_GC_raw.png (PNG copy)> <./lat_rad_GC_mean.png (PNG copy)>]
-<detune.png, id=534, 562.1pt x 421.575pt>
-File: detune.png Graphic file (type png)
- <use detune.png>
-Package pdftex.def Info: detune.png used on input line 374.
-(pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
-
-<simtrue.png, id=535, 562.1pt x 421.575pt>
-File: simtrue.png Graphic file (type png)
- <use simtrue.png>
-Package pdftex.def Info: simtrue.png used on input line 374.
-(pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
- [27
-
- <./detune.png (PNG copy)> <./simtrue.png (PNG copy)>]
-<simerr.png, id=550, 562.1pt x 652.4375pt>
-File: simerr.png Graphic file (type png)
- <use simerr.png>
-Package pdftex.def Info: simerr.png used on input line 394.
-(pdftex.def)             Requested size: 142.26378pt x 165.11995pt.
- [28
-
- <./simerr.png (PNG copy)>]
-Package epstopdf Info: Source file: <./figs/exp1.eps>
-(epstopdf)                    date: 2019-11-13 17:40:20
-(epstopdf)                    size: 45954 bytes
-(epstopdf)             Output file: <./figs/exp1-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-11-13 17:40:25
-(epstopdf)                    size: 15058 bytes
-(epstopdf)             Command: <repstopdf --outfile=./figs/exp1-eps-converted-
-to.pdf ./figs/exp1.eps>
-(epstopdf)             \includegraphics on input line 413.
-Package epstopdf Info: Output file is already uptodate.
- <./figs/exp1-eps-converted-to.pdf, id=565, 562.1pt x 421.575pt>
-File: ./figs/exp1-eps-converted-to.pdf Graphic file (type pdf)
-
-<use ./figs/exp1-eps-converted-to.pdf>
-Package pdftex.def Info: ./figs/exp1-eps-converted-to.pdf used on input line 41
-3.
-(pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
-Package epstopdf Info: Source file: <./figs/exp1_err.eps>
-(epstopdf)                    date: 2019-11-13 17:32:52
-(epstopdf)                    size: 27929 bytes
-(epstopdf)             Output file: <./figs/exp1_err-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-11-13 17:36:00
-(epstopdf)                    size: 9972 bytes
-(epstopdf)             Command: <repstopdf --outfile=./figs/exp1_err-eps-conver
-ted-to.pdf ./figs/exp1_err.eps>
-(epstopdf)             \includegraphics on input line 413.
-Package epstopdf Info: Output file is already uptodate.
-
-<./figs/exp1_err-eps-converted-to.pdf, id=566, 562.1pt x 421.575pt>
-File: ./figs/exp1_err-eps-converted-to.pdf Graphic file (type pdf)
-
-<use ./figs/exp1_err-eps-converted-to.pdf>
-Package pdftex.def Info: ./figs/exp1_err-eps-converted-to.pdf used on input lin
-e 413.
-(pdftex.def)             Requested size: 130.83328pt x 98.12453pt.
- [29
-
- <./figs/exp1-eps-converted-to.pdf> <./figs/exp1_err-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <./figs/exp2.eps>
-(epstopdf)                    date: 2019-11-14 07:27:32
-(epstopdf)                    size: 60630 bytes
-(epstopdf)             Output file: <./figs/exp2-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-11-14 07:30:28
-(epstopdf)                    size: 18442 bytes
-(epstopdf)             Command: <repstopdf --outfile=./figs/exp2-eps-converted-
-to.pdf ./figs/exp2.eps>
-(epstopdf)             \includegraphics on input line 433.
-Package epstopdf Info: Output file is already uptodate.
-
-<./figs/exp2-eps-converted-to.pdf, id=597, 562.1pt x 421.575pt>
-File: ./figs/exp2-eps-converted-to.pdf Graphic file (type pdf)
-
-<use ./figs/exp2-eps-converted-to.pdf>
-Package pdftex.def Info: ./figs/exp2-eps-converted-to.pdf used on input line 43
-3.
-(pdftex.def)             Requested size: 144.54pt x 108.40399pt.
- [30
-
- <./figs/exp2-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <./figs/exp3.eps>
-(epstopdf)                    date: 2019-11-14 16:53:54
-(epstopdf)                    size: 60627 bytes
-(epstopdf)             Output file: <./figs/exp3-eps-converted-to.pdf>
-(epstopdf)             Command: <repstopdf --outfile=./figs/exp3-eps-converted-
-to.pdf ./figs/exp3.eps>
-(epstopdf)             \includegraphics on input line 453.
-runsystem(repstopdf --outfile=./figs/exp3-eps-converted-to.pdf ./figs/exp3.eps)
-...executed safely (allowed).
-
-Package epstopdf Info: Result file: <./figs/exp3-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-11-14 16:55:03
-(epstopdf)                    size: 18149 bytes.
-
-<./figs/exp3-eps-converted-to.pdf, id=620, 562.1pt x 421.575pt>
-File: ./figs/exp3-eps-converted-to.pdf Graphic file (type pdf)
-
-<use ./figs/exp3-eps-converted-to.pdf>
-Package pdftex.def Info: ./figs/exp3-eps-converted-to.pdf used on input line 45
-3.
-(pdftex.def)             Requested size: 144.54pt x 108.40399pt.
-
-Overfull \vbox (1.8143pt too high) detected at line 453
- []
-
-[31
-
- <./figs/exp3-eps-converted-to.pdf>] [32
-
-] [33
-
-]
-Missing character: There is no â in font phvr7t!
-Missing character: There is no € in font phvr7t!
-Missing character: There is no ¢ in font phvr7t!
- [34
-
-] [35
-
-]
 \tf@nav=\write6
 \openout6 = `Wheel_presentation.nav'.
 
@@ -1574,44 +1592,39 @@ Missing character: There is no ¢ in font phvr7t!
 \tf@snm=\write8
 \openout8 = `Wheel_presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 509.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 509.
-
-(./Wheel_presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 509.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 509.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 523.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 523.
+ (./Wheel_presentation.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 523.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 523.
 Package rerunfilecheck Info: File `Wheel_presentation.out' has not changed.
 (rerunfilecheck)             Checksum: 2912B816E2CDBB9E965AB5F4E9ED86A0;356.
  ) 
 Here is how much of TeX's memory you used:
- 29965 strings out of 492995
- 597104 string characters out of 6132704
- 623681 words of memory out of 5000000
- 32895 multiletter control sequences out of 15000+600000
+ 30053 strings out of 492995
+ 599233 string characters out of 6132704
+ 625112 words of memory out of 5000000
+ 32973 multiletter control sequences out of 15000+600000
  49677 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,16n,60p,10392b,727s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texli
-ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive
-/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/201
-7/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2017/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/texmf-
-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-dist/fo
-nts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
-pe1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/ti
-mes/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8
-a.pfb>
-Output written on Wheel_presentation.pdf (35 pages, 5307736 bytes).
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
+xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-
+dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2017/texmf-dist/f
+onts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
+/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times
+/utmri8a.pfb>
+Output written on Wheel_presentation.pdf (36 pages, 5159001 bytes).
 PDF statistics:
- 759 PDF objects out of 1000 (max. 8388607)
- 644 compressed objects within 7 object streams
- 79 named destinations out of 1000 (max. 500000)
- 268 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 810 PDF objects out of 1000 (max. 8388607)
+ 698 compressed objects within 7 object streams
+ 95 named destinations out of 1000 (max. 500000)
+ 278 words of extra memory for PDF output out of 10000 (max. 10000000)
 

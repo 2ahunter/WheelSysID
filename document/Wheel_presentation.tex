@@ -4,7 +4,7 @@
 
 \title{Bicycle Wheel System Identification and Optimal Truing Algorithm}
 \author{Aaron Hunter}
-\date{October 7, 2019}
+\date{July 6, 2020}
 
 \usetheme{PaloAlto}
 \beamertemplatenavigationsymbolsempty
@@ -31,23 +31,31 @@
 \section{Background}
 
 \begin{frame}{The Bicycle Wheel}
+    \begin{center}
+    	\includegraphics[width=0.4\textwidth]{geom.pdf}
+%	\includegraphics[width=0.07\textwidth]{rim_x.pdf}
+    \end{center}
     \begin{itemize}
     \item The bicycle wheel is a structure consisting of a rim, a hub, and spokes connecting the hub to the rim
-    \item The spokes are under tension to provide the stiffness to wheel structure
-    \item The rim is under compression
-    \item The wheel can be considered a system of springs in parallel and series combinations
-    \item Spoke tension must be high enough to support the load (bicycle and rider) but not so high that the rim warps laterally
+    \item The spokes are under tension to provide the lateral stiffness and radial strength
+    \item Spoke tension must be high enough to support the load but not so high that the rim buckles laterally
     \item Spokes patterns vary from radial to nearly tangential
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Bicycle Wheel Geometry}
     \begin{center}
-    	\includegraphics[width=4.0in]{fig_geometry.pdf}
+    	\includegraphics[width=0.55\textwidth]{geom.pdf}
+	\includegraphics[width=0.13\textwidth]{rim_x.pdf}
     \end{center}
-    \begin{block}{}
-    {\tiny Image credit: Ford, Matthew, \emph{Reinventing the Wheel: Stress Analysis, Stability, and Optimization of the Bicycle Wheel}, PhD. Dissertation Northwestern University, December 2018.}
-    \end{block}
+        \begin{itemize}
+    \item $\theta$ is the rim angle of the spoke
+    \item $\beta$ is the spoking angle (tangential vs radial)
+    \item $\alpha_d$ and  $\alpha_{nd}$ are the drive side and non-drive side lateral angles
+    \end{itemize}
+%    \begin{block}{}
+%   % {\tiny Image credit: Ford, Matthew, \emph{Reinventing the Wheel: Stress Analysis, Stability, and Optimization of the Bicycle Wheel}, PhD. Dissertation Northwestern University, December 2018.}
+%    \end{block}
 \end{frame}
 
 \begin{frame}{Wheel Truing}
@@ -131,21 +139,6 @@
         \end{enumerate}
 \end{frame}
 
-\begin{frame}
-      \frametitle{Spoke Tension Measurements}
-      \begin{figure}
-      	\includegraphics[height = 2.5cm]{wheelfanatyk}\\
-        {\tiny WheelFanatyk spoke tension meter.  Image credit: https://www.wheelfanatyk.com}
-      \end{figure}
-
-      \begin{itemize}
-          \item Digital spoke tension measurements
-          \item Data collected through USB to PC
-          \item Meter collects displacement of spoke by calibrated spring
-          \item Reference measurement accounts for variation of spoke thickness 
-          \item Tension values interpolated from calibration table
-      \end{itemize}•
-\end{frame}
 
 \begin{frame}
 \frametitle{Measurement Data Vector}
@@ -261,12 +254,13 @@ Compute the optimal vector of spoke rotations, ${\bf d}_{ls}$, from the set of m
 
 \begin{frame}
         \frametitle{Truing Algorithm}
+            \begin{figure}
+    	\includegraphics[width=0.5\textwidth]{algo_flow.pdf}
+    \end{figure}
         \begin{itemize}
-          \item ${\bf d}$ is vector of nipple rotations that take the wheel from current to desired state
-          \item Spoke nipple turns are difficult to apply accurately.  Instead predict the state of the system after each adjustment (entry in $\bf d$)
-          \item Adjust the spoke until the lateral displacement at the spoke location matches the prediction
-          \item After all spokes adjusted, measure state of the system
-          \item Demonstrated graphically in the next slides...
+          \item Spoke adjustment vector: current $\rightarrow$ desired state
+          \item Difficult to apply precisely (twist, friction)
+          \item Use model to predict state after adjustment!
         \end{itemize}
 \end{frame}
 
@@ -295,6 +289,8 @@ Compute the optimal vector of spoke rotations, ${\bf d}_{ls}$, from the set of m
     \item Green represents final (trued) profile
 \end{itemize}
 \end{frame}
+
+
 
 \section{Results}
 
@@ -374,7 +370,7 @@ Compute the optimal vector of spoke rotations, ${\bf d}_{ls}$, from the set of m
 \end{frame}
 
 \begin{frame}
-\frametitle{Simulation Error}
+\frametitle{Weighting Factors}
 \begin{columns}[T]
     \begin{column}[T]{5cm}
     \begin{itemize}
@@ -499,11 +495,29 @@ Wheel measurements ($\mu \pm \sigma$):
       
 \section{References}
 
-\begin{frame}{References}
-\begin{itemize}
-    \item Ford, Matthew, \emph{Reinventing the Wheel: Stress Analysis, Stability, and Optimization of the Bicycle Wheel}, PhD. Dissertation Northwestern University, December 2018
-    \item Brandt, Jobst, \emph{The Bicycle Wheel}, Avocet, 1993
-\end{itemize}
+\begin{frame}[allowframebreaks]
+\frametitle{References} 
+\tiny
+\nocite{*} 
+\bibliographystyle{IEEEtran}
+\bibliography{WheelSysID.bib} 
+\end{frame}
+
+\section*{Backup}
+\begin{frame}
+      \frametitle{Spoke Tension Measurements}
+      \begin{figure}
+      	\includegraphics[height = 2.5cm]{wheelfanatyk}\\
+        {\tiny WheelFanatyk spoke tension meter.  Image credit: https://www.wheelfanatyk.com}
+      \end{figure}
+
+      \begin{itemize}
+          \item Digital spoke tension measurements
+          \item Data collected through USB to PC
+          \item Meter collects displacement of spoke by calibrated spring
+          \item Reference measurement accounts for variation of spoke thickness 
+          \item Tension values interpolated from calibration table
+      \end{itemize}•
 \end{frame}
 
 \end{document}  
