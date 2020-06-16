@@ -1,4 +1,4 @@
-close all
+%close all
 clear all
 load('CV_valid.mat')
 lateral = CV_valid(1,:)';
@@ -33,28 +33,27 @@ maxLateral = max(abs(lateral-g1_mm))
 maxRadial = max(abs(radial-g2_mm))
 
 measNumber = [1;2;3;4];
-figure()
+figure(1)
 subplot(2,1,1)
 hold on
-plot(measNumber,lateral, 'x','MarkerSize',10)
-plot(g1_mm,'d','MarkerSize',10)
+plot(measNumber,lateral, 'kx','MarkerSize',10)
+plot(g1_mm,'kd','MarkerSize',10)
 legend('CV','visual')
-xlabel('Measurement Number')
-ylabel('Displacement [mm]')
-title('Gauge CV Validation')
+ylabel('Lateral [mm]')
+title('CV Gauge Validation')
 ax = gca; % current axes
-ax.FontSize = 12;
+ax.FontSize = 16;
 xticks([1 2 3 4])
 subplot(2,1,2)
 hold on
-plot(measNumber,radial, 'x','MarkerSize',10)
-plot(g2_mm,'d','MarkerSize',10)
+plot(measNumber,radial, 'kx','MarkerSize',10)
+plot(g2_mm,'kd','MarkerSize',10)
 legend('CV','visual')
 xlabel('Measurement Number')
-ylabel('Displacement [mm]')
+ylabel('Radial [mm]')
 hold off
 ax = gca; % current axes
-ax.FontSize = 12;
+ax.FontSize = 16;
 xticks([1 2 3 4])
 
 
